@@ -1,4 +1,4 @@
-from testpy import testpy
+import testpy
 
 # Show unintended concatenation of strings
 
