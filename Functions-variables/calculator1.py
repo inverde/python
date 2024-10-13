@@ -9,4 +9,3 @@ y = input("Por favor, digite el valor de y:")
 # Sum x + y
 z = x + y
 print(z)
-assert z == 9
