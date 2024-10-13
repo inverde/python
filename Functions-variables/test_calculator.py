@@ -1,13 +1,6 @@
 from calculator1 import sum
-# Show unintended concatenation of strings
 
-# Ask the user for x and y values
-x = input("Por favor, digite el valor de x:")
-y = input("Por favor, digite el valor de y:")
 
-# Sum x + y
-z = x + y
-print(z)
-
+# Unit test for sum
 def test_sum():
     return sum()
