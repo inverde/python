@@ -1,4 +1,3 @@
-import pytest
 # Show unintended concatenation of strings
 
 # Ask the user for x and y values
