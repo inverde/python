@@ -1,5 +1,6 @@
-from calculator1 import sum
-
+z = 45
 # Unit test for sum
-def test_sum():
-    assert z == 9
+def test_sum(x):
+    assert x == 9
+
+test_sum(45)
