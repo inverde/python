@@ -11,7 +11,7 @@ z = x + y
 print(z)
 
 def test_sum(z):
-    if assert z == 9:
+    if assert(z) == 9:
         return z
     else:
         return false
