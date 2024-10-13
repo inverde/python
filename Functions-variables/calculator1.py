@@ -8,7 +8,6 @@ y = input("Por favor, digite el valor de y:")
 z = x + y
 print(z)
 
-def test_sum():
+def sum():
     assert z == 9
-
 
