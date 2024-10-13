@@ -9,5 +9,6 @@ z = x + y
 print(z)
 
 def sum():
+    global z
     assert z == 9
 
