@@ -3,3 +3,7 @@
 # Ask the user for x and y values
 x = input("Por favor, digite el valor de x:")
 y = input("Por favor, digite el valor de y:")
+
+# Sum x + y
+z = x + y
+print(x)
