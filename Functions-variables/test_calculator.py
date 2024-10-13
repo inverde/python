@@ -1,3 +1,4 @@
+from calculator1 import sum
 # Show unintended concatenation of strings
 
 # Ask the user for x and y values
