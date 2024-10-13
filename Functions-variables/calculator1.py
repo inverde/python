@@ -10,8 +10,10 @@ y = input("Por favor, digite el valor de y:")
 z = x + y
 print(z)
 
-def test_sum(z):
-    assert z == 9
-    
+def test_sum(val):
+    assert val == 9
 
 
+
+if __name__ == "__main__":
+    test_sum(z)
