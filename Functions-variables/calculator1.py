@@ -1,5 +1,3 @@
-import pytest
-
 # Show unintended concatenation of strings
 
 # Ask the user for x and y values
@@ -10,10 +8,7 @@ y = input("Por favor, digite el valor de y:")
 z = x + y
 print(z)
 
-def test_sum(val):
-    assert val == 9
+def test_sum():
+    assert z == 9
 
 
-
-if __name__ == "__main__":
-    test_sum(z)
