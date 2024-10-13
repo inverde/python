@@ -12,3 +12,5 @@ def sum():
     global z
     assert z == 9
 
+if __name__ == "__main__":
+    sum()
