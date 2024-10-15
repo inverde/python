@@ -56,8 +56,8 @@ set_std_ballot()
 
 if (is_std_ballot() and std_supporting_ballot()) or (not is_std_ballot() and supporting_ballot()):
     print("Plus Vote")
-elif not std_supporting_ballot() or not supporting_ballot()
-    if
+elif (is_std_ballot and not std_supporting_ballot()) or (not is_std_ballot and not supporting_ballot()):
+    print("Minus Vote")
 
 
 # Vote with normal ballot
