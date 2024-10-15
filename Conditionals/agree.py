@@ -51,7 +51,6 @@ def supporting_ballot():
     else:
         return False
 
-# Get case insensitive vote  and clean white spaces
 def std_supporting_ballot():
     global c_Yes
     vote = input("Do you agree with this reform?: ")
