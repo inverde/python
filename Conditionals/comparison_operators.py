@@ -23,9 +23,9 @@ above_poverty_line = income >= 15000
 below_poverty_line = income <= 15000
 
 
-print(type(low_income))
+print('Variable Type: ', type(low_income))
 
-print(low_income)
+print('Low income class: ', low_income)
 
 # Conditional Execution (if clause)
 
