@@ -23,5 +23,5 @@ def sum(n):
     if not count:
         return counter
 =   else:
-        counter = counter +
-        return counter + sum(n-1)
+        counter = counter + n
+        return sum(n-1)
