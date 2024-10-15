@@ -5,9 +5,12 @@ c_NO = 'no'
 c_TRUE = True
 c_FALSE = False
 
+c_STD_BALLOT = None
+
+
 def set_std_ballot(on= c_TRUE):
     if on:
-        Re
+        c
 
 
 
