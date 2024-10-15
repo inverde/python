@@ -1,4 +1,14 @@
 # Comparison operator are used in boolean expressions to determine its value
+""" Python comparisons operators
+
+>  Greater Than
+>= Greater or Equal Than
+<  Less Than
+<=
+==
+!=
+
+"""
 
 # Equal comparison
 income = 15000
