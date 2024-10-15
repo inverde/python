@@ -15,8 +15,9 @@ c_NOR = 'normal'
 #-------------------------------------------------------------------------
 
 # Declare global variables for this module ----------------------------------
-STD_BALLOT = {}
-SUPPORTING_VOTE = {}
+globals = {}
+globals['STD_BALLOT'] = c_TRUE
+globals['SUPPORTING_VOTE'] = c_STD
 #------------------------------------------------------------------------------
 
 def set_std_ballot(toggle= c_TRUE):
