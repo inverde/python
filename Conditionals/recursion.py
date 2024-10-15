@@ -5,8 +5,10 @@ Recursions are usually more inefficient and slower than regular loops but logica
 make our program very easy to understand and save the programmers numerous instructions.
 """
 # Defines a recursive function to count n times
+counter = 0
 def countdown(n):
     count = n
+    global counter
     if not count: # Pythonic code
         return counter
     else:
