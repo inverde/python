@@ -94,4 +94,6 @@ def test():
         cast_vote()
 
 if __name__ == "__main__":
-    test()
+    #test()
+    supporting_ballot()
+    supporting_ballot()
