@@ -25,7 +25,7 @@ def set_std_ballot(toggle= c_TRUE):
     if toggle:
         globals['STD_BALLOT'] = toggle
     else:
-        globals
+        globals[']
 
 def is_std_ballot():
     global STD_BALLOT
