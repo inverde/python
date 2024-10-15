@@ -52,12 +52,12 @@ def std_supporting_ballot():
 set_std_ballot()
 
 if is_std_ballot():
-    globals['VOTE'] = std_supporting_ballot()
+    globals['STD_VOTE'] = std_supporting_ballot()
 else:
-    globals['VOTE'] = supporting_ballot()
+    globals['NOR_VOTE'] = supporting_ballot()
 
 # Voting pro and against with either of the ballots
-if (is_std_ballot() and globals['VOTE']) or (not is_std_ballot() and globals['VOTE']):
+if (is_std_ballot() and globals['STD_VOTE']) or (not is_std_ballot() and globals['NOR_VOTE']):
     print("Plus Vote")
 elif (is_std_ballot() and not SUPPORTING_VOTE[c_STD]) or (not is_std_ballot and not SUPPORTING_VOTE[c_NOR]):
     print("Minus Vote")
