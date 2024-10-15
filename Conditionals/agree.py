@@ -59,6 +59,6 @@ else:
 # Voting pro and against with either of the ballots
 if (is_std_ballot() and globals['STD_VOTE']) or (not is_std_ballot() and globals['NOR_VOTE']):
     print("Plus Vote")
-elif (is_std_ballot() and not SUPPORTING_VOTE[c_STD]) or (not is_std_ballot and not SUPPORTING_VOTE[c_NOR]):
+elif (is_std_ballot() and not globals['STD_VOTE']) or (not is_std_ballot and globals ):
     print("Minus Vote")
 
