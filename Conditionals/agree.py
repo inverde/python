@@ -3,6 +3,7 @@
 # Define constants to be used agree module --------------------------------
 c_YES = 'yes'
 c_NO = 'no'
+
 c_TRUE = True
 c_FALSE = False
 
@@ -10,7 +11,9 @@ c_ON = 'on'
 c_OFF = 'off'
 #-------------------------------------------------------------------------
 
+# Declare global variables for this module ----------------------------------
 STD_BALLOT = {}
+#------------------------------------------------------------------------------
 
 def set_std_ballot(toggle= c_TRUE):
     global STD_BALLOT
