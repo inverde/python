@@ -6,16 +6,18 @@ c_NO = 'no'
 c_TRUE = True
 c_FALSE = False
 
+c_ON = 'on'
+c_OFF = 'off'
+
 c_STD_BALLOT = {}
 #-------------------------------------------------------------------------
 
-def set_std_ballot(on= c_TRUE):
-    if on:
-        global c_STD_BALLOT
-        c_STD_BALLOT = True
+def set_std_ballot(toggle= c_TRUE):
+    global c_STD_BALLOT
+    if toggle:
+        c_STD_BALLOT[c_ON] = toggle
     else:
-        global c_STD_BALLOT
-        c_STD_BALLOT = False
+        c_STD_BALLOT(c_OFF) = toggle
 
 
 # Get vote from citizen
