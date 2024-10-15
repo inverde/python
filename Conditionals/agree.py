@@ -4,8 +4,14 @@ c_NO = 'no'
 
 # Define vote
 def supporting_ballot():
-    vote = input("Do )
-    if on_support == c_YES:
+    global c_YES
+    vote = input("Do you agree with this reform?: ")
+    if vote == c_YES:
         return True
     else:
         return False
+
+if supporting_ballot():
+    print("Plus Vote")
+else:
+    print("Minus Vote")
