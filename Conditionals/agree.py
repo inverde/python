@@ -10,6 +10,10 @@ def supporting_ballot():
         return True
     else:
         return False
+# Get case insensitive answer  and clean white spaces
+def std_supporting_ballot():
+    global c_Yes
+    vote = in
 
 if supporting_ballot():
     print("Plus Vote")
