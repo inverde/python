@@ -22,6 +22,8 @@ def sum(n):
     count = n
     if not count:
         return counter
-=   else:
+    else:
         counter = counter + n
         return sum(n-1)
+
+print(sum(5))
