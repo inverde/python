@@ -20,6 +20,7 @@ globals['STD_BALLOT'] = c_TRUE
 globals['NOR_BALLOT'] = c_FALSE
 globals['STD_VOTE'] = None
 globals['NOR_VOTE'] = None
+globals['TEST'] = c_OFF
 #------------------------------------------------------------------------------
 
 def set_std_ballot(toggle= c_TRUE):
@@ -66,5 +67,18 @@ def cast_vote():
     elif (is_std_ballot() and not globals['STD_VOTE']) or (not is_std_ballot and not globals['NOR_VOTE']):
         print("Minus Vote")
 
-def testing():
-    set_std_ballot()
+def test():
+    if testing():
+        set_std_ballot()
+        cast_vote()
+        cast_vote()
+        cast_vote()
+        cast_vote()
+        set_std_ballot(c_FALSE)
+        cast_vote()
+        cast_vote()
+        cast_vote()
+        cast_vote()
+
+if __name__ == "__main__":
+    test()
