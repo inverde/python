@@ -1,12 +1,11 @@
 # Make function module for conditional samples
+
+# Define constants to be used agree module --------------------------------
 c_YES = 'yes'
 c_NO = 'no'
-
 c_TRUE = True
 c_FALSE = False
-
-c_STD_BALLOT
-
+#-------------------------------------------------------------------------
 
 def set_std_ballot(on= c_TRUE):
     if on:
