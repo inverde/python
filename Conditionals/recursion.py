@@ -7,7 +7,7 @@ make our program very easy to understand and save the programmers numerous instr
 # Defines a recursive function to count n times
 def countdown(n):
     count = n
-    if count <= 0:
+    if not count: # Pythonic code
         return 0
     else:
         print(count)
