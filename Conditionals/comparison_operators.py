@@ -1,4 +1,5 @@
 # Comparison operator are used in boolean expressions to determine its value
+
 """ Python comparisons operators
 
 >  Greater Than
@@ -10,10 +11,10 @@
 
 """
 
-# Equal comparison
+# Income assignment
 income = 15000
 
-# Conditional statement
+# Conditional statement is one or more connected boolean expressions
 low_income = income >= 0 and income < 50000
 
 print(type(low_income))
