@@ -23,4 +23,13 @@ def sum(n):
     else:
         return n + sum(n-1)
 
-print('Sumatoria:', sum(5))
+print('Sumatoria de 5:', sum(5))
+
+def factorial(n):
+    count = n
+    if not count:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+print('Factorial de 5:', factorial(5))
