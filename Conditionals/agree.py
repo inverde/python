@@ -27,6 +27,17 @@ def set_std_ballot(toggle= c_TRUE):
     global globals
     globals['STD_BALLOT'] = toggle
 
+def set_testing(toggle=C_ON):
+    global globals
+    globals['TEST'] = toggle
+
+def is_testing():
+    global globals
+    if globals['TEST'] == c_ON:
+        return True
+    else:
+        return False
+
 def is_std_ballot():
     global globals
     return globals['STD_BALLOT']
@@ -68,7 +79,7 @@ def cast_vote():
         print("Minus Vote")
 
 def test():
-    if testing():
+    if is_testing():
         set_std_ballot()
         cast_vote()
         cast_vote()
