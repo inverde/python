@@ -18,8 +18,8 @@ c_NOR = 'normal'
 globals = {}
 globals['STD_BALLOT'] = c_TRUE
 globals['NOR_BALLOT'] = c_FALSE
-globals['STD_VOTE'] = None
-globals['NOR_VOTE'] = None
+globals['STD_VOTE'] = c_FALSE
+globals['NOR_VOTE'] = c_FALSE
 globals['TEST'] = c_OFF
 #------------------------------------------------------------------------------
 
