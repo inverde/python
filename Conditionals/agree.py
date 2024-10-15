@@ -49,10 +49,9 @@ def supporting_ballot():
 def std_supporting_ballot():
     global c_Yes
     vote = input("Do you agree with this reform?: ")
-    if (vote.strip().lower().startswith == 'y') or (vote.strip().lower() == c_YES):
+    if (vote.strip().lower().startswith() == 'y') or (vote.strip().lower() == c_YES):
         return True
     else:
-        print('Return False')
         return False
 
 
