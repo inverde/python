@@ -54,6 +54,9 @@ def std_supporting_ballot():
 # Set standard ballot for this election
 set_std_ballot()
 
+if is_std_ballot:
+    
+
 # Vote with normal ballot
 if supporting_ballot():
     print("Plus Vote")
