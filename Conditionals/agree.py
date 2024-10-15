@@ -27,7 +27,7 @@ def set_std_ballot(toggle= c_TRUE):
     global globals
     globals['STD_BALLOT'] = toggle
 
-def set_testing(toggle=C_ON):
+def set_testing(toggle=c_ON):
     global globals
     globals['TEST'] = toggle
 
