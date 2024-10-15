@@ -61,12 +61,12 @@ set_std_ballot()
 if is_std_ballot():
     SUPPORTING_VOTE(c_STD) = std_supporting_ballot()
 else:
-    SUPPORTING_VODE(c_NOR) = supporting_ballot()
+    SUPPORTING_VOTE(c_NOR) = supporting_ballot()
 
 # Voting pro and against with either of the ballots
-if (is_std_ballot() and std_supporting_ballot()) or (not is_std_ballot() and supporting_ballot()):
+if (is_std_ballot() and SUPPORTING_VOTE(c_STD)) or (not is_std_ballot() and SUPPORTING_VOTE(c_NOR)):
     print("Plus Vote")
-elif (is_std_ballot and not std_supporting_ballot()) or (not is_std_ballot and not supporting_ballot()):
+elif (is_std_ballot and not SUPPORTING_VOTE(c_STD)) or (not is_std_ballot and not SUPPORTING_VODE(c_NOR)):
     print("Minus Vote")
 
 
