@@ -88,6 +88,15 @@ def test():
         cast_vote()
         cast_vote()
 
+def main():
+    # Set standard ballot for this election
+    set_std_ballot()
+
+    # Set the module in testing mode
+    set_testing(c_OFF)
+
+
 if __name__ == "__main__":
+    main()
     test()
 
