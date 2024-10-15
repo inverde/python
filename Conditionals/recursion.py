@@ -8,9 +8,9 @@ make our program very easy to understand and save the programmers numerous instr
 def countdown(n):
     count = n
     if not count: # Pythonic code
-        return 0
+        return counter
     else:
-        print(count)
+        counter = counter + countdown(n-1)
         return countdown(n-1)
 
 countdown(5)
