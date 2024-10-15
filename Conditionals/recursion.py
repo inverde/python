@@ -10,7 +10,7 @@ def countdown(n):
     if not count: # Pythonic code
         return counter
     else:
-        counter = counter + countdown(n-1)
+        counter = n + countdown(n-1)
         return countdown(n-1)
 
 countdown(5)
