@@ -2,7 +2,7 @@
 c_YES = 'yes'
 c_NO = 'no'
 
-c_STD_BALLOT 
+c_STD_BALLOT
 
 
 
