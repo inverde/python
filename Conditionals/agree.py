@@ -42,11 +42,12 @@ def is_std_ballot():
     global globals
     return globals['STD_BALLOT']
 
-# Get vote from citizen
-def supporting_ballot():
+# Get vote from citizen with
+def nor_supporting_ballot():
     global c_YES
     global c_NO
     vote = input("Do you agree with this reform?: ")
+
     if vote.strip() == c_YES:
         return True
     else:
@@ -73,7 +74,7 @@ def cast_vote():
     if is_std_ballot():
         globals['STD_VOTE'] = std_supporting_ballot()
     else:
-        globals['NOR_VOTE'] = supporting_ballot()
+        globals['NOR_VOTE'] = nor_supporting_ballot()
 
     if (is_std_ballot() and globals['STD_VOTE']) or (not is_std_ballot() and globals['NOR_VOTE']):
         print("Plus Vote")
@@ -95,7 +96,7 @@ def test():
 
 if __name__ == "__main__":
     #test()
-    if supporting_ballot():
+    if nor_supporting_ballot():
         print("yes")
-    if supporting_ballot():
+    if nor_supporting_ballot():
         print("no")
