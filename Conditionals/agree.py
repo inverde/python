@@ -61,13 +61,6 @@ def std_supporting_ballot():
         return False
 
 
-# Set standard ballot for this election
-set_std_ballot()
-
-# Set the module in testing mode
-set_testing(c_OFF)
-
-
 # Voting pro or against a constitutional reform
 def cast_vote():
     if is_std_ballot():
