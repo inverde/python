@@ -2,8 +2,12 @@
 c_YES = 'yes'
 c_NO = 'no'
 
-c_STD_BALLOT
+c_TRUE = True
+c_FALSE = False
 
+def set_std_ballot(on= c_TRUE):
+    if on:
+        Re
 
 
 
