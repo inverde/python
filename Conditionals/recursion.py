@@ -16,9 +16,7 @@ def countdown(n):
 
 countdown(5)
 
-counter = 0
 def sum(n):
-    global counter
     count = n
     if not count:
         return 0
