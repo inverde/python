@@ -54,8 +54,11 @@ def std_supporting_ballot():
 # Set standard ballot for this election
 set_std_ballot()
 
-if is_std_ballot:
-    
+if (is_std_ballot() and std_supporting_ballot()) or (not is_std_ballot() and supporting_ballot()):
+    print("Plus Vote")
+elif not is_std_ballot and std_supporting_ballot
+    if
+
 
 # Vote with normal ballot
 if supporting_ballot():
