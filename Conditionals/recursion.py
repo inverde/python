@@ -15,3 +15,13 @@ def countdown(n):
         return countdown(n-1)
 
 countdown(5)
+
+counter = 0
+def sum(n):
+    global counter
+    count = n
+    if not count:
+        return counter
+=   else:
+        counter = counter +
+        return counter + sum(n-1)
