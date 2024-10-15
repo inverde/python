@@ -2,6 +2,11 @@
 c_YES = 'yes'
 c_NO = 'no'
 
+c_STD_BALLOT 
+
+
+
+
 # Get vote from citizen
 def supporting_ballot():
     global c_YES
