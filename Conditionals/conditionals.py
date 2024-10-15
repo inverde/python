@@ -1,4 +1,4 @@
-# Make function module for conditional samples
+# Make functional module for voting system using  conditionals
 
 # Define constants to be used agree module --------------------------------
 c_YES = 'yes'
