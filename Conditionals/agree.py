@@ -24,6 +24,12 @@ def set_std_ballot(toggle= c_TRUE):
         STD_BALLOT[c_OFF] = toggle
         STD_BALLOT[c_ON] =  not toggle
 
+def is_std_ballot()
+    global STD_BALLOT
+    if STD_BALLOT[c_ON]:
+        return True
+    else:
+        return False
 
 # Get vote from citizen
 def supporting_ballot():
