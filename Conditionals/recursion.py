@@ -11,7 +11,7 @@ def countdown(n):
     count = n
     global counter
     if not count: # Pythonic code
-        return counter
+        print(counter)
     else:
         counter = n + countdown(n-1)
         return countdown(n-1)
