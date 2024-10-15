@@ -10,12 +10,23 @@ def supporting_ballot():
         return True
     else:
         return False
-# Get case insensitive answer  and clean white spaces
+
+# Get case insensitive vote  and clean white spaces
 def std_supporting_ballot():
     global c_Yes
-    vote = in
+    vote = input("Do you agree with this reform?: ")
+    if vote.strip().lower() == c_YES:
+        return True
+    else:
+        return False
+
 
 if supporting_ballot():
+    print("Plus Vote")
+else:
+    print("Minus Vote")
+
+if std_supporting_ballot():
     print("Plus Vote")
 else:
     print("Minus Vote")
