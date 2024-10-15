@@ -18,3 +18,7 @@ count = 5
 if count:
     print(count)
 
+count = 0
+
+if not count:
+    print(count)
