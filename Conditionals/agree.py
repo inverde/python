@@ -66,7 +66,7 @@ else:
 # Voting pro and against with either of the ballots
 if (is_std_ballot() and SUPPORTING_VOTE[c_STD]) or (not is_std_ballot() and SUPPORTING_VOTE[c_NOR]):
     print("Plus Vote")
-elif (is_std_ballot and not SUPPORTING_VOTE[c_STD]) or (not is_std_ballot and not SUPPORTING_VODE[c_NOR]):
+elif (is_std_ballot and not SUPPORTING_VOTE[c_STD]) or (not is_std_ballot and not SUPPORTING_VOTE[c_NOR]):
     print("Minus Vote")
 
 
