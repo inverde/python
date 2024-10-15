@@ -26,7 +26,8 @@ def set_std_ballot(toggle= c_TRUE):
 
 def is_std_ballot()
     global STD_BALLOT
-    if STD_BALLOT[c_ON]:
+    global c_TRUE
+    if STD_BALLOT[c_ON] == c_TRUE:
         return True
     else:
         return False
