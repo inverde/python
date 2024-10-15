@@ -80,6 +80,7 @@ def cast_vote():
 
     if (is_std_ballot() and globals['STD_VOTE']) or (not is_std_ballot() and globals['NOR_VOTE']):
         print("Plus Vote")
+
     if (is_std_ballot() and not globals['STD_VOTE']) or (not is_std_ballot and not globals['NOR_VOTE']):
         print("Minus Vote")
 
