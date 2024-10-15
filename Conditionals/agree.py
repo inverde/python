@@ -10,7 +10,11 @@ c_STD_BALLOT = None
 
 def set_std_ballot(on= c_TRUE):
     if on:
-        c
+        global c_STD_BALLOT
+        c_STD_BALLOT = True
+        return c_STD_BALLOT
+    else:
+        bl
 
 
 
