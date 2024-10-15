@@ -18,6 +18,7 @@ c_NOR = 'normal'
 globals = {}
 globals['STD_BALLOT'] = c_TRUE
 globals['NOR_BALLOT'] = c_FALSE
+globals['STD_VOTE']
 #------------------------------------------------------------------------------
 
 def set_std_ballot(toggle= c_TRUE):
@@ -50,10 +51,12 @@ def std_supporting_ballot():
 # Set standard ballot for this election
 set_std_ballot()
 
+"""
 if is_std_ballot():
     globals['STD_VOTE'] = std_supporting_ballot()
 else:
     globals['NOR_VOTE'] = supporting_ballot()
+"""
 
 # Voting pro and against with either of the ballots
 if (is_std_ballot() and globals['STD_VOTE']) or (not is_std_ballot() and globals['NOR_VOTE']):
