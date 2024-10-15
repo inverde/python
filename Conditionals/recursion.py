@@ -6,6 +6,7 @@ make our program very easy to understand and save the programmers numerous instr
 """
 # Defines a recursive function to count n times
 counter = 0
+
 def countdown(n):
     count = n
     global counter
