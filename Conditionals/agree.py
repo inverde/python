@@ -9,10 +9,14 @@ c_FALSE = False
 
 c_ON = 'on'
 c_OFF = 'off'
+
+c_STD = 'standard'
+c_NOR = 'normal'
 #-------------------------------------------------------------------------
 
 # Declare global variables for this module ----------------------------------
 STD_BALLOT = {}
+SUPPORTING_VOTE = {}
 #------------------------------------------------------------------------------
 
 def set_std_ballot(toggle= c_TRUE):
