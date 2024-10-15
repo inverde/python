@@ -8,6 +8,13 @@ Logical operators:
 3. not (Conditional statement is true if boolean expression is false)
 
 In Python logical operators operates not only over boolean expressions but also over values.
-When in doubt please only used operators with booleans
+When in doubt please only used operators with booleans.
+
+Example: All positive integers are True in Python and zero is False
 
 """
+count = 5
+
+if count:
+    print(count)
+
