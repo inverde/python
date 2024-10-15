@@ -3,7 +3,8 @@ c_YES = 'yes'
 c_NO = 'no'
 
 # Define vote
-def supporting_ballot(on_support = c_NO):
+def supporting_ballot():
+    vote = input("Do )
     if on_support == c_YES:
         return True
     else:
