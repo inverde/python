@@ -59,6 +59,7 @@ def std_supporting_ballot():
 set_std_ballot()
 
 if is_std_ballot():
+    print('Standard Ballot')
     SUPPORTING_VOTE[c_STD] = std_supporting_ballot()
     SUPPORTING_VOTE[c_NOR] = not SUPPORTING_VOTE[c_STD]
 else:
