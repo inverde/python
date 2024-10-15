@@ -17,7 +17,8 @@ income = 15000
 # Conditional statement is one or more connected boolean expressions
 low_income = income >= 0 and income < 50000
 
-poverty_line = income == 
+# Define poverty line level
+poverty_line = income == 15000
 
 print(type(low_income))
 
@@ -28,3 +29,4 @@ print(low_income)
 # Conditionally print the economic class
 if low_income:
     print('Low income class')
+    print('Just in the )
