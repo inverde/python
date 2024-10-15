@@ -16,8 +16,6 @@ def set_std_ballot(on= c_TRUE):
         global c_STD_BALLOT
         c_STD_BALLOT = False
 
-# Set standard ballot for this election
-set_std_ballot()
 
 # Get vote from citizen
 def supporting_ballot():
@@ -38,11 +36,15 @@ def std_supporting_ballot():
         return False
 
 
+# Set standard ballot for this election
+set_std_ballot()
+
+# Vote with normal ballot
 if supporting_ballot():
     print("Plus Vote")
 else:
     print("Minus Vote")
-
+# Vote with standar ballot
 if std_supporting_ballot():
     print("Plus Vote")
 else:
