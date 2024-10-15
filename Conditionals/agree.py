@@ -5,7 +5,7 @@ c_NO = 'no'
 c_TRUE = True
 c_FALSE = False
 
-c_STD_BALLOT = None
+c_STD_BALLOT
 
 
 def set_std_ballot(on= c_TRUE):
