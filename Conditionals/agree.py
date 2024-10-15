@@ -97,5 +97,5 @@ if __name__ == "__main__":
     #test()
     if nor_supporting_ballot():
         print("yes")
-    if nor_supporting_ballot():
+    if not nor_supporting_ballot():
         print("no")
