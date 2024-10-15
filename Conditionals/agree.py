@@ -17,6 +17,7 @@ c_NOR = 'normal'
 # Declare global variables for this module ----------------------------------
 globals = {}
 globals['STD_BALLOT'] = c_TRUE
+globals['NOR_BALLOT'] = c_FALSE
 globals['SUPPORTING_VOTE'] = c_STD
 #------------------------------------------------------------------------------
 
