@@ -74,6 +74,7 @@ def cast_vote():
         globals['STD_VOTE'] = std_supporting_ballot()
         globals['NOR_VOTE'] = c_FALSE
     else:
+        set_std_ballot(c_FALSE)
         globals['NOR_VOTE'] = nor_supporting_ballot()
         globals['STD_VOTE'] = c_FALSE
 
