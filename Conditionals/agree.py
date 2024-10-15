@@ -2,7 +2,7 @@
 c_YES = 'yes'
 c_NO = 'no'
 
-# Define vote
+# Get vote from citizen
 def supporting_ballot():
     global c_YES
     vote = input("Do you agree with this reform?: ")
