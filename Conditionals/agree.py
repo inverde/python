@@ -18,7 +18,6 @@ c_NOR = 'normal'
 globals = {}
 globals['STD_BALLOT'] = c_TRUE
 globals['NOR_BALLOT'] = c_FALSE
-globals['VOTING_SYSTEM'] = c_STD
 #------------------------------------------------------------------------------
 
 def set_std_ballot(toggle= c_TRUE):
