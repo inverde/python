@@ -95,5 +95,7 @@ def test():
 
 if __name__ == "__main__":
     #test()
-    supporting_ballot()
-    supporting_ballot()
+    if supporting_ballot():
+        print("yes")
+    if supporting_ballot():
+        print("no")
