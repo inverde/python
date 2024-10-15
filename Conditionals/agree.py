@@ -57,7 +57,6 @@ if is_std_ballot():
 else:
     globals['NOR_VOTE'] = supporting_ballot()
 
-
 # Voting pro and against a constitutional reform
 def cast_vote():
     if (is_std_ballot() and globals['STD_VOTE']) or (not is_std_ballot() and globals['NOR_VOTE']):
