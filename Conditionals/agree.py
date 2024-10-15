@@ -72,15 +72,3 @@ if (is_std_ballot() and SUPPORTING_VOTE[c_STD]) or (not is_std_ballot() and SUPP
 elif (is_std_ballot() and not SUPPORTING_VOTE[c_STD]) or (not is_std_ballot and not SUPPORTING_VOTE[c_NOR]):
     print("Minus Vote")
 
-
-""""Vote with normal ballot
-if supporting_ballot():
-    print("Plus Vote")
-else:
-    print("Minus Vote")
-# Vote with standard ballot
-if std_supporting_ballot():
-    print("Plus Vote")
-else:
-    print("Minus Vote")
-end of comments"""
