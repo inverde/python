@@ -48,7 +48,7 @@ def supporting_ballot():
     vote = input("Do you agree with this reform?: ")
     if vote == c_YES:
         return True
-    else:
+    elif vote == c_NO:
         return False
 
 def std_supporting_ballot():
