@@ -54,6 +54,7 @@ def std_supporting_ballot():
 # Set standard ballot for this election
 set_std_ballot()
 
+# Voting pro and against
 if (is_std_ballot() and std_supporting_ballot()) or (not is_std_ballot() and supporting_ballot()):
     print("Plus Vote")
 elif (is_std_ballot and not std_supporting_ballot()) or (not is_std_ballot and not supporting_ballot()):
