@@ -59,8 +59,9 @@ def std_supporting_ballot():
 set_std_ballot()
 
 if is_std_ballot():
-    global SUPPORTING_VOTE
     SUPPORTING_VOTE(c_STD) = std_supporting_ballot()
+else:
+    SUPPORTING_VODE(c_NOR) = supporting_ballot()
 
 # Voting pro and against with either of the ballots
 if (is_std_ballot() and std_supporting_ballot()) or (not is_std_ballot() and supporting_ballot()):
