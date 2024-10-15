@@ -21,19 +21,12 @@ globals['SUPPORTING_VOTE'] = c_STD
 #------------------------------------------------------------------------------
 
 def set_std_ballot(toggle= c_TRUE):
-    global STD_BALLOT
-    if toggle:
-        globals['STD_BALLOT'] = toggle
-    else:
-        globals[']
+    global globals
+    globals['STD_BALLOT'] = toggle
 
 def is_std_ballot():
-    global STD_BALLOT
-    global c_ON
-    if STD_BALLOT[c_ON] == True:
-        return True
-    else:
-        return False
+    global globals
+    return globals['STD_BALLOT']
 
 # Get vote from citizen
 def supporting_ballot():
