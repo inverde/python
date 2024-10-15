@@ -21,9 +21,8 @@ def sum(n):
     global counter
     count = n
     if not count:
-        return counter
+        return 0
     else:
-        counter = counter + n
-        return sum(n-1)
+        return n + sum(n-1)
 
 print(sum(5))
