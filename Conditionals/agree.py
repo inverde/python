@@ -52,6 +52,7 @@ def std_supporting_ballot():
     if (vote.strip().lower().startswith == 'y') or (vote.strip().lower() == c_YES):
         return True
     else:
+        print('Return False')
         return False
 
 
