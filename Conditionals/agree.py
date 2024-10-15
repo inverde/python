@@ -45,7 +45,6 @@ def is_std_ballot():
 # Get vote from citizen with
 def nor_supporting_ballot():
     global c_YES
-    global c_NO
     vote = input("Do you agree with this reform?: ")
 
     if vote.strip() == c_YES:
