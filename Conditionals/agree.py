@@ -63,7 +63,7 @@ def std_supporting_ballot():
 
 # Set standard ballot for this election
 set_std_ballot()
-
+set_
 
 
 # Voting pro or against a constitutional reform
