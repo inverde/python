@@ -24,10 +24,10 @@ def set_std_ballot(toggle= c_TRUE):
         STD_BALLOT[c_OFF] = toggle
         STD_BALLOT[c_ON] =  not toggle
 
-def is_std_ballot()
+def is_std_ballot():
     global STD_BALLOT
-    global c_TRUE
-    if STD_BALLOT[c_ON] == c_TRUE:
+    global c_ON
+    if STD_BALLOT[c_ON] == True:
         return True
     else:
         return False
