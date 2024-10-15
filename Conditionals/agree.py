@@ -23,11 +23,9 @@ globals['SUPPORTING_VOTE'] = c_STD
 def set_std_ballot(toggle= c_TRUE):
     global STD_BALLOT
     if toggle:
-        STD_BALLOT[c_ON] = toggle
-        STD_BALLOT[c_OFF] = not toggle
+        globals['STD_BALLOT'] = toggle
     else:
-        STD_BALLOT[c_OFF] = toggle
-        STD_BALLOT[c_ON] =  not toggle
+        globals
 
 def is_std_ballot():
     global STD_BALLOT
