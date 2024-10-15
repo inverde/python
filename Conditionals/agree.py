@@ -12,11 +12,12 @@ def set_std_ballot(on= c_TRUE):
     if on:
         global c_STD_BALLOT
         c_STD_BALLOT = True
-        return c_STD_BALLOT
     else:
-        bl
+        global c_STD_BALLOT
+        c_STD_BALLOT = False
 
-
+# Set standard ballot for this election
+set_std_ballot()
 
 # Get vote from citizen
 def supporting_ballot():
