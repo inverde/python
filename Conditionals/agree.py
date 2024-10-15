@@ -58,8 +58,9 @@ else:
     globals['NOR_VOTE'] = supporting_ballot()
 
 
-# Voting pro and against with either of the ballots
-if (is_std_ballot() and globals['STD_VOTE']) or (not is_std_ballot() and globals['NOR_VOTE']):
-    print("Plus Vote")
-elif (is_std_ballot() and not globals['STD_VOTE']) or (not is_std_ballot and not globals['NOR_VOTE']):
-    print("Minus Vote")
+# Voting pro and against a constitutional reform
+def cast_vote():
+    if (is_std_ballot() and globals['STD_VOTE']) or (not is_std_ballot() and globals['NOR_VOTE']):
+        print("Plus Vote")
+    elif (is_std_ballot() and not globals['STD_VOTE']) or (not is_std_ballot and not globals['NOR_VOTE']):
+        print("Minus Vote")
