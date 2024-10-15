@@ -72,8 +72,10 @@ set_testing()
 def cast_vote():
     if is_std_ballot():
         globals['STD_VOTE'] = std_supporting_ballot()
+        globals['NOR_VOTE'] = c_FALSE
     else:
         globals['NOR_VOTE'] = nor_supporting_ballot()
+        globals['STD_VOTE'] = c_FALSE
 
     if (is_std_ballot() and globals['STD_VOTE']) or (not is_std_ballot() and globals['NOR_VOTE']):
         print("Plus Vote")
@@ -95,4 +97,4 @@ def test():
 
 if __name__ == "__main__":
     test()
-    
+
