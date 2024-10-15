@@ -77,7 +77,7 @@ def cast_vote():
 
     if (is_std_ballot() and globals['STD_VOTE']) or (not is_std_ballot() and globals['NOR_VOTE']):
         print("Plus Vote")
-    elif (is_std_ballot() and not globals['STD_VOTE']) or (not is_std_ballot and not globals['NOR_VOTE']):
+    if (is_std_ballot() and not globals['STD_VOTE']) or (not is_std_ballot and not globals['NOR_VOTE']):
         print("Minus Vote")
 
 def test():
@@ -94,13 +94,5 @@ def test():
         cast_vote()
 
 if __name__ == "__main__":
-    #test()
-    if nor_supporting_ballot():
-        print("yes")
-    else:
-        print("no")
-
-    if not nor_supporting_ballot():
-        print("no")
-    else:
-        print("yes")
+    test()
+    
