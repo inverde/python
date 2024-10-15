@@ -2,10 +2,10 @@
 """ Python comparisons operators
 
 >  Greater Than
->= Greater or Equal Than
+>= Greater or Equal Than (=> does not work)
 <  Less Than
-<=
-==
+<= Less or Equqal Than (=< does not work)
+== Equal Than
 !=
 
 """
