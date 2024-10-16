@@ -1,4 +1,4 @@
-import ..\Conditionals\conditionals as condMod
+import ../Conditionals/conditionals as condMod
 # Sometimes we need to send a message several times
 """Lets write a litle program for the cat
 """
