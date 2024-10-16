@@ -2,6 +2,8 @@
 """ It is the simplest form of the simple statement
 It has the same caractheristic of a funcion: a header and a body """
 
+x = 10
+
 # Sampole conditional execution
 if x > 0:
     print('x is positive')
