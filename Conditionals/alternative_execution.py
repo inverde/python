@@ -6,9 +6,9 @@ def main():
     else:
         print(f"{n} is odd")
 
-    # Lets execute modulus function to print if it is even or odd
     # This is a phytonic call
-    print('Number classification:', alternative_execution(n, n % 2 == 0, lambda x: f"{n} is even", lambda x: f"{n} is odd"))
+    print('Number classification:',
+          alternative_execution(n, n % 2 == 0, lambda x: f"{n} is even", lambda x: f"{n} is odd"))
 
 
 def get_number():
