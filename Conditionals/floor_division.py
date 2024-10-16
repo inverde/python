@@ -12,7 +12,7 @@ def minutes_to_days(minutes):
     if hours > 24:
         days = hours // 24
         hours = hours % 24
-        minutes = minutes % 60
+    minutes = minutes % 60
     return days, hours, minutes
 
 days, hours, minutes = minutes_to_days(minutes)
