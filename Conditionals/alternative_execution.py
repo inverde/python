@@ -37,7 +37,7 @@ def alternative_execution(n, test, main, alternate):
         #alternate branch executes alternate parameter function
         return alternate(n)
 
-condMod.set_testing(condMod.c_ON)
+condMod.set_testing(condMod.c_OFF)
 
 if __name__ == "__main__":
     if condMod.is_testing():
