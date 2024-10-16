@@ -8,9 +8,12 @@ minutes = 1660
 
 hours = minutes // 60
 
+
 if hours > 24:
-    days = hours //4
+    days = hours //24
+
+hours = hours % 24
 
 remainder = minutes % 60
 
-print(f"There are {hours} hours and {remainder} minutes in 1660 minutes")
+print(f"There are {days} days, {hours} hours and {remainder} minutes in 1660 minutes")
