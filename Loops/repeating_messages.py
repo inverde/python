@@ -24,6 +24,6 @@ def repeat(msg, times):
     n = times
     while n: # P
         print(msg)
-        n-= 1
+        n -=1  #Equivalent to n = n-1
 
 main()
