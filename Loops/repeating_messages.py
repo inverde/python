@@ -1,4 +1,4 @@
-import ../Conditionals/conditionals as condMod
+import /workspaces/8430012/CS50 Python/python/python/Conditionals/conditionals as condMod
 # Sometimes we need to send a message several times
 """Lets write a litle program for the cat
 """
