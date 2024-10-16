@@ -23,7 +23,7 @@ def repeat(msg, times):
     # Test with1
     # while loop
     n = times
-    while n:
+    while n: # P
         print(msg)
         n-= 1
 
