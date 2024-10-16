@@ -1,7 +1,20 @@
+import conditionals as condMod
 # Some times we have more than two alternative branches to execute.
 """ Chained conditionals are more than two mutually exclusive execution branches
 Let's assume we need to assign letter grades to our students"""
 
+def main():
+
+    puntuation = get_puntuation()
+
+    print(gpa(grade(puntuation)))
+
+def puntuation()
+    while True:
+        x = float(input("Por favor ingrese la puntuacion para esta materia:?))
+        if x > 0:
+            break
+    return x
 
 def grade(puntuation):
     if puntuantion >= 90:
@@ -33,7 +46,7 @@ def gpa(grade):
         case _:
             return f"{grade} is NOT AN IDENTIFIABLE GRADE"
 
-
+cond.set_testing(cond)
 
 
 
