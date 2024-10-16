@@ -9,5 +9,5 @@ def alternative_execution(n, test, main, alternate):
 
 
 # Lets execute modulus function to print if it is even or odd
-alternative_execution(5, 5 % 2 == 0, lambda x: print(f"{x} is even"), print(f"{x} is odd"))
+alternative_execution(5, 5 % 2 == 0, lambda x: f"{x} is even", lambda x: f"{x} is odd")
 
