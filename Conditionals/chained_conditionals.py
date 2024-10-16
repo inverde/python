@@ -12,7 +12,7 @@ def grade(puntuation):
         return D
     elif puntuation >= 0:
         return F
-    else
+    else:
         raise VALUE_ERROR
 
 
