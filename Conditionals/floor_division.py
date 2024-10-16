@@ -10,7 +10,7 @@ hours = minutes // 60
 
 
 if hours > 24:
-    days = hours //24
+    days = hours // 24
 
 hours = hours % 24
 
