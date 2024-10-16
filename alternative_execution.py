@@ -12,5 +12,5 @@ def alternative_execution(n, test, main, alternate):
 
 # Lets execute modulus function to print if it is even or odd
 # This is a phytonic call
-print(alternative_execution(5, 5 % 2 == 0, lambda x: f"{x} is even", lambda x: f"{x} is odd"))
+print('Number classification:', alternative_execution(5, 5 % 2 == 0, lambda x: f"{x} is even", lambda x: f"{x} is odd"))
 
