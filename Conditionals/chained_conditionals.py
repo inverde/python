@@ -1,6 +1,7 @@
 # Some times we have more than two alternative branches to execute.
 """ Chained conditionals are more than two mutually exclusive execution branches
 Let's assume we need to assign letter grades to our students"""
+
 def grade(puntuation):
     if puntuantion >= 90:
         return A
