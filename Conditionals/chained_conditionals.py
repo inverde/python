@@ -46,7 +46,10 @@ def gpa(grade):
         case _:
             return f"{grade} is NOT AN IDENTIFIABLE GRADE"
 
-condMod.set_testing(condMod.c_OFF)
+condMod.set_testing(condMod.c_ON)
+
+if condMod.is_testing():
+    main()
 
 
 
