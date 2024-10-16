@@ -11,22 +11,22 @@ def main():
 
 def get_puntuation():
     while True:
-        x = float(input("Por favor ingrese la puntuacion para esta materia:?"))
+        x = float(input("Por favor ingrese la puntuacion para esta materia: ?"))
         if x > 0:
             break
     return x
 
 def grade(puntuation):
-    if puntuantion >= 90:
-        return A
+    if puntuation >= 90:
+        return "A"
     elif puntuation >= 80:
-        return B
+        return "B"
     elif puntuation >= 70:
-        return C
+        return "C"
     elif puntuation >= 60:
-        return D
+        return "D"
     elif puntuation >= 0:
-        return F
+        return "F"
     else:
         raise VALUE_ERROR
 
