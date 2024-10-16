@@ -6,6 +6,11 @@ def main():
     else
         print(f"{n} is odd")
 
+    # Lets execute modulus function to print if it is even or odd
+    # This is a phytonic call
+    print('Number classification:', alternative_execution(5, 5 % 2 == 0, lambda x: f"{x} is even", lambda x: f"{x} is odd"))
+
+
 def get_number():
     while True:
         x = int(input("Por favor digite un numero entero: ?"))
@@ -30,7 +35,4 @@ def alternative_execution(n, test, main, alternate):
         return alternate(n)
 
 
-# Lets execute modulus function to print if it is even or odd
-# This is a phytonic call
-print('Number classification:', alternative_execution(5, 5 % 2 == 0, lambda x: f"{x} is even", lambda x: f"{x} is odd"))
 
