@@ -2,6 +2,8 @@
 import sys
 import os
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__name__), '../Conditionals')))
+
 # Add the parent directory to the system path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__name__), '../Conditionals')))
 # Import module for conditional executions
@@ -12,13 +14,13 @@ import conditionals as condMod
 """
 condMod.set_testing(condMod.c_OFF)
 
-def main():
-    repeat("meaow", 3)
-
 if condMod.is_testing():
     print("meaow")
     print("meaow")
     print("meaow")
+
+def main():
+    repeat("meaow", 3)
 
 # Define a function to print any message n times instead of three
 """Our function repeat msg need to use the structure of a loop
