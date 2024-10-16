@@ -13,3 +13,6 @@ def conditional_execution(value, test, func):
     if test:
         func(value)
 
+# Callig function with a lambda
+
+conditional_execution(10, 10 < 100, lambda: x = x*x)
