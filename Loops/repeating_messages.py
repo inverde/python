@@ -1,5 +1,6 @@
 import sys
 import os
+
 # Add the parent directory to the system path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__name__), '../Conditionals')))
 # Import module for conditional executions
@@ -23,9 +24,9 @@ if condMod.is_testing():
 """
 def repeat(msg, times):
     # while loop
-    n = times
-    while n: # P
+    countdown = times
+    while countdown: # Pythonic statement
         print(msg)
-        n -=1  #Equivalent to n = n-1
+        countdown -=1  #Equivalent to n = n-1 decrementer
 
 main()
