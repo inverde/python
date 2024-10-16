@@ -34,5 +34,6 @@ def alternative_execution(n, test, main, alternate):
         #alternate branch executes alternate parameter function
         return alternate(n)
 
+main()
 
 
