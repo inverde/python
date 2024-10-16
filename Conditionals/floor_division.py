@@ -6,6 +6,7 @@ This calculation is usuful to convert to system using just whole units like days
 
 minutes = 1660
 
+# Conversion function using the modulus function: return the fractional part of the floor function
 def minutes_to_days(minutes):
     hours = minutes // 60
     if hours > 24:
