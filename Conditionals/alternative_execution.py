@@ -7,7 +7,19 @@ def main():
         print(f"{n} is odd")
 
 def get_number():
-    n = int(input("Por favor digite un numero entero: ?")
+    while True:
+        x = int(input("Por favor digite un numero entero: ?"))
+        if x > 0:
+            break
+    return x
+
+def is_even(x):
+    if x % 2 == 0:
+        return True
+    else:
+        return False
+
+
 # Define a function to classify number between even and odd -- Only two altenative.
 def alternative_execution(n, test, main, alternate):
     if test:
