@@ -30,7 +30,7 @@ def gpa(grade):
             return f"{grade} is GRADUATION CONGRATULATIONS"
         case "F":
             return f"{grade} is HOPE YOU ACHIEVE GOALS SOON"
-        case else:
+        else:
             return f"{grade} is NOT AN IDENTIFIABLE GRADE"
 
 
