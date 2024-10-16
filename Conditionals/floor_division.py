@@ -25,4 +25,3 @@ print(f"There are {days} days, {hours} hours and {minutes} minutes in 1660 minut
 days, hours, minutes = conditional_execution(1660, True, minutes_to_days)
 
 print('Days, hours, minutes:', days, hours, minutes)
-
