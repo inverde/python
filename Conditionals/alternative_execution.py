@@ -1,4 +1,4 @@
-import conditionals as cond
+import conditionals as condMod
 # Alternative execution happens when conditional statements brake into two branches
 def main():
     n = get_number()
@@ -37,10 +37,10 @@ def alternative_execution(n, test, main, alternate):
         #alternate branch executes alternate parameter function
         return alternate(n)
 
-cond.set_testing(cond.c_ON)
+condMod.set_testing(condMod.c_ON)
 
 if __name__ == "__main__":
-    if cond.is_testing():
+    if condMod.is_testing():
         main()
 
 
