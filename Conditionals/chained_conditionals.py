@@ -6,7 +6,7 @@ Let's assume we need to assign letter grades to our students"""
 def main():
 
     puntuation = get_puntuation()
-
+    # Send a message to the student about his/her honors
     print(gpa(grade(puntuation)))
 
 def get_puntuation():
@@ -46,7 +46,7 @@ def gpa(grade):
         case _:
             return f"Grade {grade} is NOT AN IDENTIFIABLE GRADE"
 
-condMod.set_testing(condMod.c_ON)
+condMod.set_testing(condMod.c_OFF)
 
 if condMod.is_testing():
     main()
