@@ -1,6 +1,8 @@
 # Add the parent directory to the system path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-import ../Conditionals/conditionals as condMod
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../Conditionals')))
+import conditionals as condMod
 # Sometimes we need to send a message several times
 """Lets write a litle program for the cat
 """
