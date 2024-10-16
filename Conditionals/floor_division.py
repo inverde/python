@@ -6,13 +6,15 @@ This calculation is usuful to convert to system using just whole units like days
 
 minutes = 1660
 
-hours = minutes // 60
 
-if hours > 24:
-    days = hours // 24
+def minutes_to_days(minutes):
+    hours = minutes // 60
+    if hours > 24:
+        days = hours // 24
+        hours = hours % 24
+        minutes = minutes % 60
+    return days, hours, minutes
 
-hours = hours % 24
-
-minutes = minutes % 60
+days, hours, minutes = minutes_to_days(minutes)
 
 print(f"There are {days} days, {hours} hours and {minutes} minutes in 1660 minutes")
