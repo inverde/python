@@ -14,5 +14,7 @@ def conditional_execution(value, test, func):
         return func(value)
 
 # Callig function with a lambda
-"""To define a lambda function we need to write lambda plues a lis 
+"""To define a lambda function we need to write lambda plus a list of arguments optionally in parentheses
+followed by a semicolon and a mathematical expression or computer expression with values and operators. """
+
 print('Conditional Execution:', conditional_execution(10, 10 < 100, lambda x: x*x)) # Phytonic function call
