@@ -20,7 +20,6 @@ if condMod.is_testing():
 """Our function repeat msg need to use the structure of a loop
 """
 def repeat(msg, times):
-    # Test with1
     # while loop
     n = times
     while n: # P
