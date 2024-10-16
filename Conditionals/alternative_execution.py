@@ -16,6 +16,8 @@ def get_number():
         x = int(input("Por favor digite un numero entero:? "))
         if x > 0:
             break
+        else:
+            continue
     return x
 
 def is_even(x):
