@@ -11,8 +11,8 @@ if x > 0:
 # Abstraction passing a value, boolean expression and function
 def conditional_execution(value, test, func):
     if test:
-        func(value)
+        return func(value)
 
 # Callig function with a lambda
 
-conditional_execution(10, 10 < 100, lambda: x = x*x)
+print('Conditional Execution:', conditional_execution(10, 10 < 100, lambda x: x*x))
