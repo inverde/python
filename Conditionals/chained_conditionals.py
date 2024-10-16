@@ -9,9 +9,9 @@ def main():
 
     print(gpa(grade(puntuation)))
 
-def puntuation()
+def get_puntuation():
     while True:
-        x = float(input("Por favor ingrese la puntuacion para esta materia:?))
+        x = float(input("Por favor ingrese la puntuacion para esta materia:?"))
         if x > 0:
             break
     return x
