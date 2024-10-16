@@ -11,7 +11,7 @@ def main():
 
 def get_puntuation():
     while True:
-        x = float(input("Por favor ingrese la puntuacion para esta materia: ?"))
+        x = float(input("Por favor ingrese la puntuacion para esta materia:? "))
         if x > 0:
             break
     return x
@@ -34,17 +34,17 @@ def gpa(grade):
 
     match grade:
         case "A":
-            return f"{grade} is SUMMA CUM LAUDE"
+            return f"Grade {grade} is SUMMA CUM LAUDE"
         case "B":
-            return f"{grade} is MAGNA CUM LAUDE"
+            return f"Grade {grade} is MAGNA CUM LAUDE"
         case "C":
-            return f"{grade} is CUM LAUDE"
+            return f"Grade {grade} is CUM LAUDE"
         case "D":
-            return f"{grade} is GRADUATION CONGRATULATIONS"
+            return f"Grade {grade} is GRADUATION CONGRATULATIONS"
         case "F":
-            return f"{grade} is HOPE YOU ACHIEVE GOALS SOON"
+            return f"Grade {grade} is HOPE YOU ACHIEVE GOALS SOON"
         case _:
-            return f"{grade} is NOT AN IDENTIFIABLE GRADE"
+            return f"Grade {grade} is NOT AN IDENTIFIABLE GRADE"
 
 condMod.set_testing(condMod.c_ON)
 
