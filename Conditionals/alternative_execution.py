@@ -3,7 +3,7 @@ def main():
     n = get_number()
     if is_even(n):
         print(f"{n} is even")
-    else
+    else:
         print(f"{n} is odd")
 
     # Lets execute modulus function to print if it is even or odd
