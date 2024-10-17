@@ -41,6 +41,6 @@ if condMod.is_testing():
     for i in range(3):
         print("meow")
 
-if __name == "__main__":
+if __name__ == "__main__":
     main()
 
