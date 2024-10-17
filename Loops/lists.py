@@ -7,7 +7,12 @@ import conditionals as condMod
 
 condMod.set_testing(condMod.c_OFF)
 
-
+# Looping lists
+students = [
+    'Luis Rodolfo',
+    'Luis Miguel',
+    'Manuel Alejandro'
+]
 
 def main():
     print_list(students)
@@ -16,12 +21,6 @@ def print_list(listname):
     for i in range(len(listname)):
         print(i, listname[i], sep=": ")
 
-# Looping lists
-students = [
-    'Luis Rodolfo',
-    'Luis Miguel',
-    'Manuel Alejandro'
-]
 
 if condMod.is_testing():
     # Use For Loops to loop throught lists
