@@ -2,7 +2,8 @@
 import sys, os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__name__), '../Conditionals')))
 import conditionals as condMod
-condMod.set_testing(condMod.c_ON)
+
+condMod.set_testing(condMod.c_OFF)
 
 # Another type of loops in Python are For Loops
 """ For loops loops iterate all the values of iterable sequence of values
