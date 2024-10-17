@@ -9,6 +9,8 @@ def main():
     n = get_number()
     repeat(n, "meow")
 
+main()
+
 def get_number():
     while True:
         x = int(input("Por digite el numero de iteraciones? "))
@@ -40,4 +42,3 @@ if condMod.is_testing():
     for i in range(3):
         print("meow")
 
-main()
