@@ -5,10 +5,11 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__name__), '../Cond
 # Import conditional module to this file
 import conditionals as condMod
 
-condMod.set_testing(condMod.c_ON)
+condMod.set_testing(condMod.c_OFF)
 
+def main():
+    print_list(list)
 # Looping lists
-
 students = [
     'Luis Rodolfo',
     'Luis Miguel',
