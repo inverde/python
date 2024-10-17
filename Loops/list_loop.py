@@ -16,6 +16,6 @@ if condMod.is_testing():
 
 # We need to loop through a iterable certain number of times
 # Lets use the Python iterable function range
-for i in range(3):
-    print("meow")
-
+if condMod.is_testing():
+    for i in range(3):
+        print("meow")
