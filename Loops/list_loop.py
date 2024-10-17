@@ -1,8 +1,8 @@
 # import sys and os module to add other directory than current to the path
 import sys, os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__name__), '../Conditionals')))
-import Conditionals as condMod
-
+import conditionals as condMod
+condMod.set_testing(condMod.c_ON)
 
 # Another type of loops in Python are For Loops
 """ For loops loops iterate all the values of iterable sequence of values
@@ -10,8 +10,9 @@ import Conditionals as condMod
     There are several structures like: lists, tuples, dictionaries and collections
 """
 # Lets loop through all the items of a list
-for i in [0,1,2]:
-    print("meow")
+if condMod.is_testing():
+    for i in [0,1,2]:
+        print("meow")
 
 # We need to loop through a iterable certain number of times
 # Lets use the Python iterable function range
