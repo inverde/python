@@ -11,7 +11,7 @@ for student in students:
 
 print()
 for i in range(len(students)):
-    print(i, students[i], sep=": ", end=", ")
+    print(i, students[i], sep=": ")
 
 # Printing all the items individually
 print(end="\n")
