@@ -9,6 +9,9 @@ students = [
 for student in students:
     print(student)
 
+for i in range(len(students)):
+    print(students[i], end="", sep=",")
+
 # Printing all the items individually
 print()
 print(students[0])
