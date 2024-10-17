@@ -9,7 +9,6 @@ def main():
     n = get_number()
     repeat(n, "meow")
 
-main()
 
 def get_number():
     while True:
@@ -41,4 +40,7 @@ if condMod.is_testing():
 if condMod.is_testing():
     for i in range(3):
         print("meow")
+
+if __name == "__main__":
+    main()
 
