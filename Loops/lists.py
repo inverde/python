@@ -8,7 +8,12 @@ import conditionals as condMod
 condMod.set_testing(condMod.c_OFF)
 
 def main():
-    print_list(list)
+    print_list(students)
+
+def print_list(listname):
+    for i in range(len(listname)):
+        print(i, listname[i], sep=": ")
+
 # Looping lists
 students = [
     'Luis Rodolfo',
@@ -30,3 +35,7 @@ if condMod.is_testing():
     print(students[0])
     print(students[1])
     print(students[2])
+
+if __name__ == "__main__":
+    main()
+
