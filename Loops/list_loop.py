@@ -1,6 +1,6 @@
 # import sys and os module to add other directory than current to the path
 import sys, os
-os.path.join(os.path.directory(__name__), '../Conditionals')
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__name__), '../Conditionals')))
 import Conditionals as condMod
 
 
