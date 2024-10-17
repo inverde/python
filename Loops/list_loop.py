@@ -7,7 +7,7 @@ condMod.set_testing(condMod.c_OFF)
 
 def main():
     n = get_number()
-    repeat(n, msg)
+    repeat(n, "meow")
 
 def get_number():
     while True:
@@ -18,7 +18,11 @@ def get_number():
             break
     return x
 
-def repeat()
+
+def repeat(x, msg):
+    for i in range(x):
+        print(msg)
+
 
 # Another type of loops in Python are For Loops
 """ For loops loops iterate all the values of iterable sequence of values
@@ -35,3 +39,5 @@ if condMod.is_testing():
 if condMod.is_testing():
     for i in range(3):
         print("meow")
+
+main()
