@@ -10,7 +10,7 @@ for student in students:
     print(student)
 
 for i in range(len(students)):
-    print(students[i], end="", sep=",")
+    print(students[i], sep=",")
 
 # Printing all the items individually
 print()
