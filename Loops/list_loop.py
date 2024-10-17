@@ -5,6 +5,21 @@ import conditionals as condMod
 
 condMod.set_testing(condMod.c_OFF)
 
+def main():
+    n = get_number()
+    repeat(n, msg)
+
+def get_number():
+    while True:
+        x = int(input("Por digite el numero de iteraciones? "))
+        if x < 0:
+            continue
+        else:
+            break
+    return x
+
+def repeat()
+
 # Another type of loops in Python are For Loops
 """ For loops loops iterate all the values of iterable sequence of values
     In Python a iterable is a class of object able to makes iterations
