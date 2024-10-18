@@ -26,8 +26,9 @@ students =  [
 }]
 
 for classmate in phoneBook:
+    formatted_number = f"{phoneBook[classmate]}
     print(classmate, phoneBook[classmate])
     print(classmate, "{000-000-0000}".format(phoneBook[classmate]))
-    
+
 
 
