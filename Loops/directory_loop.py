@@ -1,7 +1,8 @@
 phoneBook = {
-            'Manuel O. De Los Santos': 809905551,
-            'Luis G. Mella': 8093446677,
-            '
+            'Manuel Oscar De Los Santos': 809905551,
+            'Jose Luis Valenzuela': 8098504623,
+            'Orlando Herrera': 8099966195,
+            'Alexis Ortega':  8297159500,
 }
 students =  [
             {
@@ -24,5 +25,3 @@ students =  [
             }
 }]
 
-for key in range(len(students)):
-    print(students[key]['electoral_id'], students[key]['personal_data']['telephone'], sep=", ")
