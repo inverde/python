@@ -36,3 +36,7 @@ for student in students:
 print()
 for key, value in phoneBook.items():
     print(key, value)
+print()
+for student in students:
+    for key, value in student.items():
+        print(key, value)
