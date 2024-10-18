@@ -34,5 +34,5 @@ for student in students:
     print(f"matrícula {student['academic_record']['studentID']} ", end="")
     print(f"es de {student['academic_record']['major']}")
 print()
-for key in phoneBook.keys:
+for key in phoneBook:
     print(key)
