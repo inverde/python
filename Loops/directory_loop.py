@@ -19,4 +19,4 @@ students =  [{
 }]
 
 for key in range(len(students)):
-    print(students[key]['electoral_id'], students[key]['personal_data']['telephone'], sep=",\n")
+    print(students[key]['electoral_id'], students[key]['personal_data']['telephone'], sep=", ")
