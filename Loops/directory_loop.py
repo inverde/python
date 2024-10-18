@@ -18,5 +18,5 @@ students =[{
             }
 }]
 
-for key in students:
-    print(key, students[key])
+for student in students:
+    print(student, students[student])
