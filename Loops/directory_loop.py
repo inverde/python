@@ -17,5 +17,5 @@ students = {electoral_id: '00100973486',
             }
 }
 
-for student in students:
-    print({student.key})
+for key, value in students.keys, students.values:
+    print(key, value)
