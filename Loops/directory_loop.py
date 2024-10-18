@@ -1,5 +1,5 @@
-students = {electoralID: '00100973486',
-            personalData: {
+students = {electoral_id: '00100973486',
+            personal_data: {
                 firstName: 'Manuel',
                 middleName: 'Oscar',
                 lastName: 'De Los Santos'
@@ -8,7 +8,7 @@ students = {electoralID: '00100973486',
                 dayOfBirth: '11-06-1961',
                 civilStatus: 'Single'
             },
-            academicRecord: {
+            academic_record: {
                 major: 'Computer Sciences',
                 studentID: 180584,
                 GPA: 3.60,
