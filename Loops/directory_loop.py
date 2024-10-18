@@ -25,3 +25,6 @@ students =  [
             }
 }]
 
+for classmate in phoneBook:
+    print(classmate, phoneBook[classmate])
+
