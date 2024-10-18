@@ -39,6 +39,6 @@ for key, value in phoneBook.items():
 print()
 for student in students:
     for key, value in student.items():
-    print(key,value,sep=": ")
-    ~!@`12$%%^&*())__+/*-QWWWE~||ZX||XCCVVBNM<<>>???ASSD:"|}{POIQ!@#~$%^&*())_}
+        print(key,value,sep=": ")
+
 
