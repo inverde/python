@@ -19,4 +19,4 @@ students =  {
 }
 
 for student in students:
-    print(students[student], sep=", ")
+    print(students[student], sep=", ", end=", ")
