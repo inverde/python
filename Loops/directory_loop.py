@@ -31,6 +31,3 @@ for classmate in phoneBook:
 
 for i in range(len(students)):
     
-
-
-
