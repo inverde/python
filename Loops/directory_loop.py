@@ -17,7 +17,7 @@ students =  [
                 'civilStatus': 'Single'
             },
             'academic_record': {
-                'major': 'Computer Sciences',
+                'major': 'Ciencias Computacionales',
                 'studentID': 180584,
                 'GPA': 3.60,
                 'coursesTaken': ['Python', 'C Language', 'Algorithms', 'Web Development'],
@@ -30,5 +30,6 @@ for classmate in phoneBook:
     print(f"El teléfono de {classmate} es {formatted_string}")
 
 for student in students:
+    f"Estudiante {student['personal_data']['lastName']}, matrícula {student['academic_record']['studentID']}
     print(student['academic_record']['studentID'], student['personal_data']['lastName'],
           student['academic_record']['major'])
