@@ -27,6 +27,7 @@ students =  [
 
 for classmate in phoneBook:
     print(classmate, phoneBook[classmate])
-    print(classmate, f"{phoneBook[classmate]: 000-000-0000}")
+    print(classmate, "{000-000-0000}".format(phoneBook[classmate]))
+    
 
 
