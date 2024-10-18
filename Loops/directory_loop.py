@@ -19,4 +19,4 @@ students =  {
 }
 
 for student in students:
-    print(students['electoral_id'], students['personal_data'], sep=",")
+    print(students['electoral_id'], students['personal_data'])
