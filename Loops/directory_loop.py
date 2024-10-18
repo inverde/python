@@ -1,10 +1,10 @@
-students = {telephone: 8099095551,
+students = {electoralID: '00100973486',
             personalData: {
                 firstName: 'Manuel',
                 middleName: 'Oscar',
                 lastName: 'De Los Santos'
                 Address: 'Calle Santa Teresa #10, Torre DKI, Apt 7A',
-                electoralID: 00100973486,
+                telephone: 8099095551,
                 dayOfBirth: '11-06-1961',
                 civilStatus: 'Single'
             },
