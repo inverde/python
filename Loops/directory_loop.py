@@ -1,5 +1,5 @@
 phoneBook = {
-            'Manuel Oscar De Los Santos': 809905551,
+            'Manuel Oscar De Los Santos': 8099095551,
             'Jose Luis Valenzuela': 8098504623,
             'Orlando Herrera': 8099966195,
             'Alexis Ortega':  8297159500,
@@ -28,7 +28,8 @@ students =  [
 for classmate in phoneBook:
     formatted_number = f"{phoneBook[classmate]:010d}"
     formatted_string = f"{formatted_number[:3]}-{formatted_number[3:6]}-{formatted_number[6:]}"
-    print(classmate, formatted_string)
+    print(classmate, f"{phoneBook[classmate][:3]}-{phoneBook[classmate][3:6]}-{phoneBook[classmate][6:]}")
+    
 
 
 
