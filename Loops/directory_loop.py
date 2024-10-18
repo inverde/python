@@ -16,3 +16,6 @@ students = {electoral_id: '00100973486',
                 academicLoad: ['Data Science', 'Pre-Algebra']
             }
 }
+
+for student in students:
+    print({student.key})
