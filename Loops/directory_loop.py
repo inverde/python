@@ -12,6 +12,7 @@ students = {electoralID: '00100973486',
                 major: 'Computer Sciences',
                 studentID: 180584,
                 GPA: 3.60,
-                academicsList: ['Python', 'C Language', 'Algorithms', 'Web Development']
+                coursesTaken: ['Python', 'C Language', 'Algorithms', 'Web Development'],
+                academicLoad: ['Data Science', 'Pre-Algebra']
             }
 }
