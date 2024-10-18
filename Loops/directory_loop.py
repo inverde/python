@@ -8,6 +8,8 @@ students = {telephone: 8099095551,
                 dayOfBirth: '11-06-1961',
                 civilStatus: 'Single'
             },
-            major: 'Economics'
-            studentID: 795584
+            major: 'Computer Sciences',
+            studentID: 795584,
+            GPA: 3.60,
+            subjectsL
 }
