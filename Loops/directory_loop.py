@@ -28,11 +28,11 @@ students =  [
 for classmate in phoneBook:
     formatted_string = f"{str(phoneBook[classmate])[:3]}-{str(phoneBook[classmate])[3:6]}-{str(phoneBook[classmate])[6:]}"
     print(f"El teléfono de {classmate} es {formatted_string}")
-
+print()
 for student in students:
     print(f"Estudiante {student['personal_data']['lastName']}, ", end="")
     print(f"matrícula {student['academic_record']['studentID']} ", end="")
     print(f"es de {student['academic_record']['major']}")
-
+print()
 for key, value in phoneBook.keys, phoneBook.values:
     print(key, value)
