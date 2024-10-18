@@ -28,8 +28,8 @@ students =  [
 for classmate in phoneBook:
     formatted_number = f"{phoneBook[classmate]:010d}"
     formatted_string = f"{formatted_number[:3]}-{formatted_number[3:6]}-{formatted_number[6:]}"
-    print(classmate, f"{phoneBook[classmate][:3]}-{phoneBook[classmate][3:6]}-{phoneBook[classmate][6:]}")
-    
+    print(classmate, f"{str(phoneBook[classmate])[:3]}-{str(phoneBook[classmate])[3:6]}-{str(phoneBook[classmate])[6:]}")
+
 
 
 
