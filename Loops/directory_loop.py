@@ -1,6 +1,6 @@
-students =[{
-            'electoral_id': '00100973486',
-            'personal_data': {
+students =  {
+             'electoral_id': '00100973486',
+             'personal_data': {
                 'firstName': 'Manuel',
                 'middleName': 'Oscar',
                 'lastName': 'De Los Santos',
@@ -16,7 +16,7 @@ students =[{
                 'coursesTaken': ['Python', 'C Language', 'Algorithms', 'Web Development'],
                 'academicLoad': ['Data Science', 'Pre-Algebra']
             }
-}]
+}
 
 for student in students:
     print(student)
