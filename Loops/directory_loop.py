@@ -1,3 +1,8 @@
+phoneBook = {
+            'Manuel O. De Los Santos': 809905551,
+            'Luis G. Mella': 8093446677,
+            '
+}
 students =  [
             {
              'electoral_id': '00100973486',
