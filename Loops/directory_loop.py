@@ -1,5 +1,4 @@
-students = [
-            {
+students =[{
             'electoral_id': '00100973486',
             'personal_data': {
                 'firstName': 'Manuel',
@@ -17,7 +16,7 @@ students = [
                 'coursesTaken': ['Python', 'C Language', 'Algorithms', 'Web Development'],
                 'academicLoad': ['Data Science', 'Pre-Algebra']
             }
-}
+}]
 
 for student in students:
     print(student, student)
