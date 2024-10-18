@@ -1,4 +1,5 @@
-students = {
+students = [
+            {
             'electoral_id': '00100973486',
             'personal_data': {
                 'firstName': 'Manuel',
