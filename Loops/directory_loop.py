@@ -29,7 +29,6 @@ for classmate in phoneBook:
     formatted_number = f"{phoneBook[classmate]:010d}"
     formatted_string = f"{formatted_number[:3]}-{formatted_number[3:6]}-{formatted_number[6:]}"
     print(classmate, formatted_string)
-    print(classmate, "{000-000-0000}".format(phoneBook[classmate]))
 
 
 
