@@ -30,6 +30,5 @@ for classmate in phoneBook:
     print(f"El teléfono de {classmate} es {formatted_string}")
 
 for student in students:
-    f"Estudiante {student['personal_data']['lastName']}, matrícula {student['academic_record']['studentID'] es de {student['academic_record']['major']}}
-    print(student['academic_record']['studentID'], student['personal_data']['lastName'],
-          student['academic_record']['major'])
+    print(f"Estudiante {student['personal_data']['lastName']}, matrícula {student['academic_record']['studentID']} es de {student['academic_record']['major']}")
+
