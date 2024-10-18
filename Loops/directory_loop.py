@@ -28,6 +28,7 @@ students =  [
 for classmate in phoneBook:
     formatted_string = f"{str(phoneBook[classmate])[:3]}-{str(phoneBook[classmate])[3:6]}-{str(phoneBook[classmate])[6:]}"
     print(classmate, formatted_string)
+    print(f"El telefeno de {classmate} es el número {formatted_string}")
 
 
 
