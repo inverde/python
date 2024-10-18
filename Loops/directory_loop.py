@@ -6,7 +6,11 @@ students = {telephone: 8099095551,
                 Address: 'Calle Santa Teresa #10, Torre DKI, Apt 7A',
                 electoralID: 00100973486,
                 dayOfBirth: '11-06-1961',
-                civilStatus: 'Single'
+                civilStatus: 'Single',
+                major: 'Computer Sciences',
+                studentID: 180584,
+                GPA: 3.60,
+                academicsList: ['Python', 'C Language', 'Algorithms', 'Web Development']
             },
             major: 'Computer Sciences',
             studentID: 795584,
