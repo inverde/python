@@ -18,5 +18,5 @@ students =  [{
             }
 }]
 
-for student in students:
-    print(students[key])
+for key in range(len(students)):
+    print(students[key]['electoral_id'], students[key])
