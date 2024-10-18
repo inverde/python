@@ -29,7 +29,8 @@ for classmate in phoneBook:
     formatted_string = f"{str(phoneBook[classmate])[:3]}-{str(phoneBook[classmate])[3:6]}-{str(phoneBook[classmate])[6:]}"
     print(f"El teléfono de {classmate} es {formatted_string}")
 
-
+for i in range(len(students)):
+    
 
 
 
