@@ -23,5 +23,5 @@ def user_number(msg): # msg asking user for input
             continue    # Pythonic statement
 
 if __name__ == "__main__":
-    
+    main()
 
