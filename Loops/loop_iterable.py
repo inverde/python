@@ -6,9 +6,9 @@ class shoppingCart:
         self.end = end
 
     def __iter__(self):
-        return iterator(self.start, self.end)
+        return shoppingCartIterator(self.start, self.end)
 
-class iterator:
+class shoppingCartIterator:
     def __init__(self, start, end):
         self.current = start
         self.end = end
