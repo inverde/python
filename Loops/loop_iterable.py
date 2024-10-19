@@ -4,6 +4,7 @@ class shoppingCart:
     def __init__(self, start, end):
         self.start = start
         self.end = end
+        self.count = end - start
 
     def __iter__(self):
         return shoppingCartIterator(self.start, self.end)
