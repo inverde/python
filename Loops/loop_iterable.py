@@ -20,6 +20,8 @@ class shoppingCart:
             self.end = self._count + self.start
         else:
             raise ValueError
+    def __str__(self):
+        return f"shoppingCart({self.start}, {self.end})"
 
 class shoppingCartIterator:
     def __init__(self, start, end):
@@ -45,3 +47,5 @@ print(myShoppingCart.count)
 print()
 for i in myShoppingCart:
     print(i)
+print()
+print(myShoppingCart)
