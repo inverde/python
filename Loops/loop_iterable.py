@@ -4,19 +4,19 @@ class shoppingCart:
     def __init__(self, start, end):
         self.start = start
         self.end = end
-        self.count = end - start
+        self._count = end - start
 
     def __iter__(self):
         return shoppingCartIterator(self.start, self.end)
 
     @property
     def count(self):
-        return self.count
+        return self._count
 
     @count.setter
     def count(self, new_count):
         if new_count >= 0:
-            self.count = new_count
+            self._count = new_count
         else:
             raise ValueError
 
@@ -26,7 +26,7 @@ class shoppingCartIterator:
         self.end = end
 
     def __next__(self):
-        if self.current <= self.count:
+        if self.current <= self._count:
             current = self.current
             self.current += 1
             return current
