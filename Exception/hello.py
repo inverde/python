@@ -4,5 +4,11 @@ print("Helo World!!")
 print()
 
 # Shows an example of runtime error
-n = int(input("Please enter number of times? "))
+
+try:
+
+    n = int(input("Please enter number of times? "))
+
+    Exception ValueError:
+        print("Value must be a integer!!!")
 
