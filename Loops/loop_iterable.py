@@ -12,4 +12,7 @@ class iterator:
     def __init__(self, start, end):
         self.current = start
         self.end = end
-class 
+
+    def __next__(self):
+        if self.current < self.end:
+            self.current 
