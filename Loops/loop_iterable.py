@@ -15,4 +15,11 @@ class iterator:
 
     def __next__(self):
         if self.current < self.end:
-            self.current 
+            current = self.current
+            self.current += 1
+            return current
+
+myShoppingCart = shoppingCart(1,5)
+
+for i in myShoppingCart:
+    print(i)
