@@ -1,3 +1,8 @@
+# Main program function
+def main():
+    n = get_number("Please enter a whole digit")
+    print(n)
+
 # Define a function to get user input
 def get_number(msg): # msg for exception error
     while True:
@@ -18,5 +23,5 @@ def user_number(msg): # msg asking user for input
             continue    # Pythonic statement
 
 if __name__ == "__main__":
-    print(user_number("Enter a whole digit:? "))
+    
 
