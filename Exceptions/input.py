@@ -1,5 +1,5 @@
 # Define a function to get user input
-def get_number(msg):
+def get_number(msg): # msg for exception error
     while True:
         try:
             n = int(input("Enter a integer as input:? "))
@@ -9,7 +9,7 @@ def get_number(msg):
         else:
             return n
 
-def user_number(msg):
+def user_number(msg): # msg asking user for input
      while True:
         try:
             return int(input(msg)) # Pythonic statement
@@ -17,5 +17,6 @@ def user_number(msg):
         except ValueError:
             continue    # Pythonic statement
 
-print(user_number("Enter a whole digit:? "))
+if __name__ == "__main__":
+    print(user_number("Enter a whole digit:? "))
 
