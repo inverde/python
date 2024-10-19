@@ -21,7 +21,7 @@ class shoppingCart:
         else:
             raise ValueError
     def __str__(self):
-        return f"shoppingCart({self.start}, {self.end})"
+        return f"shoppingCart({self.start},{self.end})"
 
 class shoppingCartIterator:
     def __init__(self, start, end):
