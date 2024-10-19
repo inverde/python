@@ -1,5 +1,7 @@
 # Print hello with syntax error
-print("Helo World!!")
+try:
+    print("Helo World!!)
+
 
 print()
 
