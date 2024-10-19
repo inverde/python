@@ -8,7 +8,8 @@ class shoppingCart:
     def __iter__(self):
         return shoppingCartIterator(self.start, self.end)
     @property
-    def count()
+    def count(self):
+        self.end = 
 
 class shoppingCartIterator:
     def __init__(self, start, end):
