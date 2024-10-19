@@ -5,3 +5,6 @@ try:
 except ValueError:
     print(f"Your input must be a integer")
 
+else:
+    print(f"The value of your input is {x}")
+
