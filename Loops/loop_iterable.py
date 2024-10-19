@@ -5,5 +5,11 @@ class shoppingCart:
         self.start = start
         self.end = end
 
-    def __iter__(self, start, end):
-        return iterator(self, start, end)
+    def __iter__(self):
+        return iterator(self.start, self.end)
+
+class iterator:
+    def __init__(self, start, end):
+        self.current = start
+        self.end = end
+class 
