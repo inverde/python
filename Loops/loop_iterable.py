@@ -40,7 +40,8 @@ for i in myShoppingCart:
     print(i)
 
 myShoppingCart.count = 6
-
+print()
+print(myShoppingCart.count)
 print()
 for i in myShoppingCart:
     print(i)
