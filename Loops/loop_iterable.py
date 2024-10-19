@@ -45,9 +45,9 @@ def shoppingCart_factory(n):
 
 condMod.set_testing(condMod.c_ON)
 
-if __name == "__main__":
+if __name__ == "__main__":
     if condMod.is_testing():
-        nameCart = shoppingCart_factory(1):
+        nameCart = shoppingCart_factory(7)
         for i in nameCart:
             print(i)
         print()
