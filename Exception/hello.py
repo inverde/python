@@ -9,6 +9,7 @@ try:
 
     n = int(input("Please enter number of times? "))
 
-    Exception
+    Exception:
+
         print("Value must be a integer!!!")
 
