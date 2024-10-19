@@ -38,3 +38,8 @@ myShoppingCart = shoppingCart(0,5)
 
 for i in myShoppingCart:
     print(i)
+
+myShoppingCart._count = 6
+
+print()
+f
