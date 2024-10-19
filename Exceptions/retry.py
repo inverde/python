@@ -7,4 +7,4 @@ while True:
         print("Value must be a integer")
     else:
         break
-    
+print(f"The input entered is {n}")
