@@ -1,3 +1,6 @@
+# Lets import system's modules to add current directory to path
+import sys, os
+os.path.abspath(os.path.join(os.path.dirname(__name__), '../Conditionals'))
 # Lets create a iterable to be able to loop through it
 # Any object that implements iter method is a iterable
 class shoppingCart:
