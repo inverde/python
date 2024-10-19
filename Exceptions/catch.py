@@ -3,5 +3,5 @@ try:
     n = int(input("Please enter a number:? "))
 
 except ValueError:
-    print(f"Your input is {n}")
+    print(f"Your input must be a integer")
 
