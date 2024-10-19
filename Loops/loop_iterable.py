@@ -42,4 +42,5 @@ for i in myShoppingCart:
 myShoppingCart._count = 6
 
 print()
-f
+for i in myShoppingCart:
+    print(i)
