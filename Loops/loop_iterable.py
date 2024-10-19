@@ -11,7 +11,9 @@ class shoppingCart:
 
     @property
     def count(self):
-        ret
+        return self.count
+
+    @count.setter
 
 class shoppingCartIterator:
     def __init__(self, start, end):
