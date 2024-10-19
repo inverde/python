@@ -7,6 +7,7 @@ class shoppingCart:
 
     def __iter__(self):
         return shoppingCartIterator(self.start, self.end)
+
     @property
     def count(self):
         ret
