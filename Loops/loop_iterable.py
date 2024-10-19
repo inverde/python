@@ -15,8 +15,10 @@ class shoppingCart:
 
     @count.setter
     def count(self, new_count):
-        if new_count > 0:
-            
+        if new_count >= 0:
+            self.count = new_count
+        else:
+            raise ValueError
 
 class shoppingCartIterator:
     def __init__(self, start, end):
