@@ -17,7 +17,7 @@ class shoppingCart:
     def count(self, new_count):
         if new_count >= 0:
             self._count = new_count
-            self.end = 
+            self.end = self._count + self.start
         else:
             raise ValueError
 
