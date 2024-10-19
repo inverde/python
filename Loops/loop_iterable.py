@@ -40,16 +40,19 @@ class shoppingCartIterator:
         else:
             raise StopIteration
 
-myShoppingCart = shoppingCart(0,5)
+def shoppingCart_factory(n, )
 
-for i in myShoppingCart:
-    print(i)
+condMod.set_testing(condMod.c_ON)
 
-myShoppingCart.count = 6
-print()
-print(myShoppingCart.count)
-print()
-for i in myShoppingCart:
-    print(i)
-print()
-print(myShoppingCart)
+if __name == "__main__":
+    if condMod.is_testing():
+        shoppingCart_factory(n, nameCart)
+        for i in nameCart:
+            print(i)
+        print()
+        nameCart.count = 10
+        for i in nameCart:
+            print(i)
+
+
+
