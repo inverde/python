@@ -12,10 +12,10 @@ def get_number(msg):
 def user_number(msg):
      while True:
         try:
-            return int(input("Enter a integer as input:? "))
+            return int(input("Enter a integer as input:? ")) # Pythonic statement
 
         except ValueError:
-            continue
+            continue    # Pythonic statement
 
 print(user_number("Enter a whole digit"))
 
