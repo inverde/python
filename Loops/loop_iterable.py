@@ -39,7 +39,7 @@ myShoppingCart = shoppingCart(0,5)
 for i in myShoppingCart:
     print(i)
 
-myShoppingCart._count = 6
+myShoppingCart.count = 6
 
 print()
 for i in myShoppingCart:
