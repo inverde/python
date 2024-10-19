@@ -14,6 +14,9 @@ class shoppingCart:
         return self.count
 
     @count.setter
+    def count(self, new_count):
+        if new_count > 0:
+            
 
 class shoppingCartIterator:
     def __init__(self, start, end):
