@@ -40,13 +40,14 @@ class shoppingCartIterator:
         else:
             raise StopIteration
 
-def shoppingCart_factory(n, )
+def shoppingCart_factory(n):
+    return shoppingCart(0, n)
 
 condMod.set_testing(condMod.c_ON)
 
 if __name == "__main__":
     if condMod.is_testing():
-        shoppingCart_factory(n, nameCart)
+        nameCart = shoppingCart_factory(1):
         for i in nameCart:
             print(i)
         print()
