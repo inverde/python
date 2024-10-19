@@ -17,6 +17,7 @@ class shoppingCart:
     def count(self, new_count):
         if new_count >= 0:
             self._count = new_count
+            self.end = 
         else:
             raise ValueError
 
@@ -26,7 +27,7 @@ class shoppingCartIterator:
         self.end = end
 
     def __next__(self):
-        if self.current <= self._count:
+        if self.current < self.end:
             current = self.current
             self.current += 1
             return current
