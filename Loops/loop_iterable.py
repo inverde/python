@@ -26,7 +26,7 @@ class shoppingCartIterator:
         self.end = end
 
     def __next__(self):
-        if self.current < self.end:
+        if self.current <= self.end:
             current = self.current
             self.current += 1
             return current
