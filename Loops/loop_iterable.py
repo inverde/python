@@ -43,7 +43,7 @@ class shoppingCartIterator:
 def shoppingCart_factory(n):
     return shoppingCart(0, n)
 
-condMod.set_testing(condMod.c_OFF)
+# condMod.set_testing(condMod.c_OFF)
 
 if __name__ == "__main__":
     if condMod.is_testing():
