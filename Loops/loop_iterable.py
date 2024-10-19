@@ -18,7 +18,8 @@ class iterator:
             current = self.current
             self.current += 1
             return current
-        else
+        else:
+            raise stopIteration
 
 myShoppingCart = shoppingCart(1,5)
 
