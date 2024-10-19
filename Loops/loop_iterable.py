@@ -19,9 +19,9 @@ class shoppingCartIterator:
             self.current += 1
             return current
         else:
-            raise stopIteration
+            raise StopIteration
 
-myShoppingCart = shoppingCart(1,5)
+myShoppingCart = shoppingCart(0,5)
 
 for i in myShoppingCart:
     print(i)
