@@ -8,7 +8,7 @@ for i in range(1, 10):
     try:
         idx = numbers.index(number)
         numbers.append(number)
-    else:
+    except ValueError:
         pass
 
 print(numbers)
