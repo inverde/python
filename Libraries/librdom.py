@@ -8,3 +8,4 @@ for i in range(1, 10):
     numbers.append(number)
 print(numbers)
 
+list.index()
