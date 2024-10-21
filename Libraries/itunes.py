@@ -2,4 +2,6 @@
 import sys
 # if requests library is not installed in your system, install it using pip
 import requests
+# there is a web site for itunes
+url = 'https://itunes.apple.com/search'
 
