@@ -9,3 +9,7 @@ url = 'https://itunes.apple.com/search'
 term = 'Beatles'
 media = 'music'
 params = {'term':term, 'media':music}
+
+response = requests.get(url, params=params)
+
+print(response.json())
