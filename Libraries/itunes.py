@@ -14,4 +14,4 @@ response = requests.get(url, params=params)
 
 results = response.json()['results']
 
-print(results[0].keys)
+keys = results[0].keys()
