@@ -6,4 +6,6 @@ import requests
 url = 'https://itunes.apple.com/search'
 
 # we need to pass some parameters to this url
-params = ['term':]
+term = 'Beatles'
+media = 'music'
+params = {'term':term, 'media':music}
