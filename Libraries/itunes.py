@@ -7,10 +7,10 @@ url = 'https://itunes.apple.com/search'
 
 def search_tunes(term):
     params = {'term':term, 'media':'music'}
-    response = requests.get(url, params=params).json()
+    response = requests.get(url, params=params)
 
     if response.status_code == 200:
-        return response['results']
+        return response.json()['results']
     else:
         raise exception('Application Error: ' + str(response.status_code))
 
