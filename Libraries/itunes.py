@@ -17,10 +17,10 @@ results = response.json()['results']
 keys = results[0].keys()
 
 def is_song(result):
-    songs = []
     if result['kind'] == 'song':
-        songs.append(result)
+        return True
+    else:
+        return False
 
-for key in keys:
-    print(key)
+songs = list(results.filter(is_song, results))
 
