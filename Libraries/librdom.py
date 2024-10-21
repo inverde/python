@@ -5,8 +5,10 @@ import random
 numbers = []
 for i in range(1, 10):
     number = random.randint(1, 10)
-    if numbers.index(number): # Pythonic test
-    numbers.append(number)
+    if numbers.index(number) >= 0: # Pythonic test
+        numbers.append(number)
+    else:
+        pass
+
 print(numbers)
 
-numbers.index(2)
