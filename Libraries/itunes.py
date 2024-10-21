@@ -29,6 +29,7 @@ for song in songs:
     records.append({'trackName': song['trackName'], 'releaseDate':song['releaseDate']})
 print(len(records))
 print()
-print(records)
+for record in records:
+    print(record)
 
 
