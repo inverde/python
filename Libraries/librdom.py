@@ -5,6 +5,7 @@ import random
 numbers = []
 for i in range(1, 10):
     number = random.randint(1, 10)
+    if numbers.index()
     numbers.append(number)
 print(numbers)
 
