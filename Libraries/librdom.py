@@ -11,6 +11,10 @@ while True:
             break
 print(numbers)
 print()
-print(random.shuffle(numbers))
+random.shuffle(numbers)
+print(numbers)
+random.shuffle(numbers)
+print(numbers)
+random.shuffle(numbers)
 print(numbers)
 
