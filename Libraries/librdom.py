@@ -6,8 +6,7 @@ numbers = []
 for i in range(1, 10):
     number = random.randint(1, 10)
     try:
-        
-    if numbers.index(number) >= 0: # Pythonic test
+        idx = numbers.index(number)
         numbers.append(number)
     else:
         pass
