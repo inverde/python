@@ -12,6 +12,6 @@ params = {'term':term, 'media':media}
 
 response = requests.get(url, params=params)
 
-r
+
 
 print(response.json())
