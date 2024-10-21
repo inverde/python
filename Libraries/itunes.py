@@ -12,7 +12,7 @@ def search_tunes(term):
     if response.status_code == 200:
         return response['results']
     else:
-        raise exception('An error has occurred while searching, try again later')
+        raise exception('Application Error: ' + str(response.status_code))
 
 
 # we need to pass some parameters to this url
