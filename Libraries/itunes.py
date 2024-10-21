@@ -22,5 +22,7 @@ def is_song(result):
     else:
         return False
 
-songs = list(results.filter(is_song, results))
+songs = list(filter(is_song, results))
+
+print(songs)
 
