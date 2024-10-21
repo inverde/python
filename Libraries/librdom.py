@@ -7,9 +7,9 @@ for i in range(1, 10):
     number = random.randint(1, 10)
     try:
         idx = numbers.index(number)
-        numbers.append(number)
     except ValueError:
-        pass
+        numbers.append(number)
+
 
 print(numbers)
 
