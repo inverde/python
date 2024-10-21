@@ -5,6 +5,11 @@ import requests
 # there is a web site for itunes
 url = 'https://itunes.apple.com/search'
 
+def search_tunes(term):
+    params = {'term':term, 'media':'music'}
+    response = requests.get(url, params=params).json()
+    return response['results']
+
 # we need to pass some parameters to this url
 term = 'Beatles'
 media = 'music'
