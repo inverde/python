@@ -9,7 +9,7 @@ def search_tunes(term):
     params = {'term':term, 'media':'music'}
     response = requests.get(url, params=params).json()
 
-    if response.status.code == 200:
+    if response.status_code == 200:
         return response['results']
     else:
         raise exception('An error has occurred while searching, try again later')
