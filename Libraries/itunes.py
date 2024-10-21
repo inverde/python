@@ -24,5 +24,6 @@ def is_song(result):
 
 songs = list(filter(is_song, results))
 
-print(lentsongs)
+print(keys)
+print(len(songs))
 
