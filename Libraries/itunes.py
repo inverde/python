@@ -16,6 +16,11 @@ results = response.json()['results']
 
 keys = results[0].keys()
 
+def is_song(result):
+    songs = []
+    if result['kind'] == 'song':
+        songs.append(result)
+
 for key in keys:
     print(key)
 
