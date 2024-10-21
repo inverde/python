@@ -22,7 +22,7 @@ params = {'term':term, 'media':media}
 
 response = requests.get(url, params=params).json()
 
-results = response['results']
+results = search_tunes('Beatles')
 
 keys = results[0].keys()
 
