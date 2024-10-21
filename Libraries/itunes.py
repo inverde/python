@@ -8,7 +8,7 @@ url = 'https://itunes.apple.com/search'
 # we need to pass some parameters to this url
 term = 'Beatles'
 media = 'music'
-params = {'term':term, 'media':music}
+params = {'term':term, 'media':media}
 
 response = requests.get(url, params=params)
 
