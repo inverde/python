@@ -10,4 +10,7 @@ while True:
         if len(numbers) == 10:
             break
 print(numbers)
+print()
+random.shuffle(numbers)
+print(numbers)
 
