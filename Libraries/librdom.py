@@ -5,12 +5,9 @@ import random
 numbers = []
 while True:
     number = random.randint(1, 10)
-    try:
-        idx = numbers.index(number)
-    except ValueError:
+    if number not in numbers:
         numbers.append(number)
         if len(numbers) == 10:
             break
-
 print(numbers)
 
