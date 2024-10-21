@@ -5,3 +5,5 @@ import requests
 # there is a web site for itunes
 url = 'https://itunes.apple.com/search'
 
+# we need to pass some parameters to this url
+params = ['term':]
