@@ -15,3 +15,7 @@ response = requests.get(url, params=params)
 results = response.json()['results']
 
 keys = results[0].keys()
+
+for key in keys:
+    print(key)
+
