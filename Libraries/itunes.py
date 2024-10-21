@@ -10,6 +10,7 @@ def search_tunes(term):
     response = requests.get(url, params=params).json()
     return response['results']
 
+
 # we need to pass some parameters to this url
 term = 'Beatles'
 media = 'music'
