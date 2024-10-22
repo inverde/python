@@ -46,8 +46,8 @@ def printList(listname, title='songs records'):
     print(f"This list has {len(listname)} {title}: \n\n")
     for rec in listname:
         print(rec['song'], end="")
-        print(rec['collectionName'])
-        print(rec['releaseDate'])
+        print(rec['album'])
+        print(rec['premiere'])
 
 print(keys)
 print()
