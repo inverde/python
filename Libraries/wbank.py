@@ -33,10 +33,10 @@ if response.status_code == 200:
         val = result['value']
         stat = {
             'indicator':indicator,
-            'country': country_code,
-            'date': publish_year,
-            'value': float(f"{val//1000000:,.0f}".replace(',', '')),
-            'units': 'millions'
+            'country':country_code,
+            'date':publish_year,
+            'value':float(f"{val//1000000:,.0f}".replace(',', '')),
+            'units':'Mills'
         }
         stats.append(stat)
         print(stat)
