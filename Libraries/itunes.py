@@ -63,7 +63,7 @@ def set_testing():
     except IndexError:
         #print("Index error has occurred")
         #print(params)
-        #print(sys.argv[1])
+        print(sys.argv[1])
         pass
 
 if __name__ == "__main__":
