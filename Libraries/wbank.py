@@ -4,7 +4,7 @@ in the World Bank """
 import sys, os
 import requests
 # World Bank Web Site
-url = "https://api.worldbank.org/v2"
+url = f"https://api.worldbank.org/v2/country/{country}/indicator/{indicator}"
 
 
 indicator_dir = {
