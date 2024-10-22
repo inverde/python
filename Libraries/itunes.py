@@ -42,9 +42,15 @@ def get_songs(term):
         records.append({'trackName': song['trackName'], 'releaseDate':song['releaseDate']})
     return records
 
-print(len(records))
+def printList(listname, name='Songs records'):
+    print('This list has {len(listname)} ' + name: \n\n')
+    for rec in listname:
+        print(rec)
+
+print(keys)
 print()
-for record in records:
-    print(record)
+printList(get_songs('Johnny Ventura'))
+
+
 
 
