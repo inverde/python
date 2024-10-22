@@ -40,12 +40,12 @@ def get_songs(term):
         records.append({'song': song['trackName'], 'album':song['collectionName'], 'premiere':song['releaseDate']})
     return records
 
-def printTracks(listname, title='songs records'):
+def printTracks(listname, title='song records'):
     print(f"This list has {len(listname)} {title}: \n\n")
     for rec in listname:
         print(f"Canción: {rec['song']}")
         print(f"Album: {rec['album']}")
-        print(f"Estreno:: {rec['premiere']}", '\n')
+        print(f"Estreno: {rec['premiere']}", '\n')
 
 def main():
     response = requests.get(url, params=params).json()
