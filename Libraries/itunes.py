@@ -61,9 +61,9 @@ def set_testing():
         if sys.argv[1] in params:
             condMod.set_testing(sys.argv[1])
     except IndexError:
-        print("Index error has occurred")
-        print(params)
-        print(sys.argv[1])
+        #print("Index error has occurred")
+        #print(params)
+        #print(sys.argv[1])
         pass
 
 if __name__ == "__main__":
