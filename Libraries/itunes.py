@@ -57,9 +57,11 @@ def main():
 
 def set_testing():
     try:
-        if sys.argv[2] in [condMod.c_OFF, condMod.c_ON]:
+        params = [condMod.c_OFF, condMod.c_ON]
+        if sys.argv[2] in params:
             condMod.set_testing(sys.argv[2])
             print(sys.arg[2])
+        print(params)
     except IndexError:
         pass
 
