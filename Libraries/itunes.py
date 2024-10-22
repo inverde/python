@@ -1,7 +1,7 @@
 import sys, os
 #Add the directory Conditionals to the path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname('__name__'), '../Conditionals')))
-import conditionals as CondMod
+import conditionals as condMod
 # We can query the web using python libraries
 # if requests library is not installed in your system, install it using pip
 import requests
