@@ -1,5 +1,6 @@
 import sys, os
-
+#Add the directory Conditionals to the path
+os.path.join(os.path.dirname('../Conditionals'))
 # We can query the web using python libraries
 # if requests library is not installed in your system, install it using pip
 import requests
