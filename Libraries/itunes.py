@@ -55,7 +55,15 @@ def main():
     print()
     print(results)
 
+def set_testing():
+    try:
+        if sys.argv[2] == 'c_OFF':
+            condMod.set_testing(condMod.c_OFF)
+    except IndexError:
+        pass
+
 if __name__ == "__main__":
+    set_testing()
     if condMod.is_testing():
         main()
 
