@@ -32,7 +32,7 @@ if response.status_code == 200:
         publish_year = result['date']
         val = result['value']
         stat = {
-            'indicator':indicator,
+            'stat':indicator,
             'country':country_code,
             'date':publish_year,
             'value':float(f"{val//1000000:,.0f}".replace(',', '')),
