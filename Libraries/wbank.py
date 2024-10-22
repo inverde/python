@@ -39,6 +39,6 @@ if response.status_code == 200:
         }
         stats.append(stat)
         print(stat)
-        
+
 
 
