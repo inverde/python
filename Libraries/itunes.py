@@ -37,6 +37,7 @@ songs = list(filter(is_song, results))
 records = []
 for song in songs:
     records.append({'trackName': song['trackName'], 'releaseDate':song['releaseDate']})
+
 print(len(records))
 print()
 for record in records:
