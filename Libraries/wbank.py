@@ -13,8 +13,16 @@ indicator_dir = {
     'CPI':'FP.CPI.TOTL.ZG'
 }
 
+country = 'dom'
+indicator = indicator_dir['GDP']
+
 params = {'country':country, 'indicator':indicator, 'format':'json'}
 
+response = requests.get(url, params=params)
 
+data = response.json()
+
+if response.status_code == 200:
+    print(data)
 
 
