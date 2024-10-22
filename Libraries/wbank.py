@@ -3,18 +3,19 @@ We could also search for economic, social and development data
 in the World Bank """
 import sys, os
 import requests
-# World Bank Web Site
-url = f"https://api.worldbank.org/v2/country/{country}/indicator/{indicator}"
-
 
 indicator_dir = {
     'GDP':'NY.GDP.MKTP.CD',
     'GNI':'NY.GNI.TOTL.CD',
     'CPI':'FP.CPI.TOTL.ZG'
 }
-
 country = 'dom'
 indicator = indicator_dir['GDP']
+
+# World Bank Web Site
+url = f"https://api.worldbank.org/v2/country/{country}/indicator/{indicator}"
+
+
 
 params = {'country':country, 'indicator':indicator, 'format':'json'}
 
