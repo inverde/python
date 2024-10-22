@@ -8,8 +8,8 @@ url = f"https://api.worldbank.org/v2/country/{country}/indicator/{indicator}"
 
 
 indicator_dir = {
-    'GDP':'NY.GDP.MKTP.CD,
-    'GNI':'NY.GNI.TOTL.CD,
+    'GDP':'NY.GDP.MKTP.CD',
+    'GNI':'NY.GNI.TOTL.CD',
     'CPI':'FP.CPI.TOTL.ZG'
 }
 
