@@ -25,8 +25,20 @@ data = response.json()
 
 if response.status_code == 200:
     results = data[1]
+    stats = []
     for result in results:
+        indicator = result['indicator']['value']
+        country_code = result['countryiso3code']
+        publish_year = result['date']
+        val = result['value']
+        stat = {
+            'indicator':indicator,
+            'country': country_code,
+            'date': publish_year,
+            'value': val
+        }
+        stats.append(stat)
+        print(stat)
         
-    print(data[1])
 
 
