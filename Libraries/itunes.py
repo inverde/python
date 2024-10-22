@@ -39,7 +39,7 @@ def get_songs(term):
 
     records = []
     for song in songs:
-        records.append({'trackName': song['trackName'], 'releaseDate':song['releaseDate']})
+        records.append({'song': song['trackName'], 'album':song['collectionName'], 'premiere':song['releaseDate']})
     return records
 
 def printList(listname, title='songs records'):
