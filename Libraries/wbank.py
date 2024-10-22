@@ -24,6 +24,6 @@ response = requests.get(url, params=params)
 data = response.json()
 
 if response.status_code == 200:
-    print(data)
+    print(data[1])
 
 
