@@ -35,7 +35,7 @@ if response.status_code == 200:
             'indicator':indicator,
             'country': country_code,
             'date': publish_year,
-            'value': val
+            'value': val//1000000
         }
         stats.append(stat)
         print(stat)
