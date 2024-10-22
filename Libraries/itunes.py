@@ -20,12 +20,7 @@ term = 'Beatles'
 media = 'music'
 params = {'term':term, 'media':media}
 
-response = requests.get(url, params=params).json()
 
-
-results = response['results']
-
-keys = results[0].keys()
 
 def is_song(result):
     if result['kind'] == 'song':
@@ -49,11 +44,16 @@ def printList(listname, title='songs records'):
         print(f"Album: {rec['album']}")
         print(f"Estreno:: {rec['premiere']}", '\n')
 
-print(keys)
-print()
-print(results)
-print()
-printList(get_songs('Johnny Ventura'))
+def main():
+    response = requests.get(url, params=params).json()
+    results = response['results']
+    keys = results[0].keys()
+    print(keys)
+    print()
+    print(results)
+
+if __name__ == "__name__":
+    main()
 
 
 
