@@ -22,6 +22,7 @@ params = {'term':term, 'media':media}
 
 response = requests.get(url, params=params).json()
 
+
 results = response['results']
 
 keys = results[0].keys()
@@ -32,14 +33,14 @@ def is_song(result):
     else:
         return False
 
+def get_songs(term):
+    results = search_tunes(term)
+    songs = list(filter(is_song, results))
 
-results = search_tunes('Jhonny Ventura')
-
-songs = list(filter(is_song, results))
-
-records = []
-for song in songs:
-    records.append({'trackName': song['trackName'], 'releaseDate':song['releaseDate']})
+    records = []
+    for song in songs:
+        records.append({'trackName': song['trackName'], 'releaseDate':song['releaseDate']})
+    return records
 
 print(len(records))
 print()
