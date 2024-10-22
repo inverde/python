@@ -49,6 +49,8 @@ def printList(listname, title='songs records'):
 
 print(keys)
 print()
+print(results)
+print()
 printList(get_songs('Johnny Ventura'))
 
 
