@@ -57,8 +57,8 @@ def main():
 
 def set_testing():
     try:
-        if sys.argv[2] == 'c_OFF':
-            condMod.set_testing(condMod.c_OFF)
+        if sys.argv[2] in [condMod.c_OFF, condMod.c_ON]:
+            condMod.set_testing(sys.argv[2])
     except IndexError:
         pass
 
