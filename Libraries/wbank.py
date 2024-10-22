@@ -35,7 +35,7 @@ if response.status_code == 200:
             'indicator':indicator,
             'country': country_code,
             'date': publish_year,
-            'value': f"{val//1000000:,}".split('.')[0],
+            'value': float(f"{val//1000000:,}".split('.')[0]),
         }
         stats.append(stat)
         print(stat)
