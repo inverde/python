@@ -40,7 +40,7 @@ def get_songs(term):
         records.append({'song': song['trackName'], 'album':song['collectionName'], 'premiere':song['releaseDate']})
     return records
 
-def printList(listname, title='songs records'):
+def printSongs(listname, title='songs records'):
     print(f"This list has {len(listname)} {title}: \n\n")
     for rec in listname:
         print(f"Canción: {rec['song']}")
