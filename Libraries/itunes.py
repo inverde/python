@@ -45,7 +45,9 @@ def get_songs(term):
 def printList(listname, title='songs records'):
     print(f"This list has {len(listname)} {title}: \n\n")
     for rec in listname:
-        print(rec)
+        print(rec['song'], end="")
+        print(rec['collectionName'])
+        print(rec['releaseDate'])
 
 print(keys)
 print()
