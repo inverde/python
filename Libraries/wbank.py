@@ -9,8 +9,12 @@ indicator_dir = {
     'GNI':'NY.GNI.TOTL.CD',
     'CPI':'FP.CPI.TOTL.ZG'
 }
+
+
 country = 'dom'
 indicator = indicator_dir['GDP']
+
+
 
 # World Bank Web Site
 url = f"https://api.worldbank.org/v2/country/{country}/indicator/{indicator}"
