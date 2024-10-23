@@ -1,7 +1,7 @@
 import arrow
 birth = arrow.get(1961, 6, 11)
 print(birth.humanize())
-today = arrow.now("US/Atlantic")
+today = arrow.now("US/Eastern")
 print(today)
 delta = today - birth
 print(delta.days)
