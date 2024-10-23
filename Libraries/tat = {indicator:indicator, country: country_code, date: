@@ -363,4 +363,816 @@ CCLLAASSSSEESS
      |
      |      Usage::
      |
-     |        
+     |          >>> arrow.utcnow()
+     |          <Arrow [2013-05-09T03:32:36.186203+00:00]>
+     |
+     |          >>> arrow.utcnow().span('hour')
+     |          (<Arrow [2013-05-09T03:00:00+00:00]>, <Arrow [2013-05-09T03:59:59.999999+00:00]>)
+     |
+     |          >>> arrow.utcnow().span('day')
+     |          (<Arrow [2013-05-09T00:00:00+00:00]>, <Arrow [2013-05-09T23:59:59.999999+00:00]>)
+     |
+     |          >>> arrow.utcnow().span('day', count=2)
+     |          (<Arrow [2013-05-09T00:00:00+00:00]>, <Arrow [2013-05-10T23:59:59.999999+00:00]>)
+     |
+     |          >>> arrow.utcnow().span('day', bounds='[]')
+     |          (<Arrow [2013-05-09T00:00:00+00:00]>, <Arrow [2013-05-10T00:00:00+00:00]>)
+     |
+     |          >>> arrow.utcnow().span('week')
+     |          (<Arrow [2021-02-22T00:00:00+00:00]>, <Arrow [2021-02-28T23:59:59.999999+00:00]>)
+     |
+     |          >>> arrow.utcnow().span('week', week_start=6)
+     |          (<Arrow [2021-02-20T00:00:00+00:00]>, <Arrow [2021-02-26T23:59:59.999999+00:00]>)
+     |
+     |  ssttrrffttiimmee(self, format: str) -> str
+     |      Formats in the style of ``datetime.strftime``.
+     |
+     |      :param format: the format string.
+     |
+     |      Usage::
+     |
+     |          >>> arrow.utcnow().strftime('%d-%m-%Y %H:%M:%S')
+     |          '23-01-2019 12:28:17'
+     |
+     |  ttiimmee(self) -> datetime.time
+     |      Returns a ``time`` object with the same hour, minute, second, microsecond.
+     |
+     |      Usage::
+     |
+     |          >>> arrow.utcnow().time()
+     |          datetime.time(12, 15, 34, 68352)
+     |
+     |  ttiimmeessttaammpp(self) -> float
+     |      Returns a timestamp representation of the :class:`Arrow <arrow.arrow.Arrow>` object, in
+     |      UTC time.
+     |
+     |      Usage::
+     |
+     |          >>> arrow.utcnow().timestamp()
+     |          1616882340.256501
+     |
+     |  ttiimmeettuuppllee(self) -> time.struct_time
+     |      Returns a ``time.struct_time``, in the current timezone.
+     |
+     |      Usage::
+     |
+     |          >>> arrow.utcnow().timetuple()
+     |          time.struct_time(tm_year=2019, tm_mon=1, tm_mday=20, tm_hour=15, tm_min=17, tm_sec=8, tm_wday=6, tm_yday=20, tm_isdst=0)
+     |
+     |  ttiimmeettzz(self) -> datetime.time
+     |      Returns a ``time`` object with the same hour, minute, second, microsecond and
+     |      tzinfo.
+     |
+     |      Usage::
+     |
+     |          >>> arrow.utcnow().timetz()
+     |          datetime.time(12, 5, 18, 298893, tzinfo=tzutc())
+     |
+     |  ttoo(self, tz: Union[datetime.tzinfo, str]) -> 'Arrow'
+     |      Returns a new :class:`Arrow <arrow.arrow.Arrow>` object, converted
+     |      to the target timezone.
+     |
+     |      :param tz: A :ref:`timezone expression <tz-expr>`.
+     |
+     |      Usage::
+     |
+     |          >>> utc = arrow.utcnow()
+     |          >>> utc
+     |          <Arrow [2013-05-09T03:49:12.311072+00:00]>
+     |
+     |          >>> utc.to('US/Pacific')
+     |          <Arrow [2013-05-08T20:49:12.311072-07:00]>
+     |
+     |          >>> utc.to(tz.tzlocal())
+     |          <Arrow [2013-05-08T20:49:12.311072-07:00]>
+     |
+     |          >>> utc.to('-07:00')
+     |          <Arrow [2013-05-08T20:49:12.311072-07:00]>
+     |
+     |          >>> utc.to('local')
+     |          <Arrow [2013-05-08T20:49:12.311072-07:00]>
+     |
+     |          >>> utc.to('local').to('utc')
+     |          <Arrow [2013-05-09T03:49:12.311072+00:00]>
+     |
+     |  ttoooorrddiinnaall(self) -> int
+     |      Returns the proleptic Gregorian ordinal of the date.
+     |
+     |      Usage::
+     |
+     |          >>> arrow.utcnow().toordinal()
+     |          737078
+     |
+     |  uuttccooffffsseett(self) -> Optional[datetime.timedelta]
+     |      Returns a ``timedelta`` object representing the whole number of minutes difference from
+     |      UTC time.
+     |
+     |      Usage::
+     |
+     |          >>> arrow.now('US/Pacific').utcoffset()
+     |          datetime.timedelta(-1, 57600)
+     |
+     |  uuttccttiimmeettuuppllee(self) -> time.struct_time
+     |      Returns a ``time.struct_time``, in UTC time.
+     |
+     |      Usage::
+     |
+     |          >>> arrow.utcnow().utctimetuple()
+     |          time.struct_time(tm_year=2019, tm_mon=1, tm_mday=19, tm_hour=21, tm_min=41, tm_sec=7, tm_wday=5, tm_yday=19, tm_isdst=0)
+     |
+     |  wweeeekkddaayy(self) -> int
+     |      Returns the day of the week as an integer (0-6).
+     |
+     |      Usage::
+     |
+     |          >>> arrow.utcnow().weekday()
+     |          5
+     |
+     |  ----------------------------------------------------------------------
+     |  Class methods defined here:
+     |
+     |  ffrroommddaattee(date: datetime.date, tzinfo: Union[datetime.tzinfo, str, NoneType] = None) -> 'Arrow' from builtins.type
+     |      Constructs an :class:`Arrow <arrow.arrow.Arrow>` object from a ``date`` and optional
+     |      replacement timezone.  All time values are set to 0.
+     |
+     |      :param date: the ``date``
+     |      :param tzinfo: (optional) A :ref:`timezone expression <tz-expr>`.  Defaults to UTC.
+     |
+     |  ffrroommddaatteettiimmee(dt: datetime.datetime, tzinfo: Union[datetime.tzinfo, str, NoneType] = None) -> 'Arrow' from builtins.type
+     |      Constructs an :class:`Arrow <arrow.arrow.Arrow>` object from a ``datetime`` and
+     |      optional replacement timezone.
+     |
+     |      :param dt: the ``datetime``
+     |      :param tzinfo: (optional) A :ref:`timezone expression <tz-expr>`.  Defaults to ``dt``'s
+     |          timezone, or UTC if naive.
+     |
+     |      Usage::
+     |
+     |          >>> dt
+     |          datetime.datetime(2021, 4, 7, 13, 48, tzinfo=tzfile('/usr/share/zoneinfo/US/Pacific'))
+     |          >>> arrow.Arrow.fromdatetime(dt)
+     |          <Arrow [2021-04-07T13:48:00-07:00]>
+     |
+     |  ffrroommoorrddiinnaall(ordinal: int) -> 'Arrow' from builtins.type
+     |      Constructs an :class:`Arrow <arrow.arrow.Arrow>` object corresponding
+     |          to the Gregorian Ordinal.
+     |
+     |      :param ordinal: an ``int`` corresponding to a Gregorian Ordinal.
+     |
+     |      Usage::
+     |
+     |          >>> arrow.fromordinal(737741)
+     |          <Arrow [2020-11-12T00:00:00+00:00]>
+     |
+     |  ffrroommttiimmeessttaammpp(timestamp: Union[int, float, str], tzinfo: Union[datetime.tzinfo, str, NoneType] = None) -> 'Arrow' from builtins.type
+     |      Constructs an :class:`Arrow <arrow.arrow.Arrow>` object from a timestamp, converted to
+     |      the given timezone.
+     |
+     |      :param timestamp: an ``int`` or ``float`` timestamp, or a ``str`` that converts to either.
+     |      :param tzinfo: (optional) a ``tzinfo`` object.  Defaults to local time.
+     |
+     |  iinntteerrvvaall(frame: Literal['year', 'years', 'month', 'months', 'day', 'days', 'hour', 'hours', 'minute', 'minutes', 'second', 'seconds', 'microsecond', 'microseconds', 'week', 'weeks', 'quarter', 'quarters'], start: datetime.datetime, end: datetime.datetime, interval: int = 1, tz: Union[datetime.tzinfo, str, NoneType] = None, bounds: Literal['[)', '()', '(]', '[]'] = '[)', exact: bool = False) -> Iterable[Tuple[ForwardRef('Arrow'), ForwardRef('Arrow')]] from builtins.type
+     |      Returns an iterator of tuples, each :class:`Arrow <arrow.arrow.Arrow>` objects,
+     |      representing a series of intervals between two inputs.
+     |
+     |      :param frame: The timeframe.  Can be any ``datetime`` property (day, hour, minute...).
+     |      :param start: A datetime expression, the start of the range.
+     |      :param end: (optional) A datetime expression, the end of the range.
+     |      :param interval: (optional) Time interval for the given time frame.
+     |      :param tz: (optional) A timezone expression.  Defaults to UTC.
+     |      :param bounds: (optional) a ``str`` of either '()', '(]', '[)', or '[]' that specifies
+     |          whether to include or exclude the start and end values in the intervals. '(' excludes
+     |          the start, '[' includes the start, ')' excludes the end, and ']' includes the end.
+     |          If the bounds are not specified, the default bound '[)' is used.
+     |      :param exact: (optional) whether to have the first timespan start exactly
+     |          at the time specified by ``start`` and the final interval truncated
+     |          so as not to extend beyond ``end``.
+     |
+     |      Supported frame values: year, quarter, month, week, day, hour, minute, second
+     |
+     |      Recognized datetime expressions:
+     |
+     |          - An :class:`Arrow <arrow.arrow.Arrow>` object.
+     |          - A ``datetime`` object.
+     |
+     |      Recognized timezone expressions:
+     |
+     |          - A ``tzinfo`` object.
+     |          - A ``str`` describing a timezone, similar to 'US/Pacific', or 'Europe/Berlin'.
+     |          - A ``str`` in ISO 8601 style, as in '+07:00'.
+     |          - A ``str``, one of the following:  'local', 'utc', 'UTC'.
+     |
+     |      Usage:
+     |
+     |          >>> start = datetime(2013, 5, 5, 12, 30)
+     |          >>> end = datetime(2013, 5, 5, 17, 15)
+     |          >>> for r in arrow.Arrow.interval('hour', start, end, 2):
+     |          ...     print(r)
+     |          ...
+     |          (<Arrow [2013-05-05T12:00:00+00:00]>, <Arrow [2013-05-05T13:59:59.999999+00:00]>)
+     |          (<Arrow [2013-05-05T14:00:00+00:00]>, <Arrow [2013-05-05T15:59:59.999999+00:00]>)
+     |          (<Arrow [2013-05-05T16:00:00+00:00]>, <Arrow [2013-05-05T17:59:59.999999+00:0]>)
+     |
+     |  nnooww(tzinfo: Optional[datetime.tzinfo] = None) -> 'Arrow' from builtins.type
+     |      Constructs an :class:`Arrow <arrow.arrow.Arrow>` object, representing "now" in the given
+     |      timezone.
+     |
+     |      :param tzinfo: (optional) a ``tzinfo`` object. Defaults to local time.
+     |
+     |      Usage::
+     |
+     |          >>> arrow.now('Asia/Baku')
+     |          <Arrow [2019-01-24T20:26:31.146412+04:00]>
+     |
+     |  rraannggee(frame: Literal['year', 'years', 'month', 'months', 'day', 'days', 'hour', 'hours', 'minute', 'minutes', 'second', 'seconds', 'microsecond', 'microseconds', 'week', 'weeks', 'quarter', 'quarters'], start: Union[ForwardRef('Arrow'), datetime.datetime], end: Union[ForwardRef('Arrow'), datetime.datetime, NoneType] = None, tz: Union[datetime.tzinfo, str, NoneType] = None, limit: Optional[int] = None) -> Generator[ForwardRef('Arrow'), NoneType, NoneType] from builtins.type
+     |      Returns an iterator of :class:`Arrow <arrow.arrow.Arrow>` objects, representing
+     |      points in time between two inputs.
+     |
+     |      :param frame: The timeframe.  Can be any ``datetime`` property (day, hour, minute...).
+     |      :param start: A datetime expression, the start of the range.
+     |      :param end: (optional) A datetime expression, the end of the range.
+     |      :param tz: (optional) A :ref:`timezone expression <tz-expr>`.  Defaults to
+     |          ``start``'s timezone, or UTC if ``start`` is naive.
+     |      :param limit: (optional) A maximum number of tuples to return.
+     |
+     |      **NOTE**: The ``end`` or ``limit`` must be provided.  Call with ``end`` alone to
+     |      return the entire range.  Call with ``limit`` alone to return a maximum # of results from
+     |      the start.  Call with both to cap a range at a maximum # of results.
+     |
+     |      **NOTE**: ``tz`` internally **replaces** the timezones of both ``start`` and ``end`` before
+     |      iterating.  As such, either call with naive objects and ``tz``, or aware objects from the
+     |      same timezone and no ``tz``.
+     |
+     |      Supported frame values: year, quarter, month, week, day, hour, minute, second, microsecond.
+     |
+     |      Recognized datetime expressions:
+     |
+     |          - An :class:`Arrow <arrow.arrow.Arrow>` object.
+     |          - A ``datetime`` object.
+     |
+     |      Usage::
+     |
+     |          >>> start = datetime(2013, 5, 5, 12, 30)
+     |          >>> end = datetime(2013, 5, 5, 17, 15)
+     |          >>> for r in arrow.Arrow.range('hour', start, end):
+     |          ...     print(repr(r))
+     |          ...
+     |          <Arrow [2013-05-05T12:30:00+00:00]>
+     |          <Arrow [2013-05-05T13:30:00+00:00]>
+     |          <Arrow [2013-05-05T14:30:00+00:00]>
+     |          <Arrow [2013-05-05T15:30:00+00:00]>
+     |          <Arrow [2013-05-05T16:30:00+00:00]>
+     |
+     |      **NOTE**: Unlike Python's ``range``, ``end`` *may* be included in the returned iterator::
+     |
+     |          >>> start = datetime(2013, 5, 5, 12, 30)
+     |          >>> end = datetime(2013, 5, 5, 13, 30)
+     |          >>> for r in arrow.Arrow.range('hour', start, end):
+     |          ...     print(repr(r))
+     |          ...
+     |          <Arrow [2013-05-05T12:30:00+00:00]>
+     |          <Arrow [2013-05-05T13:30:00+00:00]>
+     |
+     |  ssppaann__rraannggee(frame: Literal['year', 'years', 'month', 'months', 'day', 'days', 'hour', 'hours', 'minute', 'minutes', 'second', 'seconds', 'microsecond', 'microseconds', 'week', 'weeks', 'quarter', 'quarters'], start: datetime.datetime, end: datetime.datetime, tz: Union[datetime.tzinfo, str, NoneType] = None, limit: Optional[int] = None, bounds: Literal['[)', '()', '(]', '[]'] = '[)', exact: bool = False) -> Iterable[Tuple[ForwardRef('Arrow'), ForwardRef('Arrow')]] from builtins.type
+     |      Returns an iterator of tuples, each :class:`Arrow <arrow.arrow.Arrow>` objects,
+     |      representing a series of timespans between two inputs.
+     |
+     |      :param frame: The timeframe.  Can be any ``datetime`` property (day, hour, minute...).
+     |      :param start: A datetime expression, the start of the range.
+     |      :param end: (optional) A datetime expression, the end of the range.
+     |      :param tz: (optional) A :ref:`timezone expression <tz-expr>`.  Defaults to
+     |          ``start``'s timezone, or UTC if ``start`` is naive.
+     |      :param limit: (optional) A maximum number of tuples to return.
+     |      :param bounds: (optional) a ``str`` of either '()', '(]', '[)', or '[]' that specifies
+     |          whether to include or exclude the start and end values in each span in the range. '(' excludes
+     |          the start, '[' includes the start, ')' excludes the end, and ']' includes the end.
+     |          If the bounds are not specified, the default bound '[)' is used.
+     |      :param exact: (optional) whether to have the first timespan start exactly
+     |          at the time specified by ``start`` and the final span truncated
+     |          so as not to extend beyond ``end``.
+     |
+     |      **NOTE**: The ``end`` or ``limit`` must be provided.  Call with ``end`` alone to
+     |      return the entire range.  Call with ``limit`` alone to return a maximum # of results from
+     |      the start.  Call with both to cap a range at a maximum # of results.
+     |
+     |      **NOTE**: ``tz`` internally **replaces** the timezones of both ``start`` and ``end`` before
+     |      iterating.  As such, either call with naive objects and ``tz``, or aware objects from the
+     |      same timezone and no ``tz``.
+     |
+     |      Supported frame values: year, quarter, month, week, day, hour, minute, second, microsecond.
+     |
+     |      Recognized datetime expressions:
+     |
+     |          - An :class:`Arrow <arrow.arrow.Arrow>` object.
+     |          - A ``datetime`` object.
+     |
+     |      **NOTE**: Unlike Python's ``range``, ``end`` will *always* be included in the returned
+     |      iterator of timespans.
+     |
+     |      Usage:
+     |
+     |          >>> start = datetime(2013, 5, 5, 12, 30)
+     |          >>> end = datetime(2013, 5, 5, 17, 15)
+     |          >>> for r in arrow.Arrow.span_range('hour', start, end):
+     |          ...     print(r)
+     |          ...
+     |          (<Arrow [2013-05-05T12:00:00+00:00]>, <Arrow [2013-05-05T12:59:59.999999+00:00]>)
+     |          (<Arrow [2013-05-05T13:00:00+00:00]>, <Arrow [2013-05-05T13:59:59.999999+00:00]>)
+     |          (<Arrow [2013-05-05T14:00:00+00:00]>, <Arrow [2013-05-05T14:59:59.999999+00:00]>)
+     |          (<Arrow [2013-05-05T15:00:00+00:00]>, <Arrow [2013-05-05T15:59:59.999999+00:00]>)
+     |          (<Arrow [2013-05-05T16:00:00+00:00]>, <Arrow [2013-05-05T16:59:59.999999+00:00]>)
+     |          (<Arrow [2013-05-05T17:00:00+00:00]>, <Arrow [2013-05-05T17:59:59.999999+00:00]>)
+     |
+     |  ssttrrppttiimmee(date_str: str, fmt: str, tzinfo: Union[datetime.tzinfo, str, NoneType] = None) -> 'Arrow' from builtins.type
+     |      Constructs an :class:`Arrow <arrow.arrow.Arrow>` object from a date string and format,
+     |      in the style of ``datetime.strptime``.  Optionally replaces the parsed timezone.
+     |
+     |      :param date_str: the date string.
+     |      :param fmt: the format string using datetime format codes.
+     |      :param tzinfo: (optional) A :ref:`timezone expression <tz-expr>`.  Defaults to the parsed
+     |          timezone if ``fmt`` contains a timezone directive, otherwise UTC.
+     |
+     |      Usage::
+     |
+     |          >>> arrow.Arrow.strptime('20-01-2019 15:49:10', '%d-%m-%Y %H:%M:%S')
+     |          <Arrow [2019-01-20T15:49:10+00:00]>
+     |
+     |  uuttccffrroommttiimmeessttaammpp(timestamp: Union[int, float, str]) -> 'Arrow' from builtins.type
+     |      Constructs an :class:`Arrow <arrow.arrow.Arrow>` object from a timestamp, in UTC time.
+     |
+     |      :param timestamp: an ``int`` or ``float`` timestamp, or a ``str`` that converts to either.
+     |
+     |  uuttccnnooww() -> 'Arrow' from builtins.type
+     |      Constructs an :class:`Arrow <arrow.arrow.Arrow>` object, representing "now" in UTC
+     |      time.
+     |
+     |      Usage::
+     |
+     |          >>> arrow.utcnow()
+     |          <Arrow [2019-01-24T16:31:40.651108+00:00]>
+     |
+     |  ----------------------------------------------------------------------
+     |  Readonly properties defined here:
+     |
+     |  aammbbiigguuoouuss
+     |      Indicates whether the :class:`Arrow <arrow.arrow.Arrow>` object is a repeated wall time in the current
+     |      timezone.
+     |
+     |  ddaatteettiimmee
+     |      Returns a datetime representation of the :class:`Arrow <arrow.arrow.Arrow>` object.
+     |
+     |      Usage::
+     |
+     |          >>> arw=arrow.utcnow()
+     |          >>> arw.datetime
+     |          datetime.datetime(2019, 1, 24, 16, 35, 27, 276649, tzinfo=tzutc())
+     |
+     |  ffllooaatt__ttiimmeessttaammpp
+     |      Returns a floating-point timestamp representation of the :class:`Arrow <arrow.arrow.Arrow>`
+     |      object, in UTC time.
+     |
+     |      Usage::
+     |
+     |          >>> arrow.utcnow().float_timestamp
+     |          1548260516.830896
+     |
+     |  ffoolldd
+     |      Returns the ``fold`` value of the :class:`Arrow <arrow.arrow.Arrow>` object.
+     |
+     |  iimmaaggiinnaarryy
+     |      Indicates whether the :class: `Arrow <arrow.arrow.Arrow>` object exists in the current timezone.
+     |
+     |  iinntt__ttiimmeessttaammpp
+     |      Returns an integer timestamp representation of the :class:`Arrow <arrow.arrow.Arrow>` object, in
+     |      UTC time.
+     |
+     |      Usage::
+     |
+     |          >>> arrow.utcnow().int_timestamp
+     |          1548260567
+     |
+     |  nnaaiivvee
+     |      Returns a naive datetime representation of the :class:`Arrow <arrow.arrow.Arrow>`
+     |      object.
+     |
+     |      Usage::
+     |
+     |          >>> nairobi = arrow.now('Africa/Nairobi')
+     |          >>> nairobi
+     |          <Arrow [2019-01-23T19:27:12.297999+03:00]>
+     |          >>> nairobi.naive
+     |          datetime.datetime(2019, 1, 23, 19, 27, 12, 297999)
+     |
+     |  ttzziinnffoo
+     |      Gets the ``tzinfo`` of the :class:`Arrow <arrow.arrow.Arrow>` object.
+     |
+     |      Usage::
+     |
+     |          >>> arw=arrow.utcnow()
+     |          >>> arw.tzinfo
+     |          tzutc()
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  ____ddiicctt____
+     |      dictionary for instance variables (if defined)
+     |
+     |  ____wweeaakkrreeff____
+     |      list of weak references to the object (if defined)
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  ____aannnnoottaattiioonnss____ = {'_ATTRS': typing.Final[typing.List[str]], '_ATTRS_P...
+     |
+     |  mmaaxx = <Arrow [9999-12-31T23:59:59.999999+00:00]>
+     |
+     |  mmiinn = <Arrow [0001-01-01T00:00:00+00:00]>
+     |
+     |  rreessoolluuttiioonn = datetime.timedelta(microseconds=1)
+
+    class AArrrroowwFFaaccttoorryy(builtins.object)
+     |  ArrowFactory(type: Type[arrow.arrow.Arrow] = <class 'arrow.arrow.Arrow'>) -> None
+     |
+     |  A factory for generating :class:`Arrow <arrow.arrow.Arrow>` objects.
+     |
+     |  :param type: (optional) the :class:`Arrow <arrow.arrow.Arrow>`-based class to construct from.
+     |      Defaults to :class:`Arrow <arrow.arrow.Arrow>`.
+     |
+     |  Methods defined here:
+     |
+     |  ____iinniitt____(self, type: Type[arrow.arrow.Arrow] = <class 'arrow.arrow.Arrow'>) -> None
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |
+     |  ggeett(self, *args: Any, **kwargs: Any) -> arrow.arrow.Arrow
+     |      Returns an :class:`Arrow <arrow.arrow.Arrow>` object based on flexible inputs.
+     |
+     |      :param locale: (optional) a ``str`` specifying a locale for the parser. Defaults to 'en-us'.
+     |      :param tzinfo: (optional) a :ref:`timezone expression <tz-expr>` or tzinfo object.
+     |          Replaces the timezone unless using an input form that is explicitly UTC or specifies
+     |          the timezone in a positional argument. Defaults to UTC.
+     |      :param normalize_whitespace: (optional) a ``bool`` specifying whether or not to normalize
+     |          redundant whitespace (spaces, tabs, and newlines) in a datetime string before parsing.
+     |          Defaults to false.
+     |
+     |      Usage::
+     |
+     |          >>> import arrow
+     |
+     |      **No inputs** to get current UTC time::
+     |
+     |          >>> arrow.get()
+     |          <Arrow [2013-05-08T05:51:43.316458+00:00]>
+     |
+     |      **One** :class:`Arrow <arrow.arrow.Arrow>` object, to get a copy.
+     |
+     |          >>> arw = arrow.utcnow()
+     |          >>> arrow.get(arw)
+     |          <Arrow [2013-10-23T15:21:54.354846+00:00]>
+     |
+     |      **One** ``float`` or ``int``, convertible to a floating-point timestamp, to get
+     |      that timestamp in UTC::
+     |
+     |          >>> arrow.get(1367992474.293378)
+     |          <Arrow [2013-05-08T05:54:34.293378+00:00]>
+     |
+     |          >>> arrow.get(1367992474)
+     |          <Arrow [2013-05-08T05:54:34+00:00]>
+     |
+     |      **One** ISO 8601-formatted ``str``, to parse it::
+     |
+     |          >>> arrow.get('2013-09-29T01:26:43.830580')
+     |          <Arrow [2013-09-29T01:26:43.830580+00:00]>
+     |
+     |      **One** ISO 8601-formatted ``str``, in basic format, to parse it::
+     |
+     |          >>> arrow.get('20160413T133656.456289')
+     |          <Arrow [2016-04-13T13:36:56.456289+00:00]>
+     |
+     |      **One** ``tzinfo``, to get the current time **converted** to that timezone::
+     |
+     |          >>> arrow.get(tz.tzlocal())
+     |          <Arrow [2013-05-07T22:57:28.484717-07:00]>
+     |
+     |      **One** naive ``datetime``, to get that datetime in UTC::
+     |
+     |          >>> arrow.get(datetime(2013, 5, 5))
+     |          <Arrow [2013-05-05T00:00:00+00:00]>
+     |
+     |      **One** aware ``datetime``, to get that datetime::
+     |
+     |          >>> arrow.get(datetime(2013, 5, 5, tzinfo=tz.tzlocal()))
+     |          <Arrow [2013-05-05T00:00:00-07:00]>
+     |
+     |      **One** naive ``date``, to get that date in UTC::
+     |
+     |          >>> arrow.get(date(2013, 5, 5))
+     |          <Arrow [2013-05-05T00:00:00+00:00]>
+     |
+     |      **One** time.struct time::
+     |
+     |          >>> arrow.get(gmtime(0))
+     |          <Arrow [1970-01-01T00:00:00+00:00]>
+     |
+     |      **One** iso calendar ``tuple``, to get that week date in UTC::
+     |
+     |          >>> arrow.get((2013, 18, 7))
+     |          <Arrow [2013-05-05T00:00:00+00:00]>
+     |
+     |      **Two** arguments, a naive or aware ``datetime``, and a replacement
+     |      :ref:`timezone expression <tz-expr>`::
+     |
+     |          >>> arrow.get(datetime(2013, 5, 5), 'US/Pacific')
+     |          <Arrow [2013-05-05T00:00:00-07:00]>
+     |
+     |      **Two** arguments, a naive ``date``, and a replacement
+     |      :ref:`timezone expression <tz-expr>`::
+     |
+     |          >>> arrow.get(date(2013, 5, 5), 'US/Pacific')
+     |          <Arrow [2013-05-05T00:00:00-07:00]>
+     |
+     |      **Two** arguments, both ``str``, to parse the first according to the format of the second::
+     |
+     |          >>> arrow.get('2013-05-05 12:30:45 America/Chicago', 'YYYY-MM-DD HH:mm:ss ZZZ')
+     |          <Arrow [2013-05-05T12:30:45-05:00]>
+     |
+     |      **Two** arguments, first a ``str`` to parse and second a ``list`` of formats to try::
+     |
+     |          >>> arrow.get('2013-05-05 12:30:45', ['MM/DD/YYYY', 'YYYY-MM-DD HH:mm:ss'])
+     |          <Arrow [2013-05-05T12:30:45+00:00]>
+     |
+     |      **Three or more** arguments, as for the direct constructor of an ``Arrow`` object::
+     |
+     |          >>> arrow.get(2013, 5, 5, 12, 30, 45)
+     |          <Arrow [2013-05-05T12:30:45+00:00]>
+     |
+     |  nnooww(self, tz: Union[datetime.tzinfo, str, NoneType] = None) -> arrow.arrow.Arrow
+     |      Returns an :class:`Arrow <arrow.arrow.Arrow>` object, representing "now" in the given
+     |      timezone.
+     |
+     |      :param tz: (optional) A :ref:`timezone expression <tz-expr>`.  Defaults to local time.
+     |
+     |      Usage::
+     |
+     |          >>> import arrow
+     |          >>> arrow.now()
+     |          <Arrow [2013-05-07T22:19:11.363410-07:00]>
+     |
+     |          >>> arrow.now('US/Pacific')
+     |          <Arrow [2013-05-07T22:19:15.251821-07:00]>
+     |
+     |          >>> arrow.now('+02:00')
+     |          <Arrow [2013-05-08T07:19:25.618646+02:00]>
+     |
+     |          >>> arrow.now('local')
+     |          <Arrow [2013-05-07T22:19:39.130059-07:00]>
+     |
+     |  uuttccnnooww(self) -> arrow.arrow.Arrow
+     |      Returns an :class:`Arrow <arrow.arrow.Arrow>` object, representing "now" in UTC time.
+     |
+     |      Usage::
+     |
+     |          >>> import arrow
+     |          >>> arrow.utcnow()
+     |          <Arrow [2013-05-08T05:19:07.018993+00:00]>
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  ____ddiicctt____
+     |      dictionary for instance variables (if defined)
+     |
+     |  ____wweeaakkrreeff____
+     |      list of weak references to the object (if defined)
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  ____aannnnoottaattiioonnss____ = {'type': typing.Type[arrow.arrow.Arrow]}
+
+    class PPaarrsseerrEErrrroorr(builtins.ValueError)
+     |  Method resolution order:
+     |      ParserError
+     |      builtins.ValueError
+     |      builtins.Exception
+     |      builtins.BaseException
+     |      builtins.object
+     |
+     |  Data descriptors defined here:
+     |
+     |  ____wweeaakkrreeff____
+     |      list of weak references to the object (if defined)
+     |
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from builtins.ValueError:
+     |
+     |  ____iinniitt____(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods inherited from builtins.ValueError:
+     |
+     |  ____nneeww____(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from builtins.BaseException:
+     |
+     |  ____ddeellaattttrr____(self, name, /)
+     |      Implement delattr(self, name).
+     |
+     |  ____ggeettaattttrriibbuuttee____(self, name, /)
+     |      Return getattr(self, name).
+     |
+     |  ____rreedduuccee____(...)
+     |      Helper for pickle.
+     |
+     |  ____rreepprr____(self, /)
+     |      Return repr(self).
+     |
+     |  ____sseettaattttrr____(self, name, value, /)
+     |      Implement setattr(self, name, value).
+     |
+     |  ____sseettssttaattee____(...)
+     |
+     |  ____ssttrr____(self, /)
+     |      Return str(self).
+     |
+     |  aadddd__nnoottee(...)
+     |      Exception.add_note(note) --
+     |      add a note to the exception
+     |
+     |  wwiitthh__ttrraacceebbaacckk(...)
+     |      Exception.with_traceback(tb) --
+     |      set self.__traceback__ to tb and return self.
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from builtins.BaseException:
+     |
+     |  ____ccaauussee____
+     |      exception cause
+     |
+     |  ____ccoonntteexxtt____
+     |      exception context
+     |
+     |  ____ddiicctt____
+     |
+     |  ____ssuupppprreessss__ccoonntteexxtt____
+     |
+     |  ____ttrraacceebbaacckk____
+     |
+     |  aarrggss
+
+FFUUNNCCTTIIOONNSS
+    ggeett(*args: Any, **kwargs: Any) -> arrow.arrow.Arrow
+        Returns an :class:`Arrow <arrow.arrow.Arrow>` object based on flexible inputs.
+
+        :param locale: (optional) a ``str`` specifying a locale for the parser. Defaults to 'en-us'.
+        :param tzinfo: (optional) a :ref:`timezone expression <tz-expr>` or tzinfo object.
+            Replaces the timezone unless using an input form that is explicitly UTC or specifies
+            the timezone in a positional argument. Defaults to UTC.
+        :param normalize_whitespace: (optional) a ``bool`` specifying whether or not to normalize
+            redundant whitespace (spaces, tabs, and newlines) in a datetime string before parsing.
+            Defaults to false.
+
+        Usage::
+
+            >>> import arrow
+
+        **No inputs** to get current UTC time::
+
+            >>> arrow.get()
+            <Arrow [2013-05-08T05:51:43.316458+00:00]>
+
+        **One** :class:`Arrow <arrow.arrow.Arrow>` object, to get a copy.
+
+            >>> arw = arrow.utcnow()
+            >>> arrow.get(arw)
+            <Arrow [2013-10-23T15:21:54.354846+00:00]>
+
+        **One** ``float`` or ``int``, convertible to a floating-point timestamp, to get
+        that timestamp in UTC::
+
+            >>> arrow.get(1367992474.293378)
+            <Arrow [2013-05-08T05:54:34.293378+00:00]>
+
+            >>> arrow.get(1367992474)
+            <Arrow [2013-05-08T05:54:34+00:00]>
+
+        **One** ISO 8601-formatted ``str``, to parse it::
+
+            >>> arrow.get('2013-09-29T01:26:43.830580')
+            <Arrow [2013-09-29T01:26:43.830580+00:00]>
+
+        **One** ISO 8601-formatted ``str``, in basic format, to parse it::
+
+            >>> arrow.get('20160413T133656.456289')
+            <Arrow [2016-04-13T13:36:56.456289+00:00]>
+
+        **One** ``tzinfo``, to get the current time **converted** to that timezone::
+
+            >>> arrow.get(tz.tzlocal())
+            <Arrow [2013-05-07T22:57:28.484717-07:00]>
+
+        **One** naive ``datetime``, to get that datetime in UTC::
+
+            >>> arrow.get(datetime(2013, 5, 5))
+            <Arrow [2013-05-05T00:00:00+00:00]>
+
+        **One** aware ``datetime``, to get that datetime::
+
+            >>> arrow.get(datetime(2013, 5, 5, tzinfo=tz.tzlocal()))
+            <Arrow [2013-05-05T00:00:00-07:00]>
+
+        **One** naive ``date``, to get that date in UTC::
+
+            >>> arrow.get(date(2013, 5, 5))
+            <Arrow [2013-05-05T00:00:00+00:00]>
+
+        **One** time.struct time::
+
+            >>> arrow.get(gmtime(0))
+            <Arrow [1970-01-01T00:00:00+00:00]>
+
+        **One** iso calendar ``tuple``, to get that week date in UTC::
+
+            >>> arrow.get((2013, 18, 7))
+            <Arrow [2013-05-05T00:00:00+00:00]>
+
+        **Two** arguments, a naive or aware ``datetime``, and a replacement
+        :ref:`timezone expression <tz-expr>`::
+
+            >>> arrow.get(datetime(2013, 5, 5), 'US/Pacific')
+            <Arrow [2013-05-05T00:00:00-07:00]>
+
+        **Two** arguments, a naive ``date``, and a replacement
+        :ref:`timezone expression <tz-expr>`::
+
+            >>> arrow.get(date(2013, 5, 5), 'US/Pacific')
+            <Arrow [2013-05-05T00:00:00-07:00]>
+
+        **Two** arguments, both ``str``, to parse the first according to the format of the second::
+
+            >>> arrow.get('2013-05-05 12:30:45 America/Chicago', 'YYYY-MM-DD HH:mm:ss ZZZ')
+            <Arrow [2013-05-05T12:30:45-05:00]>
+
+        **Two** arguments, first a ``str`` to parse and second a ``list`` of formats to try::
+
+            >>> arrow.get('2013-05-05 12:30:45', ['MM/DD/YYYY', 'YYYY-MM-DD HH:mm:ss'])
+            <Arrow [2013-05-05T12:30:45+00:00]>
+
+        **Three or more** arguments, as for the direct constructor of an ``Arrow`` object::
+
+            >>> arrow.get(2013, 5, 5, 12, 30, 45)
+            <Arrow [2013-05-05T12:30:45+00:00]>
+
+    nnooww(tz: Union[datetime.tzinfo, str, NoneType] = None) -> arrow.arrow.Arrow
+        Returns an :class:`Arrow <arrow.arrow.Arrow>` object, representing "now" in the given
+        timezone.
+
+        :param tz: (optional) A :ref:`timezone expression <tz-expr>`.  Defaults to local time.
+
+        Usage::
+
+            >>> import arrow
+            >>> arrow.now()
+            <Arrow [2013-05-07T22:19:11.363410-07:00]>
+
+            >>> arrow.now('US/Pacific')
+            <Arrow [2013-05-07T22:19:15.251821-07:00]>
+
+            >>> arrow.now('+02:00')
+            <Arrow [2013-05-08T07:19:25.618646+02:00]>
+
+            >>> arrow.now('local')
+            <Arrow [2013-05-07T22:19:39.130059-07:00]>
+
+    uuttccnnooww() -> arrow.arrow.Arrow
+        Returns an :class:`Arrow <arrow.arrow.Arrow>` object, representing "now" in UTC time.
+
+        Usage::
+
+            >>> import arrow
+            >>> arrow.utcnow()
+            <Arrow [2013-05-08T05:19:07.018993+00:00]>
+
+DDAATTAA
+    FFOORRMMAATT__AATTOOMM = 'YYYY-MM-DD HH:mm:ssZZ'
+    FFOORRMMAATT__CCOOOOKKIIEE = 'dddd, DD-MMM-YYYY HH:mm:ss ZZZ'
+    FFOORRMMAATT__RRFFCC11003366 = 'ddd, DD MMM YY HH:mm:ss Z'
+    FFOORRMMAATT__RRFFCC11112233 = 'ddd, DD MMM YYYY HH:mm:ss Z'
+    FFOORRMMAATT__RRFFCC22882222 = 'ddd, DD MMM YYYY HH:mm:ss Z'
+    FFOORRMMAATT__RRFFCC33333399 = 'YYYY-MM-DD HH:mm:ssZZ'
+    FFOORRMMAATT__RRFFCC882222 = 'ddd, DD MMM YY HH:mm:ss Z'
+    FFOORRMMAATT__RRFFCC885500 = 'dddd, DD-MMM-YY HH:mm:ss ZZZ'
+    FFOORRMMAATT__RRSSSS = 'ddd, DD MMM YYYY HH:mm:ss Z'
+    FFOORRMMAATT__WW33CC = 'YYYY-MM-DD HH:mm:ssZZ'
+    ____aallll____ = ['__version__', 'get', 'now', 'utcnow', 'Arrow', 'ArrowFacto...
+
+VVEERRSSIIOONN
+    1.3.0
+
+FFIILLEE
+    /home/ubuntu/.local/lib/python3.12/site-packages/arrow/__init__.py
+
