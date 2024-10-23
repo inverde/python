@@ -1,2 +1,2 @@
-import arrow
+from arrow import humanize
 
