@@ -8,7 +8,7 @@ print(delta.days)
 years = delta.days//365
 days = delta.days % 365
 if days > 31:
-    months =
+    months = days//31
     days = days % 31
     print(years, months, days)
 else:
