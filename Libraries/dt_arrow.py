@@ -10,7 +10,7 @@ days = delta.days % 365
 if days > 31:
     months = today.month - birth.month
     regular_days = 23 - 11
-    leap_days = delta.days - (years * 365) - (months * 30) - regular_days
+    leap_days = delta.days - (years * 365) - (months * 31) - regular_days
     print(years, months, regular_days, leap_days)
 else:
     print(years, days)
