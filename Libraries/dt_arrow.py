@@ -7,3 +7,5 @@ print(delta.days)
 years = delta.days//365
 days = delta.days % 365
 print(years, days)
+year_days = 31+28+30+31+30+31+31+30+1+30+31
+print(year_days)
