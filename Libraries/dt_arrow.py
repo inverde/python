@@ -15,10 +15,11 @@ elif birth.month > today.month:
 else:
     months = 0
 def leap_years_in_age(year_range):
+    count = 0 
     for year in range(year_range[0], year_range[1]):
         if (year % 4 == ) and (year % 100 != 0) or (year % 400 == 0):
             count += 1
-    retu
+    return count
 if days > 31:
     months = today.month - birth.month
     regular_days = 23 - 11
