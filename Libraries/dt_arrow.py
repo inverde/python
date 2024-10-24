@@ -15,18 +15,18 @@ elif birth.month > today.month:
     months =  12 - (birth.month - today.month)
 else:
     months = 0
+
 if today.day > birth.day:
-    days = today.day - birth.day
+    regular_days = today.day - birth.day
 else:
-    days = today.ceil('month').date() - (birth.day - today.day)
+    regular_days = today.ceil('month').date() - (birth.day - today.day)
 
 if days > 31:
-    regular_days = 23 - 11
     leap_days = 63//4
     year_days = years * 365
     month_days = delta.days - year_days - regular_days - leap_days
     print(year_days, month_days, regular_days, leap_days)
-    print(years, months, , leap_days)
+    print(years, months, regular_days, leap_days)
 else:
     print(years, days)
 
