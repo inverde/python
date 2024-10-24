@@ -21,15 +21,13 @@ if today.day > birth.day:
 else:
     regular_days = today.ceil('month').date() - (birth.day - today.day)
 
-if days > 31:
+def main():
     leap_days = leap_years_in_age((birth.year, today.year))
     year_days = years * 365
     month_days = delta.days - year_days - regular_days - leap_days
     print(year_days, month_days, regular_days, leap_days)
     print(years, months, regular_days, leap_days)
-else:
-    print(years, days)
-
+    
 def leap_years_in_age(year_range):
     count = 0
     for year in range(year_range[0], year_range[1]):
