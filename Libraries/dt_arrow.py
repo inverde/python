@@ -10,9 +10,11 @@ days = delta.days % 365
 
 if today.month > birth.month:
     months = today.month - birth.month
-else:
+elif birth.month > today.month:
     months =  12 - (birth.month - today.month)
-    
+else:
+    months = 0
+
 if days > 31:
     months = today.month - birth.month
     regular_days = 23 - 11
