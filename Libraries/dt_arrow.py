@@ -14,7 +14,8 @@ elif birth.month > today.month:
     months =  12 - (birth.month - today.month)
 else:
     months = 0
-
+def leap_years_in_age(year_range):
+    
 if days > 31:
     months = today.month - birth.month
     regular_days = 23 - 11
