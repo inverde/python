@@ -27,7 +27,7 @@ def main():
     month_days = delta.days - year_days - regular_days - leap_days
     print(year_days, month_days, regular_days, leap_days)
     print(years, months, regular_days, leap_days)
-    
+
 def leap_years_in_age(year_range):
     count = 0
     for year in range(year_range[0], year_range[1]):
@@ -35,4 +35,7 @@ def leap_years_in_age(year_range):
             count += 1
     return count
 
-print('Leap years: ', leap_years_in_age((1961, 2024)))
+print('Leap days: ', leap_years_in_age((1961, 2024)))
+
+if __name__ == "__main__":
+    main()
