@@ -16,8 +16,6 @@ elif birth.month > today.month:
 else:
     months = 0
 
-zstat = {'indicator':indicator, 'country': country_code, 'date': publish_year, 'value': val}
-
 if days > 31:
     months = today.month - birth.month
     regular_days = 23 - 11
