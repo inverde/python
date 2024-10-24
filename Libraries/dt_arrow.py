@@ -22,7 +22,7 @@ elif birth.day > today.day:
     regular_days = today.ceil('month').date() - (birth.day - today.day)
 else:
     regular_days = 0
-    
+
 def main():
     leap_days = leap_years_in_age((birth.year, today.year))
     year_days = years * 365
