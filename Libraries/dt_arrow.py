@@ -7,10 +7,12 @@ delta = today - birth
 print(delta.days)
 years = delta.days//365
 days = delta.days % 365
+
 if today.month > birth.month:
     months = today.month - birth.month
 else:
     months =  12 - (birth.month - today.month)
+    
 if days > 31:
     months = today.month - birth.month
     regular_days = 23 - 11
