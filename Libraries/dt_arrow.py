@@ -5,6 +5,7 @@ today = arrow.now("US/Eastern")
 print(today.month)
 delta = today - birth
 print(delta.days)
+
 years = delta.days//365
 days = delta.days % 365
 
@@ -15,7 +16,7 @@ elif birth.month > today.month:
 else:
     months = 0
 def leap_years_in_age(year_range):
-    count = 0 
+    count = 0
     for year in range(year_range[0], year_range[1]):
         if (year % 4 == ) and (year % 100 != 0) or (year % 400 == 0):
             count += 1
