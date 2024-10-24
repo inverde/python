@@ -33,4 +33,4 @@ def leap_years_in_age(year_range):
             count += 1
     return count
 
-print('Leap years: ', year_range((1961, 2024))
+print('Leap years: ', leap_years_in_age((1961, 2024)))
