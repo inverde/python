@@ -15,6 +15,10 @@ elif birth.month > today.month:
     months =  12 - (birth.month - today.month)
 else:
     months = 0
+if today.day > birth.day:
+    days = today.day - birth.day
+else:
+    days = today.ceil('month').date() - (birth.day - today.day)
 
 if days > 31:
     regular_days = 23 - 11
