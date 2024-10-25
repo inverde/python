@@ -1,11 +1,11 @@
 """
 This module works with dates objects to calculate years,months and days
-after birthday.
+after birthday. This module utilizes the built-in arrow module
 
 Functions:
 
-days_after_birthday returns tuple: (days, leap_days)
-years_after_birthday returns tuple: (years, days)
+days_after_birth returns tuple: (days, leap_days)
+years_after_birth returns tuple: (years, days)
 
 Calling this module like python dt_arrow.py
 """
