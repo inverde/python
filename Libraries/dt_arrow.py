@@ -22,7 +22,8 @@ def days_after_birth(year, month, day):
     birthday = arrow.get(1961,6,11)
     today = arrow.now("US/Eastern")
     delta = today - birthday
-    return delta.days
+    leap_days = leap_years_in_age(birthday.year, today.year)
+    return delta.days, 
 
 def years_after_birthday(days, leap_days):
     """Function to returns tuple with number of years and elapsed extra
