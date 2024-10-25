@@ -4,8 +4,8 @@ after birthday.
 
 Functions:
 
-days_after_birthday returns: (days, leap_days)
-years_after_birthday returns: (years, days)
+days_after_birthday returns tuple: (days, leap_days)
+years_after_birthday returns tuple: (years, days)
 
 Calling this module like python dt_arrow.py
 """
