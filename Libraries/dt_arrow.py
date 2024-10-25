@@ -1,3 +1,12 @@
+"""
+This module works with dates objects to calculate years,months and days
+after birthday.
+
+Functions:
+
+days_after_birthday returns: (days, leap_days)
+years_after_birthday returns
+Calling this module like python dt_arrow.py
 import arrow
 birth = arrow.get(1961, 6, 11)
 print(birth.humanize())
