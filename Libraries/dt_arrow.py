@@ -33,7 +33,7 @@ def years_after_birthday(days, leap_days):
     Returns:
     tuple: (years (int), days(int))
     """
-    return(days // 365, days % 365)
+    return(days // 365, days % 365 - leap_days)
 if today.month > birth.month:
     months = today.month - birth.month
 elif birth.month > today.month:
