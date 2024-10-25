@@ -10,7 +10,7 @@ years = delta.days//365
 days = delta.days % 365
 
 def days_after_birth(year, month, day):
-    """Function to returns tuple of days after your birthday and leap_days
+    """Function to returns tuple of days and leap_days after birthday
     year (int) year of birth
     month (int) month of birth
     day (int) day of birth
@@ -31,7 +31,7 @@ def years_after_birthday(days, leap_days):
 
     days (int) days after birthday
     leap_days (int) leap years after birthday
-    
+
     Returns:
     tuple: (years (int), days(int))
     """
