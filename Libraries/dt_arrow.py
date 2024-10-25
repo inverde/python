@@ -28,8 +28,10 @@ def days_after_birth(year, month, day):
 def years_after_birthday(days, leap_days):
     """Function to returns tuple with number of years and elapsed extra
     days after birthday
-    days (int) days after birthday
 
+    days (int) days after birthday
+    leap_days (int) leap years after birthday
+    
     Returns:
     tuple: (years (int), days(int))
     """
