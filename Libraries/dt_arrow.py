@@ -10,7 +10,12 @@ years = delta.days//365
 days = delta.days % 365
 
 def days_after_birth(year, month, day):
-    
+    """Function to returns the number of days after your birthday"""
+    # Define the birth day
+    birthday = arrow.get(1961,6,11)
+    today = arrow.now("US/Eastern")
+    delta = today - birthday
+    return delta.days
 
 if today.month > birth.month:
     months = today.month - birth.month
