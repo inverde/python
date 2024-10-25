@@ -5,10 +5,14 @@ after birthday.
 Functions:
 
 days_after_birthday returns: (days, leap_days)
-years_after_birthday returns
+years_after_birthday returns: (years, days)
+
 Calling this module like python dt_arrow.py
+"""
 import arrow
+
 birth = arrow.get(1961, 6, 11)
+print('Type of birthday: ',type(birth))
 print(birth.humanize())
 today = arrow.now("US/Eastern")
 print(today.month)
