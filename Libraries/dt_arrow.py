@@ -38,7 +38,7 @@ def days_after_birth(year, month, day):
     leap_days = leap_years_in_age(birthday.year, today.year)
     return delta.days, leap_days
 
-def years_after_birthday(days, leap_days):
+def years_after_birth(days, leap_days):
     """Function to returns tuple with number of years and elapsed extra
     days after birthday
 
