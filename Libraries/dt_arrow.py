@@ -9,6 +9,9 @@ print(delta.days)
 years = delta.days//365
 days = delta.days % 365
 
+def days_after_birth(year, month, day):
+    
+
 if today.month > birth.month:
     months = today.month - birth.month
 elif birth.month > today.month:
