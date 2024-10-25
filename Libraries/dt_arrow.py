@@ -24,6 +24,15 @@ def days_after_birth(year, month, day):
     delta = today - birthday
     return delta.days
 
+def years_after_birthday(days):
+    """Function to returns tupple with number of years and elapsed extra
+    days after birthday
+    days (int) days after birthday
+
+    Returns:
+    tuple: (years (int), days(int))
+    """
+    return(days // 365, days % 365)
 if today.month > birth.month:
     months = today.month - birth.month
 elif birth.month > today.month:
