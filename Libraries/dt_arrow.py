@@ -16,7 +16,8 @@ def days_after_birth(year, month, day):
     day (int) day of birth
 
     Returns:
-    int: Days elapsed after your birthday
+    int: Days elapsed after your birthday.
+    """
     # Define the birth day
     birthday = arrow.get(1961,6,11)
     today = arrow.now("US/Eastern")
