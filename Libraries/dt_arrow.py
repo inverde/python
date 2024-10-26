@@ -9,6 +9,8 @@ years_from_birth(days, leap_days) returns tuple: (years, days) years and extra d
 leap_years_in_age((birth_year, today_year)) returns int: leap_days
 years_from_birth(birth_dt, today_dt) returns int: years in age
 months_from_birth(birth_dt, today_dt) returns int: months in age
+days_from_birth(birth_dt, today_dt) return int: days in age
+
 Calling this module like python dt_arrow.py
 """
 import arrow
@@ -79,7 +81,7 @@ def months_from_birth(birth_dt, today_dt=arrow.now('US/Eastern')):
 
     return months
 
-def days_from_birthday(birth_dt, today_dt=arrow.now('US/Eastern')):
+def days_from_birth(birth_dt, today_dt=arrow.now('US/Eastern')):
     """Function to return the number of days other than years and months lived
     since your birthday
     Inputs:
@@ -114,7 +116,7 @@ def main():
 
     leap_days = leap_years_in_age((birth.year, today.year))
     year_days = years * 365
-    regular_days = days_from_birthday(birth, today)
+    regular_days = days_from_birth(birth, today)
     month_days = delta.days - year_days - regular_days - leap_days
 
     print(year_days, month_days, regular_days, leap_days)
