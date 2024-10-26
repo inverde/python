@@ -26,6 +26,7 @@ print('Type of years: ', type(years))
 
 def days_after_birth(year, month, day):
     """Function to returns tuple of days and leap_days after birthday
+    Inputs:
     year (int) year of birth
     month (int) month of birth
     day (int) day of birth
@@ -43,7 +44,7 @@ def days_after_birth(year, month, day):
 def years_after_birth(days, leap_days):
     """Function to returns tuple with number of years and elapsed extra
     days after birthday
-
+    Inputs:
     days (int) days after birthday
     leap_days (int) leap years after birthday
 
@@ -56,8 +57,12 @@ def leap_years_in_age(year_range):
     """Function returns the number leap years occurred during a
     range of years. Consider to adjust this number if were born after february
     and you were born in a leap year.
+    Input:
+    year_range tuple(birth_year (int), today_year (int)) years range
 
-    year_range tuple(birth_year (int), today_year (int))
+    Returns:
+    int: number of leap years in year range
+    """"
 
     count = 0
     for year in range(year_range[0], year_range[1]):
