@@ -26,7 +26,7 @@ def days_after_birth(year, month, day):
     tuple: (Days (int), leap_days (int)).
     """
     # Define the birth day
-    birthday = arrow.get(1961,6,11)
+    birthday = arrow.get(year, month, day)
     today = arrow.now("US/Eastern")
     delta = today - birthday
     leap_days = leap_years_in_age(birthday.year, today.year)
