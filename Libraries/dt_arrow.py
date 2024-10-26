@@ -52,6 +52,20 @@ def years_after_birth(days, leap_days):
     """
     return(days // 365, days % 365 - leap_days)
 
+def leap_years_in_age(year_range):
+    """Function returns the number leap years occurred during a
+    range of years. Consider to adjust this number if were born after february
+    and you were born in a leap year.
+
+    year_range tuple(birth_year (int), today_year (int))
+
+    count = 0
+    for year in range(year_range[0], year_range[1]):
+        if (year % 4 == 0) and (year % 100 != 0) or (year % 400 == 0):
+            count += 1
+    return count
+
+
 if today.month > birth.month:
     months = today.month - birth.month
 elif birth.month > today.month:
@@ -74,12 +88,7 @@ def main():
     print(year_days, month_days, regular_days, leap_days)
     print(years, months, regular_days, leap_days)
 
-def leap_years_in_age(year_range):
-    count = 0
-    for year in range(year_range[0], year_range[1]):
-        if (year % 4 == 0) and (year % 100 != 0) or (year % 400 == 0):
-            count += 1
-    return count
+
 
 print('Leap days: ', leap_years_in_age((1961, 2024)))
 
