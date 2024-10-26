@@ -70,13 +70,21 @@ def leap_years_in_age(year_range):
             count += 1
     return count
 
-def number_months_from_birth(birth_dt, today_dt=arrow.now('US/Eastern'))
-if today.month > birth.month:
-    months = today.month - birth.month
-elif birth.month > today.month:
-    months =  12 - (birth.month - today.month)
-else:
-    months = 0
+def months_from_birth(birth_dt, today_dt=arrow.now('US/Eastern')):
+    """Function to returns the number of months since your birthday
+    Inputs:
+    birth_dt (arrow object) Date of your birthday
+    today_dy (arrow object) Today's date
+
+    Returns:
+    int: Number of months elapsed since your birthday
+    """"
+    if today_dt.month > birth_dt.month:
+        months = today_dt.month - birth_dt.month
+    elif birth_dt.month > today_dt.month:
+        months =  12 - (birth_dt.month - today_dt.month)
+    else:
+        months = 0
 
 if today.day > birth.day:
     regular_days = today.day - birth.day
