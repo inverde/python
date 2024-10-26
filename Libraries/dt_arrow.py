@@ -50,7 +50,7 @@ def leap_years_in_age(year_range):
 
     Returns:
     int: number of leap years in year range
-    """"
+    """
 
     count = 0
     for year in range(year_range[0], year_range[1]):
@@ -66,7 +66,7 @@ def months_from_birth(birth_dt, today_dt=arrow.now('US/Eastern')):
 
     Returns:
     int: Number of months elapsed since your birthday
-    """"
+    """
 
     if today_dt.month > birth_dt.month:
         months = today_dt.month - birth_dt.month
