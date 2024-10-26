@@ -36,8 +36,8 @@ def years_from_birth(days, leap_days):
     """Function to returns tuple with number of years and elapsed extra days
     excluding leap days in years
     Inputs:
-    days (int) days after birthday
-    leap_days (int) leap years after birthday
+    days (int) days alive after birthday
+    leap_days (int) leap days after birthday
 
     Returns:
     tuple: (years (int), days(int))
