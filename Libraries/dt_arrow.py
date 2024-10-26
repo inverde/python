@@ -23,7 +23,7 @@ def days_after_birth(year, month, day):
     day (int) day of birth
 
     Returns:
-    tuple: (Days (int), leap_days (int)).
+    tuple: (days_alive (int), leap_days (int)).
     """
     # Define the birth day
     birthday = arrow.get(year, month, day)
