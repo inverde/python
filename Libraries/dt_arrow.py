@@ -87,7 +87,19 @@ def months_from_birth(birth_dt, today_dt=arrow.now('US/Eastern')):
     else:
         months = 0
 
+    return months
+
 def days_from_birthday(birth_dt, today_dt=arrow.now('US/Eastern')):
+    """Function to return the number of days other than years and months lived
+    since your birthday
+    Inputs:
+    birth_dt (arrow object) Date of your birthday
+    today_dt (arrow object) Today's date
+
+    Returns:
+    int: Number of days in addition of years and months since birthday
+    """
+    
     if today_dt.day > birth_dt.day:
         regular_days = today_dt.day - birth_dt.day
     elif birth_dt.day > today_dt.day:
@@ -95,6 +107,8 @@ def days_from_birthday(birth_dt, today_dt=arrow.now('US/Eastern')):
         months -=1
     else:
         regular_days = 0
+
+    return regular_days
 
 def main():
     leap_days = leap_years_in_age((birth.year, today.year))
