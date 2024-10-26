@@ -101,7 +101,7 @@ def days_from_birthday(birth_dt, today_dt=arrow.now('US/Eastern')):
 def main():
     """Function to print years in days, months in days, regular days, leap days,
     and also print years, months, regular days and leap years since birthday
-    """"
+    """
     birth = arrow.get(1961, 6, 11)
     today = arrow.now("US/Eastern")
     delta = today - birth
