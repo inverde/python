@@ -6,7 +6,7 @@ Functions:
 
 days_after_birth(year, month, day) returns tuple: (days, leap_days) days, leap_days in days
 years_from_birth(days, leap_days) returns tuple: (years, days) years and extra days
-leap_years_in_age((birth_year, today_year)) returns int: leap_days
+leap_years_in_range((birth_year, today_year)) returns int: leap_days
 months_from_birth(birth_dt, today_dt) returns int: months in age
 days_from_birth(birth_dt, today_dt) returns int: days in age
 
@@ -44,7 +44,7 @@ def years_from_birth(days, leap_days):
     """
     return(days // 365, days % 365 - leap_days)
 
-def leap_years_in_age(year_range):
+def leap_years_in_range(year_range):
     """Function returns the number leap years occurred during a
     range of years. Consider to adjust this number if you were born after february
     and during a leap year.
@@ -113,7 +113,7 @@ def main():
     months = months_from_birth(birth, today)
     days = delta.days % 365
 
-    leap_days = leap_years_in_age((birth.year, today.year))
+    leap_days = leap_years_in_range((birth.year, today.year))
     year_days = years * 365
     regular_days = days_from_birth(birth, today)
     month_days = delta.days - year_days - regular_days - leap_days
