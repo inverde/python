@@ -79,6 +79,7 @@ def months_from_birth(birth_dt, today_dt=arrow.now('US/Eastern')):
     Returns:
     int: Number of months elapsed since your birthday
     """"
+
     if today_dt.month > birth_dt.month:
         months = today_dt.month - birth_dt.month
     elif birth_dt.month > today_dt.month:
@@ -86,13 +87,14 @@ def months_from_birth(birth_dt, today_dt=arrow.now('US/Eastern')):
     else:
         months = 0
 
-if today.day > birth.day:
-    regular_days = today.day - birth.day
-elif birth.day > today.day:
-    regular_days = today.ceil('month').date() - (birth.day - today.day)
-    months -=1
-else:
-    regular_days = 0
+def days_from_birthday(birth_dt, today_dt=arrow.now('US/Eastern')):
+    if today_dt.day > birth_dt.day:
+        regular_days = today_dt.day - birth_dt.day
+    elif birth_dt.day > today_dt.day:
+        regular_days = today_dt.ceil('month').date() - (birth_dt.day - today_dt.day)
+        months -=1
+    else:
+        regular_days = 0
 
 def main():
     leap_days = leap_years_in_age((birth.year, today.year))
