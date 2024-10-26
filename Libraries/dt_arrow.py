@@ -6,7 +6,8 @@ Functions:
 
 days_after_birth(year, month, day) returns tuple: (days, leap_days)
 years_from_birth(days, leap_days) returns tuple: (years, days)
-leap_years_in_age()
+leap_years_in_age((birth_year, today_year)) returns int: leap_days
+months_from_birth(birth_dt, today_dt) returns int: months in age
 Calling this module like python dt_arrow.py
 """
 import arrow
