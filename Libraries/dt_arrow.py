@@ -111,6 +111,7 @@ def main():
 
     leap_days = leap_years_in_age((birth.year, today.year))
     year_days = years * 365
+    regular_days = days_from_birthday(birth, today)
     month_days = delta.days - year_days - regular_days - leap_days
 
     print(year_days, month_days, regular_days, leap_days)
