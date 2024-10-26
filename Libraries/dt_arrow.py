@@ -4,9 +4,9 @@ after birthday. This module utilizes the built-in arrow module
 
 Functions:
 
-days_after_birth returns tuple: (days, leap_days)
-years_after_birth returns tuple: (years, days)
-
+days_after_birth(year, month, day) returns tuple: (days, leap_days)
+years_from_birth(days, leap_days) returns tuple: (years, days)
+leap_years_in_age()
 Calling this module like python dt_arrow.py
 """
 import arrow
@@ -29,9 +29,9 @@ def days_after_birth(year, month, day):
     leap_days = leap_years_in_age(birthday.year, today.year)
     return delta.days, leap_days
 
-def years_after_birth(days, leap_days):
+def years_from_birth(days, leap_days):
     """Function to returns tuple with number of years and elapsed extra
-    days after birthday
+    leap days after birthday
     Inputs:
     days (int) days after birthday
     leap_days (int) leap years after birthday
