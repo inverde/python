@@ -70,7 +70,7 @@ def leap_years_in_age(year_range):
             count += 1
     return count
 
-
+def number_months_from_birth(birth_dt, today_dt=arrow.now('US/Eastern'))
 if today.month > birth.month:
     months = today.month - birth.month
 elif birth.month > today.month:
