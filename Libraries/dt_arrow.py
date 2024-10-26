@@ -29,7 +29,7 @@ def days_after_birth(year, month, day):
     birthday = arrow.get(year, month, day)
     today = arrow.now("US/Eastern")
     delta = today - birthday
-    leap_days = leap_years_in_age(birthday.year, today.year)
+    leap_days = leap_years_in_range(birthday.year, today.year)
     return delta.days, leap_days
 
 def years_from_birth(days, leap_days):
