@@ -11,18 +11,6 @@ Calling this module like python dt_arrow.py
 """
 import arrow
 
-birth = arrow.get(1961, 6, 11)
-print('Type of birthday: ',type(birth))
-print(birth.humanize())
-today = arrow.now("US/Eastern")
-print(today.month)
-delta = today - birth
-print(delta.days)
-
-years = delta.days//365
-days = delta.days % 365
-
-print('Type of years: ', type(years))
 
 def days_after_birth(year, month, day):
     """Function to returns tuple of days and leap_days after birthday
@@ -99,7 +87,7 @@ def days_from_birthday(birth_dt, today_dt=arrow.now('US/Eastern')):
     Returns:
     int: Number of days in addition of years and months since birthday
     """
-    
+
     if today_dt.day > birth_dt.day:
         regular_days = today_dt.day - birth_dt.day
     elif birth_dt.day > today_dt.day:
@@ -111,6 +99,13 @@ def days_from_birthday(birth_dt, today_dt=arrow.now('US/Eastern')):
     return regular_days
 
 def main():
+    birth = arrow.get(1961, 6, 11)
+    today = arrow.now("US/Eastern")
+    delta = today - birth
+
+    years = delta.days//365
+    days = delta.days % 365
+    
     leap_days = leap_years_in_age((birth.year, today.year))
     year_days = years * 365
     month_days = delta.days - year_days - regular_days - leap_days
