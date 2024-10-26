@@ -107,6 +107,7 @@ def main():
     delta = today - birth
 
     years = delta.days//365
+    months = months_from_birth(birth, today)
     days = delta.days % 365
 
     leap_days = leap_years_in_age((birth.year, today.year))
