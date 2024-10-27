@@ -1,6 +1,6 @@
 
-import pytest, arrow
 import warnings
+import pytest, arrow
 from dt_arrow import days_after_birth, years_from_birth, leap_years_in_range
 
 warnings.filterwarnings("ignore")
