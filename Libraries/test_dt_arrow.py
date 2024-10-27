@@ -13,7 +13,7 @@ def test_days_after_birth():
 def test_years_from_birth():
     assert years_from_birth(5, 0) == (0,5)
 
-    def test_leap_years_in_range():
-        with pytest.raises(AssertionError):
-            assert leap_years_in_range((2020, 2024)) == 0
+def test_leap_years_in_range():
+    with pytest.raises(AssertionError):
+        assert leap_years_in_range((2020, 2024)) == 0
 
