@@ -15,6 +15,10 @@ def main():
         for name in names:
             print(name)
 
+def load_names():
+    pass
+
 if __name__ == "__main__":
+    # todo Implements the load_names function
     main()
 
