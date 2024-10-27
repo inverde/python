@@ -7,15 +7,13 @@ def get_name():
         except ValueError:
             continue
 def main():
-    for _ in range(3):
-        name = get_name()
-        file = open("names.txt", 'a')
-        file.write(f"{name}\n")
-        names.append(name)
-        file.close()
-
-    for name in names:
-        print(name)
+    with open("names.txt", 'a') as file:
+        for _ in range(3):
+            name = get_name()
+            file.write(f"{name}\n")
+            names.append(name)
+        for name in names:
+            print(name)
 
 if __name__ == "__main__":
     main()
