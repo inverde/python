@@ -10,7 +10,7 @@ def main():
     for _ in range(3):
         name = get_name()
         file = open("names.txt", 'a')
-        file.write(name)
+        file.write(f"{name})
         names.append(name)
         file.close()
 
