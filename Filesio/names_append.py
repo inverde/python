@@ -14,6 +14,9 @@ def main():
         names.append(name)
         file.close()
 
-for name in names:
-    print(name)
+    for name in names:
+        print(name)
+
+if __name__ == "__main__":
+    main()
 
