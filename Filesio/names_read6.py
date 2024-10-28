@@ -11,5 +11,5 @@ with open("names.csv", 'r') as file:
         resident["name"] = name
         resident["city"] = city
         names.append(resident)
-    for name in names:
+    for resident in names:
         print(f"{resident['name']} lives in {resident['city']}")
