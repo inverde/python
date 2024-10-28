@@ -8,4 +8,4 @@ with open("names.csv", 'r') as file:
         name, city = line
         names.append(f"{name} lives in {city}")
     for name in names:
-        print(f"{name} lives in {city}")
+        print(name)
