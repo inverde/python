@@ -10,6 +10,6 @@ with open("names.csv", 'r') as file:
         name, city = line
         resident["name"] = name
         resident["city"] = city
-        names.append(f"{name} lives in {city}")
-    for name in sorted(names):
-        print(name)
+        names.append(resident)
+    for name in names:
+        print(f"{resident['name']} lives in {resident['city']}")
