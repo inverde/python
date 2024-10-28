@@ -7,5 +7,5 @@ with open("names.csv", 'r') as file:
     for line in reader:
         name, city = line
         names.append(f"{name} lives in {city}")
-    for name in names:
+    for name in sorted(names):
         print(name)
