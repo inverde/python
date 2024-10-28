@@ -1,3 +1,4 @@
+# Reading a file into a iterable of lines
 with open("names.csv") as file:
     for line in file:
         line = line.rstrip().split(',')
