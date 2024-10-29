@@ -15,6 +15,7 @@ def traceClose(func):
         func(arg1)
         print(f"After calling {func.__name__}")
     return wrapper
+#-----------------------------------------------------------------------------------
 
 @traceOpen
 def openFile(filename, mode):
