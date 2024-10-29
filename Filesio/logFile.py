@@ -26,12 +26,14 @@ def closeFile(file):
     file.close()
 
 def printio(message):
-    
+    global file
+    file.write(message + '\n')
+
 
 file = openFile("log.txt", 'a')
 
-file.write("Logging debug messages to my file\n")
-file.write("Testing for a second line of degug messages\n")
+printio("Logging debug messages to my file")
+printio("Testing for a second line of degug messages")
 
 print(type(file))
 
