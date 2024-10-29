@@ -8,11 +8,11 @@ def traceCall(func):
         print("After calling {func.__name__}")
     return wrapper
 
-@traceCall
+@traceCall()
 def openFile(filename, mode):
     return open(filename, mode)
 
-@traceCall
+@traceCall()
 def closeFile(file):
     file.close()
 
