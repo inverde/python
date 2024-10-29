@@ -9,7 +9,7 @@ def traceOpen(func):
         return resultado
     return wrapper
 
-def traceCall(func):
+def traceClose(func):
     def wrapper():
         print(f"Before calling {func.__name__}")
         func()
