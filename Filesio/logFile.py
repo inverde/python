@@ -12,6 +12,7 @@ def traceCall(func):
 @traceCall
 def openFile(filename, mode):
     return open(filename, mode)
+
 def closeFile(file):
     file.close()
 
