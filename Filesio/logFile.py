@@ -9,6 +9,7 @@ def closeFile(file):
 file = openFile("log.txt", 'a')
 
 file.write("Logging debug messages to my file\n")
+file.write("Testing for a second line of degug messages\n")
 
 print(type(file))
 
