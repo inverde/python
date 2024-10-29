@@ -1,6 +1,10 @@
 # In this program will be logging messages to a debug file
 
-# Please write a decorator function to 
+# Please write a decorator function to help trace my code when testing
+def traceCall(func):
+    def wrapper():
+        printio("Before calling {func.__name__}")
+        func()
 
 def openFile(filename, mode):
     return open(filename, mode)
