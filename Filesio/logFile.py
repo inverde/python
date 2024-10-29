@@ -25,6 +25,8 @@ def openFile(filename, mode):
 def closeFile(file):
     file.close()
 
+def printio
+
 file = openFile("log.txt", 'a')
 
 file.write("Logging debug messages to my file\n")
