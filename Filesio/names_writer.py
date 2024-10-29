@@ -1,3 +1,5 @@
+import csv
+
 name = input("What's your name:? ")
 city = input("Please enter name of your city:? ")
 
