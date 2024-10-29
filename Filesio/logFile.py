@@ -11,8 +11,6 @@ def traceCall(func):
 @traceCall()
 def openFile(filename, mode):
     return open(filename, mode)
-
-@traceCall()
 def closeFile(file):
     file.close()
 
