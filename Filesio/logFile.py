@@ -1,6 +1,6 @@
 # In this program will be logging messages to a debug file
 
-# Please write a decorator function to help trace my code when testing
+# Please write a decorator functions to help trace my code when logging
 def traceOpen(func):
     def wrapper(arg1, arg2):
         print(f"Before calling {func.__name__}")
