@@ -25,7 +25,8 @@ def openFile(filename, mode):
 def closeFile(file):
     file.close()
 
-def printio
+def printio(message):
+    
 
 file = openFile("log.txt", 'a')
 
