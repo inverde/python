@@ -1,7 +1,7 @@
 # In this program will be logging messages to a debug file
 
 # Please write a decorator function to help trace my code when testing
-def traceCall2(func):
+def traceOpen(func):
     def wrapper(arg1, arg2):
         print(f"Before calling {func.__name__}")
         resultado = func(arg1, arg2)
@@ -9,18 +9,18 @@ def traceCall2(func):
         return resultado
     return wrapper
 
-def traceCall1(func):
+def traceClose(func):
     def wrapper(arg1):
         print(f"Before calling {func.__name__}")
         func(arg1)
         print(f"After calling {func.__name__}")
     return wrapper
 
-@traceCall2
+@traceOpen
 def openFile(filename, mode):
     return open(filename, mode)
 
-@traceCall1
+@traceClose
 def closeFile(file):
     file.close()
 
