@@ -4,8 +4,9 @@
 def traceCall(func):
     def wrapper(arg1, arg2):
         print("Before calling {func.__name__}")
-        func(arg1, arg2)
+        resultado = func(arg1, arg2)
         print("After calling {func.__name__}")
+        return resultado
     return wrapper
 
 @traceCall
