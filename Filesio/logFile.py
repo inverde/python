@@ -10,9 +10,9 @@ def traceOpen(func):
     return wrapper
 
 def traceClose(func):
-    def wrapper(arg1):
+    def wrapper():
         print(f"Before calling {func.__name__}")
-        func(arg1)
+        func()
         print(f"After calling {func.__name__}")
     return wrapper
 #-----------------------------------------------------------------------------------
@@ -22,7 +22,8 @@ def openFile(filename, mode):
     return open(filename, mode)
 
 @traceClose
-def closeFile(file):
+def closeFile():
+    global file
     file.close()
 
 def printio(message):
@@ -37,5 +38,5 @@ printio("Testing for a second line of degug messages")
 
 print(type(file))
 
-closeFile(file)
+closeFile()
 
