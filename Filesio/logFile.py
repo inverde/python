@@ -3,8 +3,11 @@
 # Please write a decorator function to help trace my code when testing
 def traceCall(func):
     def wrapper():
-        printio("Before calling {func.__name__}")
+        print("Before calling {func.__name__}")
         func()
+        print("After calling {func.__name__}")
+    return wrapper
+
 
 def openFile(filename, mode):
     return open(filename, mode)
