@@ -3,9 +3,9 @@
 # Please write a decorator function to help trace my code when testing
 def traceCall(func):
     def wrapper(arg1, arg2):
-        print("Before calling {func.__name__}")
+        print(f"Before calling {func.__name__}")
         resultado = func(arg1, arg2)
-        print("After calling {func.__name__}")
+        print(f"After calling {func.__name__}")
         return resultado
     return wrapper
 
