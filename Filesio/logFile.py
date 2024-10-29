@@ -1,7 +1,7 @@
 # In this program will be logging messages to a debug file
 
 # Please write a decorator function to help trace my code when testing
-def traceCall(func):
+def traceCallParams(func):
     def wrapper(arg1, arg2):
         print(f"Before calling {func.__name__}")
         resultado = func(arg1, arg2)
