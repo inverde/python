@@ -8,7 +8,7 @@ def closeFile(file):
 
 file = openFile("log.txt", 'a')
 
-file.writer("Logging debug messages to my file\n")
+file.write("Logging debug messages to my file\n")
 
 print(type(file))
 
