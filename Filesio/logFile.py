@@ -1,3 +1,10 @@
 # In this program will be logging messages to a debug file
-with open("log.txt", 'a') as file:
 
+def openFile(filename, mode):
+    return open(filename, mode)
+
+file = openFile("log.txt", 'a')
+
+print(type(file))
+
+file.close()
