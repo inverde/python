@@ -1,1 +1,3 @@
 Logging debug messages to my file
+Logging debug messages to my file
+Testing for a second line of degug messages
