@@ -19,7 +19,7 @@ def validate_email():
 
     username, domain = email.split('@')
 
-    if username and ".com" in domain:
+    if username and domain.endswith('.edu'):
         return True
     else:
         return False
