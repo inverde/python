@@ -8,4 +8,13 @@ def validate_email():
     email = input("What's your email:? ")
 
     if "@" in email:
-        return 
+        return True
+    else:
+        return False
+
+
+if validate_email():
+    print("valid")
+else:
+    print("invalid")
+
