@@ -1,7 +1,7 @@
 # Validating email with regex
 import re
 def validate_email():
-""" Function to validate email with regular expressions following these rules:
+    """ Function to validate email with regular expressions following these rules:
     1. Don't allow less than 8 characters in your username
     2. Allow a period, underscore or hiphen in your username but not all
     3. The username shouldn't start with any special characters or a number
@@ -17,10 +17,21 @@ def validate_email():
     username:^[^\W\s\d][\w][\.|-|_]?{8,20}
     servername: [^@][\w][_-\.]?[.com|.edu|.gov|.gob|.org]$
 
-"""
-    userformat = "^[^\W\s\d][\w][\.|-|_]?{8,20}"
+    """
+    formatUser = "^[^\W\s\d][\w][\.|-|_]?{8,20}"
+    formatDomain = "[^@][\w][_-\.]?[.com|.edu|.gov|.gob|.org]$"
+
     email = input("What's your email:? ").strip()
 
     username, domain = email.split('@')
 
-    if re.search()
+    if re.search(formatUser, username) and re.search(formatDomain, domain):
+        return True
+    else:
+        return False
+
+if validate_email():
+    print("Valid")
+else:
+    print("Invalid")
+
