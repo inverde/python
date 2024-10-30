@@ -21,3 +21,4 @@ if validate_email():
     print("Valid")
 else:
     print("Invalid")
+
