@@ -15,7 +15,7 @@ def validate_email():
 
     Validating two groups of characters: username and servername
     username:^[^\W\s\d][\w][\.|-|_]?{8,20}
-    servername: [@]{1}[\w_-\.]?[.com|.edu|.gov|.gob|.org]$
+    servername: [@]{1}[\w][_-\.]?[.com|.edu|.gov|.gob|.org]$
 
 """
 
