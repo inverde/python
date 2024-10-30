@@ -1,6 +1,11 @@
 # Using the built-in library re make sure we use regular expressions to validate email
 """ Regular Expressions:
-    
+    .   any character except a new line
+    *   0 or more repetitions
+    +   1 or more repetitions
+    ?   0 or 1 repetition
+    {m} m repetitions
+    {m,n} m-n repetitions
 """
 def validate_email():
     """Simple function to see if user input is a email
