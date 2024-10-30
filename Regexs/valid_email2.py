@@ -8,7 +8,7 @@ def validate_email():
 
     email = input("What's your email:? ").rstrip()
 
-    username, domain = email.split('@')
+    username, domain = email.split('@').strip()
 
     print(username, domain)
 
