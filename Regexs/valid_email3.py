@@ -23,3 +23,8 @@ def validate_email():
         return True
     else:
         return False
+
+if validate_email():
+    print("Valid email")
+else:
+    print("Invalid email")
