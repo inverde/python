@@ -9,8 +9,6 @@ def validate_email():
     username, domain = email.split('@')
 
     if username and ".com" in domain:
-
-    if "@" in email and ".com" in email:
         return True
     else:
         return False
@@ -18,5 +16,11 @@ def validate_email():
 
 
 def main():
-    pass
+    if validate_email():
+        print("Valid email")
+    else:
+        print"("Invalid email")
 
+
+if __name__ == "__main__":
+    main()
