@@ -15,5 +15,6 @@ def validate_email():
 
     Validating two groups of characters: username and servername
     username: 
+
 """
 
