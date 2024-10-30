@@ -18,7 +18,9 @@ def validate_email():
     servername: [^@][\w][_-\.]?[.com|.edu|.gov|.gob|.org]$
 
 """
-
+    userformat = "^[^\W\s\d][\w][\.|-|_]?{8,20}"
     email = input("What's your email:? ").strip()
 
-    ue
+    username, domain = email.split('@')
+
+    if re.search()
