@@ -12,5 +12,8 @@ def validate_email():
     no arguments() none
 
     return boolean: True or False
+
+    Validating two groups of characters: username and servername
+    username: 
 """
 
