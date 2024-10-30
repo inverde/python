@@ -19,5 +19,6 @@ def validate_email():
 
 """
 
-    email = input("What's your email:? ")
+    email = input("What's your email:? ").strip()
     
+
