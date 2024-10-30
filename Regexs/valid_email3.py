@@ -1,4 +1,5 @@
 # Using the built-in library re make sure we use regular expressions to validate email
+
 """ Regular Expressions:
     .   any character except a new line
     *   0 or more repetitions
@@ -13,6 +14,7 @@ def validate_email():
 
     return boolean: True or False
     """
+
     email = input("What's your email:? ").strip()
 
     username, domain = email.split('@')
