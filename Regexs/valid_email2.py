@@ -10,6 +10,8 @@ def validate_email():
 
     username, domain = email.split('@')
 
+    print(username, domain)
+
     if re.search(formatUser, username):
         return True
     else:
