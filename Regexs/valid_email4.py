@@ -19,7 +19,7 @@ def validate_email():
 
     username, domain = email.split('@')
 
-    if re.search)(r"^([a-zA-Z]+)@(\w+)(\.edu)$"
+    if re.search)(r"^([a-zA-Z]+)@([a-zA-Z]+)(\.edu)$"
         return True
     else:
         return False
