@@ -14,7 +14,7 @@ def validate_email():
     return boolean: True or False
 
     Validating two groups of characters: username and servername
-    username:^[^\w\s\d]{1,9}
+    username:^[^\w\s\d]{8,20}
 
 """
 
