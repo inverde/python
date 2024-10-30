@@ -2,7 +2,7 @@
 import re
 def validate_email():
 
-    formatUser = r"(\w\.?_?-?){8,20}"
+    formatUser = r"^[](\w\.?_?-?){8,20}"
 
     # formatDomain = r"^(^@\w\.?)\.(com|edu|gov|gob|org]$"
 
