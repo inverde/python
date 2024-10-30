@@ -14,13 +14,13 @@ def validate_email():
     return boolean: True or False
 
     Validating two groups of characters: username and servername
-    username:^[^\W\s\d][\w][\.|-|_]?{8,20}
-    servername: [^@][\w][_-\.]?[.com|.edu|.gov|.gob|.org]$
+    username:[\w][\.|-|_]?{8,20}
+    servername: [^@][\w][.com|.edu|.gov|.gob|.org]$
 
     """
-    formatUser = r"^[^\W\s\d][\w][\.|-|_]?{8,20}"
+    formatUser = r"[\w][\.|-|_]?{8,20}"
 
-    formatDomain = r"[^@][\w][_-]?[.com|.edu|.gov|.gob|.org]$"
+    formatDomain = r"[^@][\w][.com|.edu|.gov|.gob|.org]$"
 
     email = input("What's your email:? ").strip()
 
