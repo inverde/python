@@ -19,6 +19,7 @@ def validate_email():
 
     """
     formatUser = r"^[^\W\s\d][\w][\.|-|_]?{8,20}"
+
     formatDomain = r"[^@][\w][_-\.]?[.com|.edu|.gov|.gob|.org]$"
 
     email = input("What's your email:? ").strip()
