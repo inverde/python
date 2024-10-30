@@ -1,6 +1,6 @@
 # We need to make sure we @ and .com in our email to make sure is valid
 def validate_email():
-    """Simple functin to see if user input is a email
+    """Simple function to see if user input is a email
     no arguments() none
 
     return boolean: True or False
