@@ -18,7 +18,7 @@ def validate_email():
     email = input("What's your email:? ").strip()
 
 
-    if re.search(r"^([a-zA-Z]+)@([a-zA-Z]+)\.(edu)$",email, re.IGNORE_CASE):
+    if re.search(r"^([a-zA-Z]+)@([a-zA-Z]+)\.(edu)$",email, re.IGNORECASE):
         return True
     else:
         return False
