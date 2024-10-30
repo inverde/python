@@ -12,7 +12,7 @@ def validate_email():
 
     print(username, domain)
 
-    if re.search(formatUser, username):
+    if re.search(formatUser, username) and re.search(formatDomain, domain):
         return True
     else:
         return False
