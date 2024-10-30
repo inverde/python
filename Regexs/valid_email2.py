@@ -4,7 +4,7 @@ def validate_email():
 
     formatUser = r"^[^\W\d\s_]([a-zA-Z0-9]\.?-?_?){8,20}"
 
-    formatDomain = r"^[^@](\w+\.?)\.(com|edu|gov|gob|org)$"
+    formatDomain = r"^[^@](\w+\.{1,2})\.(com|edu|gov|gob|org)$"
 
     email = input("What's your email:? ").rstrip()
 
