@@ -6,7 +6,7 @@ def validate_email():
 
     # formatDomain = r"^(^@\w\.?)\.(com|edu|gov|gob|org]$"
 
-    email = input("What's your email:? ").strip()
+    email = input("What's your email:? ").rstrip()
 
     username, domain = email.split('@')
 
