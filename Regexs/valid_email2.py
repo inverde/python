@@ -19,7 +19,7 @@ def main():
     if validate_email():
         print("Valid email")
     else:
-        print"("Invalid email")
+        print("Invalid email")
 
 
 if __name__ == "__main__":
