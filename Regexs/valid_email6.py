@@ -1,3 +1,4 @@
+# Only accept letters characters, digits and underscore between 8 and 15 characters
 import re
 """ Regular Expressions:
     .   any character except a new line
