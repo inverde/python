@@ -23,7 +23,7 @@ def validate_email():
     email = input("What's your email:? ").strip()
 
 
-    if re.search(r"^[^\d]([a-zA-Z]+([a-zA-Z]\.)?){8,15}@(.+)\.(com|edu|org|gob|gov)$",
+    if re.search(r"^[^\d\W\s]([a-zA-Z]+([a-zA-Z]\.)?){8,15}@(.+)\.(com|edu|org|gob|gov)$",
                 email, re.IGNORECASE):
         return True
     else:
