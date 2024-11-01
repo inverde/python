@@ -1,4 +1,4 @@
-# Validate the use of up to one dot in the 
+# Validate the use of up to one dot in the username
 import re
 """ Regular Expressions:
     .   any character except a new line
@@ -10,6 +10,9 @@ import re
 """
 def validate_email():
     """Simple function to see if user input is a email
+    This function allows one dot in the user name and up
+    to 15 characters but not less than eight.
+    
     no arguments() none
 
     return boolean: True or False
