@@ -12,8 +12,8 @@ def validate_email():
     """Simple function to see if user input is a email
     This function allows one dot in the user name and up
     to 15 characters but not less than eight.
-    
-    no arguments() none
+
+    arguments(): none
 
     return boolean: True or False
     """
