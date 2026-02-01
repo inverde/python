@@ -1,0 +1,6 @@
+arrow==1.4.0
+beautifulsoup4==4.14.3
+Flask==3.1.2
+pandas==3.0.0
+pytest==9.0.2
+Requests==2.32.5

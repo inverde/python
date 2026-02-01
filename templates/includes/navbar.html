@@ -1,0 +1,12 @@
+<!-- templates/includes/navbar.html -->
+<nav class="navbar">
+    <div class="container">
+        <a href="{{ url_for('index') }}" class="navbar-brand">My Courses</a>
+        <ul class="navbar-links">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('lesson') }}">Lessons</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </div>
+</nav>

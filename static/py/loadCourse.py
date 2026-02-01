@@ -1,0 +1,69 @@
+import json
+from courseClasses import Course, Chapter, Lesson, EnglishRows, SpanishRows
+from courses import lesson as LessonDict, course as CourseDict
+import flags
+
+
+def lessonTitles_listtype() ->list[dict]:
+    course = CourseDict
+    return course["ChapterTitles"][0]["LessonTitles"]
+
+# Global listType
+lessonsListType = lessonTitles_listtype()
+
+def lessonTitles_list(course_title:str, chapter_title:str) ->list[str]:
+    course = CourseDict
+    return [lesson["LessonTitle"] for lesson in course[course_title]["ChapterTitles"][chapter_title]["LessonTitles"]]
+
+def set_base_pathDir(course_title:str, chapter_title:str) ->str:
+    base_pathDir = f"../data/json/{course_title}/{chapter_title}"
+    return base_pathDir
+
+def print_lesson(lesson_name:str, lesson_data:dict):
+    print(f"Lesson: {lesson_name}")
+    for key, value in lesson_data.items():
+        if isinstance(value, dict):
+            print(f"  {key}:")
+            for sub_key, sub_value in value.items():
+                print(f"    {sub_key}: {sub_value}")
+        else:
+            print(f"  {key}: {value}")
+
+# Load JSON file
+
+def lesson_data_from_json(path_dir, path_file) -> dict:
+
+    with open(f"{path_dir}/{path_file}", "r", encoding="utf-8") as f:
+        data = json.load(f)
+    
+    lesson_dict = LessonDict
+    lesson_dict["CourseTitle"] = data["CourseTitle"]
+    lesson_dict["ChapterTitle"] = data["ChapterTitle"]
+    lesson_dict["ChapterNumber"] = data["ChapterNumber"]
+    lesson_dict["LessonTitle"] = data["LessonTitle"]
+    lesson_dict["LessonNumber"] = data["LessonNumber"]
+    lesson_dict["EnglishRows"] = data["EnglishRows"]
+    lesson_dict["SpanishRows"] = data["SpanishRows"]
+
+    return lesson_dict
+
+
+# Set debug mode
+#flags.set_debug_mode(flags.c_ON) 
+
+def main():
+    unitOverviewLessonDir =  lesson_data_from_json(f"{set_base_pathDir('AI-Foundations', 'Problem-Solving-With-AI')}", 
+                                        'unit-overview.json')
+    print_lesson("Unit Overview Lesson", unitOverviewLessonDir)
+
+if __name__ == "__main__":  
+    if flags.is_debug_mode():
+        main()
+    else:
+        print("Debug mode is off. Enable debug mode to run the main function.")
+
+
+
+    
+
+
