@@ -1,1 +1,1 @@
-# New Python program
+# New Pyth
