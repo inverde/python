@@ -2,8 +2,11 @@
 
 menu_linktype = {
     "en":[
-        {"label":str, "url":str},
-                 "es":{"label":str, "url":str}
+        {"label":str, "url":str}
+    ],
+    "es":[
+        {"label":str, "url":str}
+    ]
 }
 
 school_menu = menu_linktype
