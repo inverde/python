@@ -10,6 +10,7 @@ menu_linktype = {
 }
 
 school_menu = menu_linktype
+admin_menu = menu_linktype
 
 def menu_entry(menu:dir = school_menu, url:str, label_en, label_es:str = 'None', url_link:str)-> None:
     menu["en"].append({"label":label_en, "url": url_link})
