@@ -1,6 +1,8 @@
 # Declare globals types
 
-menu_linktype = {"en":{"label":str, "url":str},
+menu_linktype = {
+    "en":[
+        {"label":str, "url":str},
                  "es":{"label":str, "url":str}
 }
 
