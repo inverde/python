@@ -7,8 +7,26 @@
         <meta name="keywords" content=keywords_content>
         <title>{{ page_title }}</title>
         <link rel="stylesheet" href="{{ url_for('static/css', filename=file_css }}">
-
     </head>
-
+    <body>
+        <div class="body-container">
+            <div class="nav-container">
+                {% block section_navigation %}
+                    {% include nav_menu % }
+                {% endblock %}
+            </div>
+            <div class="main-container">
+                <div class="header">
+                    {% block section_header %}{% endblock %}
+                </div>
+                <div class="main">
+                    {% block section_main %}{% endblock %}
+                </div>
+                <div class="footer">
+                    {% block section_footer %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
 
