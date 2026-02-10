@@ -72,7 +72,7 @@ def process_file(path: Path, action:str, dry_run: bool, backup:bool, comment_pre
     and dry-run behaviour
     """
     # Reads the file contents as UTF-8
-    original = path.read_text(enconding="utf-8")
+    original = path.read_text(encoding="utf-8")
 
     # Transforms the file contents using the process_text function
     modified = process_text(original, action, comment_prefix)
