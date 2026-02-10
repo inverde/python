@@ -109,10 +109,12 @@ def main()->None:
 
 
 if __name__=='__main__':
+    #Example usage: process a single file for demonstration
+    p = Path("example.py")
+    process_file(p, action="comment", dry_run=True, backup=Flae, comment_prefix=COMMENT_PREFIX)
     if flags.is_debug_mode():
         main()
 
 if __name__ == "__main__":
-    #Example usage: process a single file for demonstration
-    p = Path("example.py")
-    process_file(p, action="comment", dry_run=True, )
+
+
