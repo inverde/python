@@ -1,9 +1,9 @@
 import util
 import flags
 
-// INSTRUMENTATION START
+util.START_MARKER
 # flags.set_debug_mode()
-// INSTRUMENTATION END
+util.END_MARKER
 
 p = util.Path("util.py")
 
