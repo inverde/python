@@ -122,6 +122,11 @@ def main()->None:
     for f in files:
         process_file(f, args.action, args.dry_run, args.backup, COMMENT_PREFIX)
 
+
+// INSTRUMENTATION START
+#flags.set_debug_mode()
+// INSTRUMENTATION END
+
 if __name__=='__main__':
     if flags.is_debug_mode():
         print(slug('Balance scale with data and fairness'))
