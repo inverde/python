@@ -1,12 +1,27 @@
+#!/usr/local/bin python
+"""
+util.py
+
+Usage examples
+ # Comment out instrumentation in all .py files (dry run)
+ python 
+
 import re
 from  pathlib import Path
 from shutil import copy2
 import flags
 
+# Markers used in source files
+START_MARKER = r"// INSTRUMENTATION START"
+END_MARKER = r"// INSTRUMENTATION END"
+
+#
 
 
 def slug(s)->str:
-"""Define function slug to produce standard url names"""
+    """
+    Define function slug to produce standard url names
+    """
     s = s.lower()
     s = re.sub(r'[^a-z0-9\s-]', '', s)
     s = re.sub(r'\s+', '-', s.strip())
