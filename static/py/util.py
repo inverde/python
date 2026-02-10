@@ -57,6 +57,7 @@ def process_text(text:str, action:str, comment_prefix:str) -> str:
                 if ln.lstrip().startswith(comment_prefix.strip()):
                     # Preserve original indentation
                     leading_ws = ln[: len(ln) - len(ln.lstrip())]
+                    uncommented.append(leading_ws + ln.lstrip()[len(comment_prefix.s)])
 
 
 
