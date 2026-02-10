@@ -4,7 +4,7 @@ util.py
 
 Usage examples
  # Comment out instrumentation in all .py files (dry run)
- python 
+ python util.py --path src --ext py --action comment --dry-run
 
 import re
 from  pathlib import Path
