@@ -125,7 +125,7 @@ def main()->None:
 
 START_MARKER
 # flags.set_debug_mode()
-END MARKER
+END_MARKER
 
 flags.set_debug_mode()
 
