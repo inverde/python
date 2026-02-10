@@ -105,7 +105,7 @@ def slug(s)->str:
 
 
 def main()->None:
-    parser =
+    parser = argparse.ArgumentParser(description=)
 
 if __name__=='__main__':
     if flags.is_debug_mode():
