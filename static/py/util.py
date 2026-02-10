@@ -58,7 +58,7 @@ def process_text(text:str, action:str, comment_prefix:str) -> str:
                     # Preserve original indentation
                     leading_ws = ln[: len(ln) - len(ln.lstrip())]
                     uncommented.append(leading_ws + ln.lstrip()[len(comment_prefix.strip()):])
-                else
+                else:
                     uncommented.append(ln)
             new_body = "\n".join(uncommented)
         else:
