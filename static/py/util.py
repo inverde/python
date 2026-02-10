@@ -127,7 +127,5 @@ if __name__=='__main__':
         print(slug('Balance scale with data and fairness'))
         #Example usage: process a single file for demonstration
         p = Path("example.py")
-        process_file(p, action="comment", dry_run=True, backup=Flae, comment_prefix=COMMENT_PREFIX)
-    else:
-        main
+        process_file(p, action="comment", dry_run=True, backup=False, comment_prefix=COMMENT_PREFIX)
 
