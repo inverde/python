@@ -105,7 +105,22 @@ def slug(s)->str:
 
 
 def main()->None:
-    parser = argparse.ArgumentParser(description=)
+    parser = argparse.ArgumentParser(description="Toggle instrumentation blocks in source files")
+    parser.add_argument("--path", required=True, help="Root path to search")
+    parser.add_argument("--ext", default="py", help="File extension to process (no dot)")
+    parser.add_argument("--action", choices=["comment", "uncomment"], required=True)
+    parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--backup", action="store_true")
+    args = parser.parse_args()
+
+    root = Path(args.path)
+    files = list(root.rglob(f"*.{args.ext}"))
+    if not files:
+        print("No files found.")
+        return
+
+    for f in files:
+        process_file(f, args.action, args.dry_run, args.backup, COMMENT_PREFIX)
 
 if __name__=='__main__':
     if flags.is_debug_mode():
