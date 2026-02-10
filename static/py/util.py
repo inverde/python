@@ -6,7 +6,15 @@ Usage examples
  # Comment out instrumentation in all .py files (dry run)
  python util.py --path src --ext py --action comment --dry-run
 
+ # Actually modify files and keep backups
+ python util.py --path src --ext py --action comment --backup
+
+ # Uncomment instrumentation
+ python util.py --path src --ext py --action uncomment --backup
+
+ """
 import re
+import argparse
 from  pathlib import Path
 from shutil import copy2
 import flags
