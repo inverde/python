@@ -1,8 +1,8 @@
-import util
+from util import START_MARKER, END_MARKER
 import flags
 
-util.START_MARKER
+START_MARKER
 # flags.set_debug_mode()
-util.END_MARKER
+END_MARKER
 
 
