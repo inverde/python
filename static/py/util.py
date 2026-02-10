@@ -33,8 +33,19 @@ def process_text(text:str, action:str, comment_prefix:str) -> str:
     - action == "uncomment": remove leading comment_prefix from lines inside block
     """
     pattern = re.compile(
-        rf"({re.escape(START_MARKER)}\n)(.*?)(\n{re.escape(END_MARKER)})", re.DOTALL)
+        rf"({re.escape(START_MARKER)}\n)(.*?)(\n{re.escape(END_MARKER)})", re.DOTALL
     )
+
+    def replacer(m):
+        start, body, end = m.group(1), m.group(2), m.group(3)
+        lines = body.splitlines()
+        if action == "comment":
+            # If already commented, leave as-is
+            commented = []
+            for ln in lines:
+                if ln.strip() == "":
+                    
+
 
 
 def slug(s)->str:
