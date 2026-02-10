@@ -80,10 +80,22 @@ def process_file(path: Path, action:str, dry_run: bool, backup:bool, comment_pre
     # If no changes were made, skip writing and report that the file was skipped
     if original == modified:
         print(f"[SKIP] {path}")
-
+        return
+    print(f"[MODIFY] {path}")
     # If dry_run is true , report the planned modification but do not writhe changes to disk
     if dry_run:
-        print(" )
+        print("  (dry-run) changes not written")
+        return
+    if backup:
+        bak = path.with_suffix(path.suffix + ".bak")
+        copy2(path,bak)
+        print(f"  backup -> {bak}")
+    path.write_text(modified, enconding="utf-8")
+    print("  written")
+
+if __name__ == "__main__":
+    #Example usage: process a single file for demonstration
+
 
 
 
