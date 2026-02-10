@@ -49,6 +49,7 @@ def process_text(text:str, action:str, comment_prefix:str) -> str:
                     commented.append(ln)
                 else:
                     commented.append(comment_prefix + ln)
+            new_body = "\n".join()
 
 
 
