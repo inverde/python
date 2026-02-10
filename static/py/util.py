@@ -50,6 +50,13 @@ def process_text(text:str, action:str, comment_prefix:str) -> str:
                 else:
                     commented.append(comment_prefix + ln)
             new_body = "\n".join(commented)
+        elif action == "uncomment":
+            uncommented = []
+            for ln in lines:
+                # Remove only one leading comment_prefix if present
+                if ln.lstrip().startswith(comment_prefix.strip()):
+                    # Preserve original indentation
+                    leading_ws = ln[: len(ln) - len(ln.lstrip())]
 
 
 
