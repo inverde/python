@@ -66,6 +66,26 @@ def process_text(text:str, action:str, comment_prefix:str) -> str:
         return start + new_body + end
     new_text, n = pattern.subn(replacer, text)
     return new_text
+def process_file(path: Path, action:str, dry_run: bool, backup:bool, comment_prefix:str)->None:
+    """
+    Function that reads a file, processes its text, and writes changes back to disk with optional backup
+    and dry-run behaviour
+    """
+    # Reads the file contents as UTF-8
+    original = path.read_text(enconding="utf-8")
+
+    # Transforms the file contents using the process_text function
+    modified = process_text(original, action, comment_prefix)
+
+    # If no changes were made, skip writing and report that the file was skipped
+    if original == modified:
+        print(f"[SKIP] {path}")
+
+    # If dry_run is true , report the planned modification but do not writhe changes to disk
+    if dry_run:
+        print(" )
+
+
 
 
 def slug(s)->str:
