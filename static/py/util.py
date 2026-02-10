@@ -60,7 +60,11 @@ def process_text(text:str, action:str, comment_prefix:str) -> str:
                     uncommented.append(leading_ws + ln.lstrip()[len(comment_prefix.strip()):])
                 else
                     uncommented.append(ln)
-                    
+            new_body = "\n".join(uncommented)
+        else:
+            raise ValueError("action must be 'comment' or 'uncomment'")
+        return start + new_body + end
+    new_text, n = pattern.subn(replacer, text)
 
 
 
