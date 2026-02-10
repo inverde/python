@@ -5,5 +5,4 @@ util.START_MARKER
 # flags.set_debug_mode()
 util.END_MARKER
 
-p = util.Path("util.py")
 

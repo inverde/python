@@ -123,9 +123,11 @@ def main()->None:
         process_file(f, args.action, args.dry_run, args.backup, COMMENT_PREFIX)
 
 
-// INSTRUMENTATION START
+START_MARKER
 # flags.set_debug_mode()
-// INSTRUMENTATION END
+END MARKER
+
+flags.set_debug_mode()
 
 if __name__=='__main__':
     if flags.is_debug_mode():
