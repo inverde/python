@@ -46,6 +46,8 @@ def process_text(text:str, action:str, comment_prefix:str) -> str:
                 if ln.strip() == "":
                     commented.append(ln)
                 elif ln.strip().startswith(comment_prefix.strip()):
+                    commented.append(ln)
+                    
                 )
 
 
