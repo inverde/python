@@ -33,7 +33,7 @@ def process_text(text:str, action:str, comment_prefix:str) -> str:
     - action == "uncomment": remove leading comment_prefix from lines inside block
     """
     pattern = re.compile(
-        rf"({re.escape(START_MARKER)}\n)(.*?)
+        rf"({re.escape(START_MARKER)}\n)(.*?)(\n{re.escape(END_MARKER)})", re.DOTALL)
     )
 
 
