@@ -93,13 +93,6 @@ def process_file(path: Path, action:str, dry_run: bool, backup:bool, comment_pre
     path.write_text(modified, enconding="utf-8")
     print("  written")
 
-if __name__ == "__main__":
-    #Example usage: process a single file for demonstration
-
-
-
-
-
 def slug(s)->str:
     """
     Define function slug to produce standard url names
@@ -118,6 +111,15 @@ def main()->None:
 if __name__=='__main__':
     if flags.is_debug_mode():
         main()
+
+if __name__ == "__main__":
+    #Example usage: process a single file for demonstration
+
+
+
+
+
+
 
 
 
