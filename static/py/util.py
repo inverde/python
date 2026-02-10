@@ -1,7 +1,12 @@
 import re
+from  pathlib import Path
+from shutil import copy2
 import flags
-# Define function slug to use to produce standard url names
+
+
+
 def slug(s)->str:
+"""Define function slug to produce standard url names"""
     s = s.lower()
     s = re.sub(r'[^a-z0-9\s-]', '', s)
     s = re.sub(r'\s+', '-', s.strip())
