@@ -114,14 +114,5 @@ if __name__=='__main__':
 
 if __name__ == "__main__":
     #Example usage: process a single file for demonstration
-
-
-
-
-
-
-
-
-
-
-
+    p = Path("example.py")
+    process_file(p, action="comment", dry_run=True, )
