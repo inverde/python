@@ -73,10 +73,10 @@ def process_file(path: Path, action:str, dry_run: bool, backup:bool, comment_pre
     """
     # Reads the file contents as UTF-8
     original = path.read_text(encoding="utf-8")
-
+    print(original)
     # Transforms the file contents using the process_text function
     modified = process_text(original, action, comment_prefix)
-
+    print(modified)
     # If no changes were made, skip writing and report that the file was skipped
     if original == modified:
         print(f"[SKIP] {path}")
