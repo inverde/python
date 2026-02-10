@@ -1,10 +1,10 @@
 from util import START_MARKER, END_MARKER
 import flags
 
-START_MARKER
+# // INSTRUMENTATION START
 
 
 # flags.set_debug_mode()
 
 
-END_MARKER
+# // INSTRUMENTATION END
