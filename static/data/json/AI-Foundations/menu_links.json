@@ -1,0 +1,13 @@
+{
+    "school":[
+        {"lang_en": "Home", "lang_es":"Inicio", "url":"/"},
+        {"lang_en": "Courses", "lang_es": "Cursos", "url":"/courses"}
+    ],
+    "admin":[
+        {"lang_en": "About Us", "lang_es": "Acerca de Nosotros", "url": "/about_us"},
+        {"lang_en": "Careers", "lang_es": "Concentraciones", "url": "/careers"},
+        {"lang_en": "Applications", "lang_es": "Admisiones", "url": "/admisions"},
+        {"lang_en": "Entrance Tests", "lang_es": "Examenes de Nivel", "url": "/entrance_tests"},
+        {"lang_en": "Contact Us", "lang_es": "Contáctanos", "url": "/contact_us"}
+    ]
+}
