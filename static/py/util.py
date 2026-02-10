@@ -23,7 +23,9 @@ import flags
 START_MARKER = r"// INSTRUMENTATION START"
 END_MARKER = r"// INSTRUMENTATION END"
 
-#
+# For Python files we willl use '#' to commnet; for other languages you can adapt
+COMMENT_PREFIX = "# "
+
 
 
 def slug(s)->str:
