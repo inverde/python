@@ -68,7 +68,6 @@ def process_text(text:str, action:str, comment_prefix:str) -> str:
     return new_text
 
 
-
 def slug(s)->str:
     """
     Define function slug to produce standard url names
