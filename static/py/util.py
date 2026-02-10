@@ -65,6 +65,7 @@ def process_text(text:str, action:str, comment_prefix:str) -> str:
             raise ValueError("action must be 'comment' or 'uncomment'")
         return start + new_body + end
     new_text, n = pattern.subn(replacer, text)
+    return new_text
 
 
 
