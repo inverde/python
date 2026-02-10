@@ -90,7 +90,7 @@ def process_file(path: Path, action:str, dry_run: bool, backup:bool, comment_pre
         bak = path.with_suffix(path.suffix + ".bak")
         copy2(path,bak)
         print(f"  backup -> {bak}")
-    path.write_text(modified, enconding="utf-8")
+    path.write_text(modified, encoding="utf-8")
     print("  written")
 
 def slug(s)->str:
