@@ -4,5 +4,3 @@ import flags
 START_MARKER
 # flags.set_debug_mode()
 END_MARKER
-
-
