@@ -124,7 +124,7 @@ def main()->None:
 
 
 // INSTRUMENTATION START
-#flags.set_debug_mode()
+# flags.set_debug_mode()
 // INSTRUMENTATION END
 
 if __name__=='__main__':
