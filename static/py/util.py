@@ -20,8 +20,8 @@ from shutil import copy2
 import flags
 
 # Markers used in source files
-START_MARKER = r"// INSTRUMENTATION START"
-END_MARKER = r"// INSTRUMENTATION END"
+START_MARKER = r"# // INSTRUMENTATION START"
+END_MARKER = r"# // INSTRUMENTATION END"
 
 # For Python files we willl use '#' to commnet; for other languages you can adapt
 COMMENT_PREFIX = "# "
