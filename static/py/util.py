@@ -60,6 +60,8 @@ def process_text(text:str, action:str, comment_prefix:str) -> str:
                     uncommented.append(leading_ws + ln.lstrip()[len(comment_prefix.strip()):])
                 else
                     uncommented.append(ln)
+                    
+
 
 
 def slug(s)->str:
