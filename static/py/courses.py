@@ -82,12 +82,14 @@ chapter = {
     "ChapterNumber": int,
     "ChapterTitle_en": str,             # string
     "ChapterTitle_es": str,
-    "imageTopic":str,
+    "ChapterSummary_en":str,
+    "ChapterSummary_es":str,
     "imageLink":str,
-    "Importance":str,
-    "PracticalUses":str,
+    "imageTopic":str,
     "enEssayHTML":str,
     "esEssayHTML":str,
+    "Importance":str,
+    "PracticalUses":str,
     "ConceptList":[
         concept     # list of concepts(dicts)
     ],
