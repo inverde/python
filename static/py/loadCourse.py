@@ -100,7 +100,7 @@ def course_data_from_json(path_dir, path_file)-> dict:
         chapter_dict["enEssayHTML"] = chapter["enEssayHTML"]
         chapter_dict["esEssayHTML"] = chapter["esEssayHTML"]
         # Now that we have the main keys for the chapter save in the list
-        initial_courses
+        course['ChapterTitles'].append(chapter_dict)
 
 
     course_dict = {"CourseTitle": data["CourseTitle"], "Chapters": chapters}
