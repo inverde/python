@@ -106,7 +106,8 @@ def course_data_from_json(path_dir, path_file)-> dict:
         # Now that we have the main keys for the chapter save in the list
         chaptersList.append(chapter_dict)
 
-    # Now 
+    # Now sort the list of chapters
+
 
 
     course_dict = {"CourseTitle": data["CourseTitle"], "Chapters": chaptersList}
