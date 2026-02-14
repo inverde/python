@@ -89,7 +89,8 @@ def course_data_from_json(path_dir, path_file)-> dict:
     # Loop through all the chapters
     for chapter in chapters:
         chapter_dict = ChapterDict
-        chapter_dict["CourseTitle"] = chapter["CourseTitle"]
+        chapter_dict["CourseTitle"] = data["CourseTitle"]
+        chapter_dict["ChapterNumber"] = chapter["ChapterNumber"]
 
     course_dict = {"CourseTitle": data["CourseTitle"], "Chapters": chapters}
     return course_dict
