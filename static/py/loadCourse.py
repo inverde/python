@@ -88,7 +88,7 @@ def course_data_from_json(path_dir, path_file)-> dict:
     chapters = data["Chapters"]
     course_dict = {"CourseTitle": data["CourseTitle], "Chapters": chapters}
     print(json.dumps(course_dict, indent=4))
-    return co
+    return course_dict
 
 
 # Set debug mode
