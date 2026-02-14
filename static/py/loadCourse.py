@@ -2,6 +2,7 @@ import json
 from courseClasses import Course, Chapter, Lesson, EnglishRows, SpanishRows
 from courses import lesson as LessonDict, course as CourseDict, chapter as ChapterDict
 import flags
+from pprint import pprint
 
 # Define initial list of courses to test first version of web app
 initial_courses = [
@@ -114,7 +115,7 @@ def main():
     unitOverviewLessonDir =  lesson_data_from_json(f"{set_base_pathDir('AI-Foundations', 'Problem-Solving-With-AI')}", 'unit-overview.json')
     print_lesson("Unit Overview Lesson", unitOverviewLessonDir)
     courseAIFoundationsDir = course_data_from_json(f"{set_base_pathDir('AI-Foundations', None)}", 'chapter_links.json')
-    print(chaptersList)
+    pprint(chaptersList)
 
 if __name__ == "__main__":
     if flags.is_debug_mode():
