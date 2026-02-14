@@ -71,8 +71,8 @@ def lesson_data_from_json(path_dir, path_file) -> dict:
 
 def course_data_from_json(path_dir, path_file)-> dict:
     """
-    This function goes to data/json directory in the parent directory and looks the course folder given by the CourseTitle:
-    from here extract all the chapters' basic information for the.
+    This function goes to data/json directory in the parent directory and looks in a specific course folder for the CourseTitle.
+    From here extract all the chapters' basic information for the.
     For each chapter builds a chapter directory that
     will be saved in a list program structure that will be kept in a system data file for easy retrieval.
     """
@@ -87,8 +87,8 @@ def course_data_from_json(path_dir, path_file)-> dict:
     course["CourseTitle"] = data["CourseTitle"]
     chapters = data["Chapters"]
     for chapter in chapters:
-        global chaptersListType
-        chaptersListType["CourseTitle"] = data["CourseTitle"]
+        chapter_dict = ChapterDic
+        chapter_dict["CourseTitle"] = data["CourseTitle"]
         chaptersListType["ChapterNumber"] = chapter["ChapterNumber"]
         chaptersListType["ChapterTitle_en"] = chapter["ChapterTitle_en"]
         chpatersListType["ChapterTitle_es"] = chapter["ChapterTitle_es"]
