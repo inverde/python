@@ -103,7 +103,7 @@ def course_data_from_json(path_dir, path_file)-> dict:
         chaptersList.append(chapter_dict)
 
 
-    course_dict = {"CourseTitle": data["CourseTitle"], "Chapters": chapters}
+    course_dict = {"CourseTitle": data["CourseTitle"], "Chapters": chaptersList}
     return course_dict
 
 
