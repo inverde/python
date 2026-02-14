@@ -88,7 +88,7 @@ def course_data_from_json(path_dir, path_file)-> dict:
     chapters = data["Chapters"]
     print(chapters)
 
-    return {"CourseTitle": data["CourseTitle"], "Chapters": data["Chapters"]}
+    return {}
 
 
 
