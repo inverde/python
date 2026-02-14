@@ -23,10 +23,10 @@ def lessonTitles_listtype()->list[dict]:
     return chapter['LessonTitles']
 
 # Global listType
-lessonsListType = lessonTitles_listtype()
+lessonsList = lessonTitles_listtype()
 
 # Global listType
-chaptersListType = chapterTitles_listtype()
+chaptersList = chapterTitles_listtype()
 
 def lessonTitles_list(course_title:str, chapter_title:str) ->list[str]:
     course = CourseDict
@@ -91,7 +91,7 @@ def course_data_from_json(path_dir, path_file)-> dict:
         chapter_dict = ChapterDict
         chapter_dict["CourseTitle"] = data["CourseTitle"]
         chapter_dict["ChapterNumber"] = chapter["ChapterNumber"]
-        
+
 
     course_dict = {"CourseTitle": data["CourseTitle"], "Chapters": chapters}
     return course_dict
