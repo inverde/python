@@ -96,6 +96,7 @@ def course_data_from_json(path_dir, path_file)-> dict:
         chapter_dict["ChapterTitle_es"] = chapter["ChapterTitle_es"]
         chapter_dict["chapterURL"] = chapter["url"]
         chapter_dict["ChapterSummary_en"] = chapter["ChapterSummary_en"]
+        chapter_dict["ChapterSummary_es"] = chapter["ChapterSummary_es"]
         chapter_dict["imageLink"] = chapter["imageLink"]
         chapter_dict["imageTopic"] = chapter["imageTopic"]
         chapter_dict["enEssayHTML"] = chapter["enEssayHTML"]
