@@ -79,7 +79,7 @@ def course_data_from_json(path_dir, path_file)-> dict:
     """
     # Define chapters list structure
 
-    chaptersList = []
+    global chaptersList
     course = CourseDict
 
     with open(f"{path_dir}/{path_file}", "r", encoding="utf-8") as file:
