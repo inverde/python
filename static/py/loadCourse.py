@@ -87,7 +87,6 @@ def course_data_from_json(path_dir, path_file)-> dict:
     course["CourseTitle"] = data["CourseTitle"]
     chapters = data["Chapters"]
     course_dict = {"CourseTitle": data["CourseTitle], "Chapters": chapters}
-    print(json.dumps(course_dict, indent=4))
     return course_dict
 
 
@@ -98,7 +97,7 @@ def main():
     unitOverviewLessonDir =  lesson_data_from_json(f"{set_base_pathDir('AI-Foundations', 'Problem-Solving-With-AI')}", 'unit-overview.json')
     print_lesson("Unit Overview Lesson", unitOverviewLessonDir)
     courseAIFoundationsDir = course_data_from_json(f"{set_base_pathDir('AI-Foundations', None)}", 'chapter_links.json')
-    print(courseAIFoundationsDir)
+    print(json.dumps(courseAIFoundationsDir,indent=4))
 
 if __name__ == "__main__":
     if flags.is_debug_mode():
