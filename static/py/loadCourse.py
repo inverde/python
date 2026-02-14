@@ -78,7 +78,7 @@ def course_data_from_json(path_dir, path_file)-> dict:
     """
     # Define chapters list structure
 
-    
+
     course = CourseDict
 
     with open(f"{path_dir}/{path_file}", "r", encoding="utf-8") as file:
@@ -115,6 +115,7 @@ def main():
     print_lesson("Unit Overview Lesson", unitOverviewLessonDir)
     courseAIFoundationsDir = course_data_from_json(f"{set_base_pathDir('AI-Foundations', None)}", 'chapter_links.json')
     print(json.dumps(courseAIFoundationsDir,indent=4, ensure_ascii=False))
+    print(json.dumps(chaptersList, indent=4))
 
 if __name__ == "__main__":
     if flags.is_debug_mode():
