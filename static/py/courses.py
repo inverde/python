@@ -84,6 +84,7 @@ chapter = {
     "ChapterTitle_es": str,
     "ChapterSummary_en":str,
     "ChapterSummary_es":str,
+    "chapterURL":str,
     "imageLink":str,
     "imageTopic":str,
     "enEssayHTML":str,
