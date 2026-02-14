@@ -78,9 +78,11 @@ def course_data_from_json(path_dir, path_file)-> dict:
     will be saved in a list program structure that will be kept in a system data file for easy retrieval.
     """
     # Define chapters list structure
-
     chaptersList = []
+    # Course dictionary datatype
     course = CourseDict
+    # Global list structure to courses
+    global initial_courses
 
     with open(f"{path_dir}/{path_file}", "r", encoding="utf-8") as file:
         data = json.load(file)
