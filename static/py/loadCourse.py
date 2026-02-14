@@ -106,7 +106,7 @@ def course_data_from_json(path_dir, path_file)-> dict:
 
 
 # Set debug mode
-flags.set_debug_mode(flags.c_ON)
+#flags.set_debug_mode(flags.c_ON)
 
 def main():
     unitOverviewLessonDir =  lesson_data_from_json(f"{set_base_pathDir('AI-Foundations', 'Problem-Solving-With-AI')}", 'unit-overview.json')
