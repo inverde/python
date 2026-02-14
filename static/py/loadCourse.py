@@ -1,22 +1,43 @@
 import json
 from courseClasses import Course, Chapter, Lesson, EnglishRows, SpanishRows
-from courses import lesson as LessonDict, course as CourseDict
+from courses import lesson as LessonDict, course as CourseDict, chapter as ChapterDict
 import flags
 
+# Define initial list of courses to test first version of web app
+initial_courses = [
+    {
+        "CourseName":str,
+        "CourseTitle":str,
+        "ChapterTitles":list[ChapterDict]
+    }
+]
 
-def lessonTitles_listtype() ->list[dict]:
+
+
+def chapterTitles_listtype()->list[dict]:
     course = CourseDict
-    return course["ChapterTitles"][0]["LessonTitles"]
+    return course['ChapterTitles']
+
+def lessonTitles_listtype()->list[dict]:
+    chapter = ChapterDict
+    return chapter['LessonTitles']
 
 # Global listType
 lessonsListType = lessonTitles_listtype()
+
+# Global listType
+chaptersListType = chapterTitles_listtype()
 
 def lessonTitles_list(course_title:str, chapter_title:str) ->list[str]:
     course = CourseDict
     return [lesson["LessonTitle"] for lesson in course[course_title]["ChapterTitles"][chapter_title]["LessonTitles"]]
 
-def set_base_pathDir(course_title:str, chapter_title:str) ->str:
-    base_pathDir = f"../data/json/{course_title}/{chapter_title}"
+def set_base_pathDir(course_title:str, chapter_title:str = None) ->str:
+    if chapter_title is not None:
+        base_pathDir = f"../data/json/{course_title}/{chapter_title}"
+    else:
+        base_pathDir = f"../data/json/{course_title}"
+
     return base_pathDir
 
 def print_lesson(lesson_name:str, lesson_data:dict):
@@ -35,7 +56,7 @@ def lesson_data_from_json(path_dir, path_file) -> dict:
 
     with open(f"{path_dir}/{path_file}", "r", encoding="utf-8") as f:
         data = json.load(f)
-    
+
     lesson_dict = LessonDict
     lesson_dict["CourseTitle"] = data["CourseTitle"]
     lesson_dict["ChapterTitle"] = data["ChapterTitle"]
@@ -48,22 +69,52 @@ def lesson_data_from_json(path_dir, path_file) -> dict:
     return lesson_dict
 
 
+def course_data_from_json(path_dir, path_file)-> dict:
+    """
+    This function goes to data/json directory in the parent directory and looks the course folder given by the CourseTitle:
+    from here extract all the chapters' basic information for the.
+    For each chapter builds a chapter directory that
+    will be saved in a list program structure that will be kept in a system data file for easy retrieval.
+    """
+    # Define chapters list structure
+
+    chapters = []
+    course = CourseDict
+
+    with open(f"{path_dir}/{path_file}", "r", encoding="utf-8") as file:
+        data = json.load(file)
+
+    course["CourseTitle"] = data["CourseTitle"]
+    chapters = data["Chapters"]
+    for chapter in chapters:
+        new_chapter = chaptersListType
+        new_chapter["CourseTitle"] = data["CourseTitle"]
+        new_chapter["ChapterNumber"] = chapter["ChapterNumber"]
+        new_chapter["ChapterTitle_en"] = chapter["ChapterTitle_en"]
+        new_chapter["ChapterTitle_es"] = chapter["ChapterTitle_es"]
+
+    return {"CourseTitle": data["CourseTitle"], "Chapters": data["Chapters"]}
+
+
+
 # Set debug mode
-#flags.set_debug_mode(flags.c_ON) 
+#flags.set_debug_mode(flags.c_ON)
 
 def main():
-    unitOverviewLessonDir =  lesson_data_from_json(f"{set_base_pathDir('AI-Foundations', 'Problem-Solving-With-AI')}", 
-                                        'unit-overview.json')
+    unitOverviewLessonDir =  lesson_data_from_json(f"{set_base_pathDir('AI-Foundations', 'Problem-Solving-With-AI')}", 'unit-overview.json')
     print_lesson("Unit Overview Lesson", unitOverviewLessonDir)
+    courseAIFoundationsDir = course_data_from_json(f"{set_base_pathDir('AI-Foundations', None)}", 'chapter_links.json')
+    print(courseAIFoundationsDir)
 
-if __name__ == "__main__":  
+if __name__ == "__main__":
     if flags.is_debug_mode():
         main()
     else:
+        print("ai-foundations".upper().title())
         print("Debug mode is off. Enable debug mode to run the main function.")
 
 
 
-    
+
 
 
