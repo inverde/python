@@ -87,11 +87,11 @@ def course_data_from_json(path_dir, path_file)-> dict:
     course["CourseTitle"] = data["CourseTitle"]
     chapters = data["Chapters"]
     for chapter in chapters:
-        new_chapter = chaptersListType
-        new_chapter["CourseTitle"] = data["CourseTitle"]
-        new_chapter["ChapterNumber"] = chapter["ChapterNumber"]
-        new_chapter["ChapterTitle_en"] = chapter["ChapterTitle_en"]
-        new_chapter["ChapterTitle_es"] = chapter["ChapterTitle_es"]
+        global chaptersListType
+        chaptersListType["CourseTitle"] = data["CourseTitle"]
+        chaptersListType["ChapterNumber"] = chapter["ChapterNumber"]
+        chaptersListType["ChapterTitle_en"] = chapter["ChapterTitle_en"]
+        chpatersListType["ChapterTitle_es"] = chapter["ChapterTitle_es"]
 
     return {"CourseTitle": data["CourseTitle"], "Chapters": data["Chapters"]}
 
