@@ -1,0 +1,37 @@
+{
+    "CourseTitle": "Foundations of AI",
+    "ChapterNumber": 1,
+    "ChapterTitle": "Problem Solving with AI",
+    "LessonTitle": "Talking to Machines",
+    "LessonNumber": 1,
+    "EnglishRows": {
+        "PurposeAndImportance_EN": "In this lesson, students explore how AI generates responses through pattern recognition and prediction. Using a game called “Yes, and...”, they simulate the AI’s process for creating answers, experiment with text and images to craft effective prompts, and learn how to use chat levels strategically to get better results.",
+        "CoreThemes_EN": "Pattern recognition and prediction; prompt design and levels of chat; experimenting with text and image inputs; observing how inputs shape outputs.",
+        "UnitOutcomes_EN": "Students will analyze patterns in AI-generated responses to explain how inputs influence outputs; experiment with different prompts to observe changes; explain that AI models use probabilities and statistics to generate responses; and refine AI outputs through iterative prompting and pattern recognition.",
+        "Objectives_EN": "- Analyze patterns in AI-generated responses to explain how inputs influence outputs. - Experiment with different prompts to observe how AI responses change. - Explain that AI models use probabilities and statistics to generate responses. - Refine AI outputs by iterating prompts and recognizing response patterns.",
+        "WarmUp_EN": "Activity Initial (10 minutes): Play the “Yes, and...” game in pairs or small groups. Start from a prompt on the board and have students take turns continuing the story beginning each turn with “Yes, and...”. Discuss patterns and differences across groups.",
+        "KeyActivities_EN": "- Main activity (30 minutes): Problem solving with AI using the “Yes, and...” simulation. - Watch short video(s) about AI predictions and how AI is powered. - Practice creating prompts using text and images and test different chat levels. - Closing roundtable (5 minutes) to reflect on findings.",
+        "DiscussionTopics_EN": "- How does AI generate content from existing phrases? - What patterns did you notice across different groups in the game? - How do wording and input type change AI outputs? - What strategies improve prompt effectiveness?",
+        "CheckpointLabs_EN": "Lab 1: Simulate AI with the “Yes, and...” game and record patterns across groups. Lab 2: Provide the same task as text and as an image; compare AI outputs and note differences in interpretation.",
+        "AcademicMaterials_EN": "- Plan a Perfect Trip with ChatGPT (video). - Problem Solving with AI (video). - Unit Guide: Problem Solving with AI. - Supplementary readings and short clips on pattern recognition and prompts.",
+        "Skills_EN": "- Analyze patterns in generated text. - Design and iterate effective prompts. - Understand basic probability/statistics concepts behind AI predictions. - Communicate observations and refine strategies.",
+        "Careers_EN": "- AI Engineer. - Data Scientist. - Software Developer. - Conversational AI Designer. - Educator in Technology."
+    },
+    "SpanishRows": {
+        "PurposeAndImportance_ES": "En esta lección, los estudiantes exploran cómo la IA genera respuestas mediante el reconocimiento de patrones y la predicción de resultados probables. A través de un juego llamado «Sí, y...», simulan el proceso de creación de respuestas de la IA. Experimentan con texto e imágenes para crear indicaciones eficaces utilizando los niveles de chat de la IA. Al final, comprenden cómo procesa la información la IA y cómo utilizar indicaciones estratégicas para obtener mejores resultados.",
+        "CoreThemes_ES": "Reconocimiento de patrones; predicción; diseño de indicaciones; experimentación con entradas de texto e imagen; niveles de chat.",
+        "UnitOutcomes_ES": "Los estudiantes serán capaces de: Analizar patrones en las respuestas generadas por IA para explicar cómo las entradas influyen en las salidas. Experimentar con diferentes indicaciones para observar cómo cambian las respuestas de la IA. Explicar que los modelos de IA utilizan probabilidades y estadísticas para generar respuestas. Refinar las salidas generadas por IA mediante la iteración de indicaciones y el reconocimiento de patrones en las respuestas.",
+        "Objectives_ES": "Analizar patrones en las respuestas generadas por IA; experimentar con diferentes indicaciones; explicar el uso de probabilidades y estadísticas en modelos de IA; refinar salidas mediante iteración y reconocimiento de patrones.",
+        "WarmUp_ES": "Actividad Inicial (10 minutos) Sí, y... Agrupe a los alumnos en parejas o grupos de tres y lea en voz alta la frase de la pizarra. Pida a los alumnos que, por turnos, amplíen la conversación empezando su siguiente frase con \"Sí, y..\". Discuta patrones y diferencias entre grupos.",
+        "KeyActivities_ES": "Actividad Principal (30 minutos): Resolución de problemas con IA usando el juego «Sí, y...». Ver vídeo(s) sobre predicciones de IA. Practicar la creación de indicaciones con texto e imágenes y probar diferentes niveles de chat. Cierre de la lección: mesa redonda rápida.",
+        "DiscussionTopics_ES": "¿Cómo genera la IA contenido a partir de frases existentes? ¿Qué patrones notaron en el juego? ¿Cómo cambian las salidas según la redacción y el tipo de entrada? ¿Qué estrategias mejoran la efectividad de las indicaciones?",
+        "CheckpointLabs_ES": "Laboratorio 1: Simular la IA con el juego «Sí, y...» y registrar patrones. Laboratorio 2: Proporcionar la misma tarea en texto y en imagen; comparar salidas y anotar diferencias.",
+        "AcademicMaterials_ES": "Recursos: Planifique un viaje perfecto con ChatGPT (vídeo); Resolución de problemas con IA (vídeo); Guía de la unidad Resolución de problemas con IA; materiales complementarios sobre reconocimiento de patrones e indicaciones.",
+        "Skills_ES": "Analizar patrones en texto generado; diseñar y iterar indicaciones eficaces; comprender conceptos básicos de probabilidad y estadística en predicciones de IA; comunicar observaciones y refinar estrategias.",
+        "Careers_ES": "Ingeniero en IA; Científico de Datos; Desarrollador de Software; Diseñador de IA Conversacional; Educador en Tecnología."
+    },
+    "CurrentYear": 2026,
+    "CourseVersion": "Spring 2026",
+    "LastUpdated": "2026-01-28T20:42:00-04:00",
+    "CourseURL": "github.com/inverde/iglesia_pueblo_nuevo/ai_foundations"
+}

@@ -1,0 +1,206 @@
+{
+   "CourseTitle": "AI Foundations",
+   "Chapters": {
+     "1": {
+        "ChapterNumber": 1,
+        "ChapterTitle_en": "Problem Solving with AI",
+        "ChapterTitle_es": "Resolución de Problemas con IA",
+        "ChapterSummary_en": "“Problem Solving with AI” guides learners through a practical workflow for applying AI to real challenges. Students discover how to break down complex tasks, craft precise prompts, and iterate on AI-generated drafts. They practice research and fact-checking, debug AI interactions, and automate simple coding tasks. Hands-on activities—from brainstorming solutions to collaborative presentations—build concrete skills, while ethical considerations around bias and transparency ensure responsible use.",
+        "ChapterSummary_es": "“Resolución de Problemas con IA” enseña un flujo de trabajo práctico para aplicar la IA a retos reales. Los estudiantes aprenden a descomponer tareas complejas, crear instrucciones precisas (prompts) y refinar borradores generados por IA. Practican investigación y verificación de datos, depuran interacciones con la IA y automatizan tareas de código sencillas.",
+        "url": "/courses/ai-foundations/problem-solving-with-ai",
+        "imageTopic": "Human and friendly robot collaborating on a task",
+        "imageLink": "https://unsplash.com/s/photos/human-robot-collaboration",
+        "enEssayHTML": "<h3>Picture the scene</h3><p>Imagine you and a friendly robot on a treasure hunt. The robot gives fast ideas and you decide which ones to try.</p><h3>Key idea</h3><p><strong>AI</strong> is a helpful computer program that gives ideas and drafts based on examples.</p><h3>Class activity</h3><p>Pairs write one prompt, test it, and improve it once. Ask: what changed and why?</p>",
+        "esEssayHTML": "<h3>Imagina la escena</h3><p>Imagina que tú y un robot amigable están en una búsqueda del tesoro. El robot da ideas rápidas y tú decides cuáles probar.</p><h3>Idea principal</h3><p><strong>IA</strong> es un programa que ayuda a generar ideas y borradores a partir de ejemplos.</p><h3>Actividad</h3><p>En parejas escriban un prompt, pruébenlo y mejorenlo una vez. Pregunten: ¿qué cambió y por qué?</p>",
+	"LessonTitles": [
+		{"Talking to Machines": "Hablando con las Máquinas"},
+		{"Beyond the Words": "Más allá de las Palabras"},
+		{"The Brain of the AI": "El Cerebro de la IA"},
+		{"Smart or Just Predictable?": "¿Inteligente o Solo Predecible?"},
+		{"Uncovering Contradictions": "Descubriendo Contradicciones"},
+		{"Understanding Bias": "Comprendiendo el Sesgo"},
+		{"AI’s Wild Imagination": "La Imaginación Desbordada de la IA"},
+		{"Debugging and Refining Outputs": "Depuración y Refinamiento de Resultados"},
+		{"The AI as a Co-Creator": "La IA como Co-Creadora"},
+		{"Remixing, Creativity and Originality of the AI": "Re-mezcla, Creatividad y Originalidad de la IA"},
+		{"AI’s Role in Society": "El Papel de la IA en la Sociedad"}
+	],
+	"lessonLinks": [
+        "/courses/ai-foundations/problem-solving-with-ai/talking-to-machines",
+        "/courses/ai-foundations/problem-solving-with-ai/beyond-the-words",
+        "/courses/ai-foundations/problem-solving-with-ai/the-brain-of-the-ai",
+        "/courses/ai-foundations/problem-solving-with-ai/smart-or-just-predictable",
+        "/courses/ai-foundations/problem-solving-with-ai/uncovering-contradictions",
+        "/courses/ai-foundations/problem-solving-with-ai/understanding-bias",
+        "/courses/ai-foundations/problem-solving-with-ai/ais-wild-imagination",
+        "/courses/ai-foundations/problem-solving-with-ai/debugging-and-refining-outputs",
+        "/courses/ai-foundations/problem-solving-with-ai/the-ai-as-a-co-creator",
+        "/courses/ai-foundations/problem-solving-with-ai/remixing-creativity-and-originality-of-the-ai",
+        "/courses/ai-foundations/problem-solving-with-ai/ais-role-in-society"
+        ]
+    },
+    "2": {
+        "ChapterNumber": 2,
+        "ChapterTitle_en": "Foundations of Programming with AI",
+        "ChapterTitle_es": "Fundamentos de Programación con IA",
+        "ChapterSummary_en": "Covers core programming concepts applied to AI: thinking like a programmer, variables and data types, control flow and decisions, functions and modular design, data structures and collections, working with files, APIs and JSON, and career connections. Emphasizes practical exercises that connect coding fundamentals to AI workflows and responsible practices.",
+        "ChapterSummary_es": "Cubre conceptos básicos de programación aplicados a la IA: pensar como programador, variables y tipos de datos, control de flujo y decisiones, funciones y diseño modular, estructuras de datos y colecciones, trabajo con archivos, APIs y JSON, y conexiones profesionales. Enfatiza ejercicios prácticos que vinculan la programación con flujos de trabajo de IA y prácticas responsables.",
+        "url": "/courses/ai-foundations/foundations-of-programming-with-ai",
+        "imageTopic": "Colorful code blocks next to a smiling robot (code as building blocks)",
+        "imageLink": "https://unsplash.com/s/photos/programming-kids",
+        "enEssayHTML": "<h3>Picture the scene</h3><p>Imagine building a toy robot from colorful blocks that snap together to make it move.</p><h3>Key idea</h3><p><strong>Code</strong> is a set of small instructions that make computers do things.</p><h3>Class activity</h3><p>Write a tiny function that adds two numbers and test it with different inputs. Talk about what changes when inputs change.</p>",
+        "esEssayHTML": "<h3>Imagina la escena</h3><p>Imagina construir un robot de juguete con bloques de colores que encajan para hacerlo moverse.</p><h3>Idea principal</h3><p><strong>Código</strong> es un conjunto de instrucciones pequeñas que hacen que las computadoras realicen tareas.</p><h3>Actividad</h3><p>Escribe una función pequeña que sume dos números y pruébala con entradas distintas. Comenten qué cambia cuando cambian las entradas.</p>",
+	"LessonTitles": [
+		{"Talking to Machines": "Hablando con las Máquinas"},
+		{"Beyond the Words": "Más allá de las Palabras"},
+		{"The Brain of the AI": "El Cerebro de la IA"},
+		{"Smart or Just Predictable?": "¿Inteligente o Solo Predecible?"},
+		{"Uncovering Contradictions": "Descubriendo Contradicciones"},
+		{"Understanding Bias": "Comprendiendo el Sesgo"},
+		{"AI’s Wild Imagination": "La Imaginación Desbordada de la IA"},
+		{"Debugging and Refining Outputs": "Depuración y Refinamiento de Resultados"},
+		{"The AI as a Co-Creator": "La IA como Co-Creadora"},
+		{"Remixing, Creativity and Originality of the AI": "Re-mezcla, Creatividad y Originalidad de la IA"},
+		{"AI’s Role in Society": "El Papel de la IA en la Sociedad"}
+	],
+	"lessonLinks": [
+        "/courses/ai-foundations/foundations-of-programming-with-ai/computing-careers",
+        "/courses/ai-foundations/foundations-of-programming-with-ai/computational-thinking",
+        "/courses/ai-foundations/foundations-of-programming-with-ai/designing-algorithms",
+        "/courses/ai-foundations/foundations-of-programming-with-ai/variables-and-data-flow",
+        "/courses/ai-foundations/foundations-of-programming-with-ai/working-with-objects",
+        "/courses/ai-foundations/foundations-of-programming-with-ai/functions",
+        "/courses/ai-foundations/foundations-of-programming-with-ai/functions-with-parameters",
+        "/courses/ai-foundations/foundations-of-programming-with-ai/introduction-to-loops",
+        "/courses/ai-foundations/foundations-of-programming-with-ai/conditional-statements",
+        "/courses/ai-foundations/foundations-of-programming-with-ai/algorithms-in-real-life",
+        "/courses/ai-foundations/foundations-of-programming-with-ai/decomposition",
+        "/courses/ai-foundations/foundations-of-programming-with-ai/two-way-selection"
+        ]
+    },
+    "3": {
+        "ChapterNumber": 3,
+        "ChapterTitle_en": "AI and the Systems that Power It",
+        "ChapterTitle_es": "IA y los Sistemas que la Impulsan",
+        "ChapterSummary_en": "Introduces the systems and infrastructure behind AI: compute infrastructure, training and deployment of models, data channels and pipelines, monitoring and maintenance, scalability and efficiency, and security and ethics. Focuses on how system design affects model behavior, reliability, and responsible operation.",
+        "ChapterSummary_es": "Introduce los sistemas e infraestructura detrás de la IA: infraestructura de cómputo, entrenamiento y despliegue de modelos, canales y tuberías de datos, monitoreo y mantenimiento, escalabilidad y eficiencia, y seguridad y ética. Se centra en cómo el diseño del sistema afecta el comportamiento del modelo, su fiabilidad y su operación responsable.",
+        "url": "/courses/ai-foundations/ai-and-the-systems-that-power-it",
+        "imageTopic": "Simple pipeline diagram: data → train → model → serve",
+        "imageLink": "https://unsplash.com/s/photos/data-pipeline",
+        "enEssayHTML": "<h3>Picture the scene</h3><p>Think of a factory where raw facts go in and helpful answers come out on a conveyor belt.</p><h3>Key idea</h3><p>Many parts must work together for AI to give good answers.</p><h3>Class activity</h3><p>Trace one data example through the four steps and mark where errors might appear. Discuss how to fix one error.</p>",
+        "esEssayHTML": "<h3>Imagina la escena</h3><p>Piensa en una fábrica donde entran hechos crudos y salen respuestas útiles por una cinta transportadora.</p><h3>Idea principal</h3><p>Muchas partes deben funcionar juntas para que la IA dé buenas respuestas.</p><h3>Actividad</h3><p>Traza un ejemplo de dato por las cuatro etapas y marca dónde podrían aparecer errores. Comenten cómo arreglar uno de esos errores.</p>",
+	"LessonTitles": [
+		{"Introduction to Computer Systems": "Introducción a los Sistemas Informáticos"},
+		{"Hardware": "Hardware"},
+		{"Troubleshooting and Optimizing Hardware": "Solución de Problemas y Optimización de Hardware"},
+		{"Software and Operating Systems": "Software y Sistemas Operativos"},
+		{"Troubleshooting and Optimizing Software": "Solución de Problemas y Optimización de Software"},
+		{"Build a Computer System": "Construir un Sistema Informático"},
+		{"Data in Computer Systems": "Datos en los Sistemas Informáticos"},
+		{"Processing Data in a System": "Procesamiento de Datos en un Sistema"},
+		{"How AI Uses Data": "Cómo la IA Utiliza los Datos"},
+		{"IoT and Emerging Technologies": "IoT y Tecnologías Emergentes"},
+		{"User Testing": "Pruebas de Usuario"},
+		{"Just because We Can, Should We?": "¿Solo porque Podemos, Deberíamos?"}
+	],
+	"lessonLinks": [
+        "/courses/ai-foundations/ai-and-the-systems-that-power-it/introduction-to-computer-systems",
+        "/courses/ai-foundations/ai-and-the-systems-that-power-it/hardware",
+        "/courses/ai-foundations/ai-and-the-systems-that-power-it/troubleshooting-and-optimizing-hardware",
+        "/courses/ai-foundations/ai-and-the-systems-that-power-it/software-and-operating-systems",
+        "/courses/ai-foundations/ai-and-the-systems-that-power-it/troubleshooting-and-optimizing-software",
+        "/courses/ai-foundations/ai-and-the-systems-that-power-it/build-a-computer-system",
+        "/courses/ai-foundations/ai-and-the-systems-that-power-it/data-in-computer-systems",
+        "/courses/ai-foundations/ai-and-the-systems-that-power-it/processing-data-in-a-system",
+        "/courses/ai-foundations/ai-and-the-systems-that-power-it/how-ai-uses-data",
+        "/courses/ai-foundations/ai-and-the-systems-that-power-it/iot-and-emerging-technologies",
+        "/courses/ai-foundations/ai-and-the-systems-that-power-it/user-testing",
+        "/courses/ai-foundations/ai-and-the-systems-that-power-it/just-because-we-can-should-we"
+        ]
+    },
+    "4": {
+        "ChapterNumber": 4,
+        "ChapterTitle_en": "The Fabric of the Internet and AI",
+        "ChapterTitle_es": "El Tejido de Internet y la IA",
+        "ChapterSummary_en": "Explores internet infrastructure and connectivity as the backbone for AI services: network infrastructure, data transmission and channels, cloud computing, AI and connectivity, and ethical implications. Emphasizes how networks, protocols, and cloud services enable AI applications and the trade-offs they introduce.",
+        "ChapterSummary_es": "Explora la infraestructura de Internet y la conectividad como columna vertebral de los servicios de IA: infraestructura de red, transmisión de datos y canales, computación en la nube, IA y conectividad, e implicaciones éticas. Destaca cómo redes, protocolos y servicios en la nube habilitan aplicaciones de IA y los compromisos que implican.",
+        "url": "/courses/ai-foundations/the-fabric-of-the-internet-and-ai",
+        "imageTopic": "Roads, clouds, and devices connected by lines (internet as roads)",
+        "imageLink": "https://unsplash.com/s/photos/internet-network",
+        "enEssayHTML": "<h3>Picture the scene</h3><p>Picture roads and bridges that carry messages from your device to big computers far away.</p><h3>Key idea</h3><p>Where and how data travels changes how fast and private AI answers are.</p><h3>Class activity</h3><p>Run a small task locally and then in the cloud. Compare how long each takes and discuss why.</p>",
+        "esEssayHTML": "<h3>Imagina la escena</h3><p>Imagina carreteras y puentes que llevan mensajes desde tu dispositivo hasta grandes computadoras lejanas.</p><h3>Idea principal</h3><p>Dónde y cómo viajan los datos cambia la rapidez y la privacidad de las respuestas de la IA.</p><h3>Actividad</h3><p>Ejecuta una tarea pequeña localmente y luego en la nube. Comparen cuánto tarda cada una y discutan por qué.</p>",
+	"LessonTitles": [
+		{"Introduction to the Internet": "Introducción a Internet"},
+		{"Sending Bits": "Enviando Bits"},
+		{"IP Addresses": "Direcciones IP"},
+		{"Routers and Redundancy": "Enrutadores y Redundancia"},
+		{"Packets": "Paquetes"},
+		{"HTTP and DNS": "HTTP y DNS"},
+		{"The Internet's Hidden Barriers": "Las Barreras Ocultas de Internet"}
+	],
+	"lessonLinks": [
+		"/courses/ai-foundations/the-fabric-of-the-internet-and-ai/introduction-to-the-internet",
+		"/courses/ai-foundations/the-fabric-of-the-internet-and-ai/sending-bits",
+		"/courses/ai-foundations/the-fabric-of-the-internet-and-ai/ip-addresses",
+		"/courses/ai-foundations/the-fabric-of-the-internet-and-ai/routers-and-redundancy",
+		"/courses/ai-foundations/the-fabric-of-the-internet-and-ai/packets",
+		"/courses/ai-foundations/the-fabric-of-the-internet-and-ai/http-and-dns",
+		"/courses/ai-foundations/the-fabric-of-the-internet-and-ai/the-internets-hidden-barriers"
+	]
+    },
+    "5": {
+        "ChapterNumber": 5,
+        "ChapterTitle_en": "Cybersecurity and Global Impacts",
+        "ChapterTitle_es": "Ciberseguridad e Impactos Globales",
+        "ChapterSummary_en": "Addresses cybersecurity topics and broader societal impacts: data collection and privacy, encryption and secure protocols, authentication and authorization (including MFA), threats and defenses, future-school innovation with privacy and security, critical thinking and digital citizenship, and global implications such as the digital divide and career pathways.",
+        "ChapterSummary_es": "Aborda temas de ciberseguridad e impactos sociales: recolección de datos y privacidad, cifrado y protocolos seguros, autenticación y autorización (incluida MFA), amenazas y defensas, innovación educativa con privacidad y seguridad, pensamiento crítico y ciudadanía digital, e implicaciones globales como la brecha digital y trayectorias profesionales.",
+        "url": "/courses/ai-foundations/cybersecurity-and-global-impacts",
+        "imageTopic": "Shield protecting a globe made of data bits (security and global impact)",
+        "imageLink": "https://unsplash.com/s/photos/cybersecurity",
+        "enEssayHTML": "<h3>Picture the scene</h3><p>Imagine a treasure chest of data that needs locks and careful guards so everyone stays safe.</p><h3>Key idea</h3><p>Protecting data keeps people safe and builds trust.</p><h3>Class activity</h3><p>Create three simple class rules for keeping work private and explain why each matters.</p>",
+        "esEssayHTML": "<h3>Imagina la escena</h3><p>Imagina un cofre del tesoro lleno de datos que necesita cerraduras y guardianes cuidadosos para que todos estén seguros.</p><h3>Idea principal</h3><p>Proteger los datos mantiene a las personas seguras y genera confianza.</p><h3>Actividad</h3><p>Creen tres reglas simples para mantener el trabajo privado y expliquen por qué cada una importa.</p>",
+	"LessonTitles": [
+		{"Project - Innovation Simulation Part 1": "Proyecto - Simulación de Innovación Parte 1"}, {"Data Policies and Privacy": "Políticas de Datos y Privacidad"}, {"The Value of Privacy": "El Valor de la Privacidad"}, {"Project - Innovation Simulation Part 2": "Proyecto - Simulación de Innovación Parte 2"}, {"Security Risks Part 1": "Riesgos de Seguridad Parte 1"}, {"Security Risks Part 2": "Riesgos de Seguridad Parte 2"}, {"Project - Innovation Simulation Part 3": "Proyecto - Simulación de Innovación Parte 3"}, {"Protecting Data Part 1": "Protección de Datos Parte 1"}, {"Protection Data Part 2": "Protección de Datos Parte 2"}, {"Project - Innovation Simulation Part 4": "Proyecto - Simulación de Innovación Parte 4"}
+	],
+	"lessonLinks": [
+		"/courses/ai-foundations/reflections-on-data-and-ai/introduction-to-data-science",
+		"/courses/ai-foundations/reflections-on-data-and-ai/making-sense-of-data",
+		"/courses/ai-foundations/reflections-on-data-and-ai/ethical-data-collection",
+		"/courses/ai-foundations/reflections-on-data-and-ai/data-rights",
+		"/courses/ai-foundations/reflections-on-data-and-ai/effective-data-questions",
+		"/courses/ai-foundations/reflections-on-data-and-ai/data-storytelling",
+		"/courses/ai-foundations/reflections-on-data-and-ai/introduction-to-data-visualization",
+		"/courses/ai-foundations/reflections-on-data-and-ai/data-cleaning-and-analysis-techniques",
+		"/courses/ai-foundations/reflections-on-data-and-ai/data-interpretation",
+		"/courses/ai-foundations/reflections-on-data-and-ai/more-visualization-techniques"
+	]
+    },
+    "6": {
+        "ChapterNumber": 6,
+        "ChapterTitle_en": "Reflections on Data and AI",
+        "ChapterTitle_es": "Reflexiones de los Datos y la IA",
+        "ChapterSummary_en": "Focuses on data-centric aspects of AI: data collection and sources, data cleaning and preparation, exploratory data analysis, modeling with AI, ethics and bias in data and models, and executive summaries and conclusions that reflect on responsible data practices and societal impacts.",
+        "ChapterSummary_es": "Se centra en aspectos centrados en los datos de la IA: recolección y fuentes de datos, limpieza y preparación, análisis exploratorio, modelado con IA, ética y sesgos en datos y modelos, y resúmenes ejecutivos y conclusiones que reflexionan sobre prácticas responsables y sus impactos sociales.",
+        "url": "/courses/ai-foundations/reflections-on-data-and-ai",
+        "imageTopic": "Balance scale with data and fairness, plus diverse faces and charts",
+        "imageLink": "https://unsplash.com/s/photos/data-ethics",
+        "enEssayHTML": "<h3>Picture the scene</h3><p>See a balance scale where data sits on one side and fairness on the other.</p><h3>Key idea</h3><p>Fair results come from careful data and honest checks.</p><h3>Class activity</h3><p>Look at a small dataset, find one missing value, and suggest one fix. Discuss how that fix changes results.</p>",
+        "esEssayHTML": "<h3>Imagina la escena</h3><p>Observa una balanza donde los datos están en un lado y la equidad en el otro.</p><h3>Idea principal</h3><p>Resultados justos provienen de datos cuidados y comprobaciones honestas.</p><h3>Actividad</h3><p>Mira un pequeño conjunto de datos, encuentra un valor faltante y sugiere una solución. Discutan cómo ese arreglo cambia los resultados.</p>",
+	"LessonTitles": [
+		{"Introduction to Data Science": "Introducción a la Ciencia de Datos"}, {"Making Sense of Data": "Dando Sentido a los Datos"}, {"Ethical Data Collection": "Recolección Ética de Datos"}, {"Data Rights": "Derechos de los Datos"}, {"Effective Data Questions": "Preguntas Efectivas sobre Datos"}, {"Data Storytelling": "Narración de Datos"}, {"Introduction to Data Visualization": "Introducción a la Visualización de Datos"}, {"Data Cleaning and Analysis Techniques": "Técnicas de Limpieza y Análisis de Datos"}, {"Data Interpretation": "Interpretación de Datos"}, {"More Visualization Techniques": "Más Técnicas de Visualización"}
+	],
+	"lessonLinks": [
+		"/courses/ai-foundations/reflections-on-data-and-ai/introduction-to-data-science",
+		"/courses/ai-foundations/reflections-on-data-and-ai/making-sense-of-data",
+		"/courses/ai-foundations/reflections-on-data-and-ai/ethical-data-collection",
+		"/courses/ai-foundations/reflections-on-data-and-ai/data-rights",
+		"/courses/ai-foundations/reflections-on-data-and-ai/effective-data-questions",
+		"/courses/ai-foundations/reflections-on-data-and-ai/data-storytelling",
+		"/courses/ai-foundations/reflections-on-data-and-ai/introduction-to-data-visualization",
+		"/courses/ai-foundations/reflections-on-data-and-ai/data-cleaning-and-analysis-techniques",
+		"/courses/ai-foundations/reflections-on-data-and-ai/data-interpretation",
+		"/courses/ai-foundations/reflections-on-data-and-ai/more-visualization-techniques"
+        ]
+     }
+  }
+}

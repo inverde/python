@@ -1,0 +1,20 @@
+<nav aria-label=aria_label>
+    <!-- Default nav goes here -->
+    <ul class="home-menu">
+        <ul class="header-menu">
+            <li>School</li>
+            <ul class="sub-menu">
+             {% for link in school_links %}
+                <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+             {% endfor %}
+            </ul>
+        </ul>
+        <ul class="header-menu">
+            <li>Administration</li>
+            <ul class="sub-menu">
+             {% for link in admin_links %}
+                <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+            </ul>
+        </ul>
+    </ul>
+</nav>

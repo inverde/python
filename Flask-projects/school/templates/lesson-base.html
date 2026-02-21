@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Sample HTML Document{% endblock %}</title>
+</head>
+
+<body>
+    <div class="lesson">
+        <div class="header">
+            {% block course_title %}Sample Course Title{% endblock %}
+            {% block chapter_title %}Sample Chapter Title{% endblock %}
+            {% block lesson_title %}Sample Lesson Title{% endblock %}
+        </div>
+        <div class="body">
+            <ul>
+                <li>
+                    <section class="section-head-rows">
+                        {% block section_head_rows %}{% endblock %}
+                    </section>
+                </li>
+                <li>
+                    <section class="section-en-rows">
+                        {%block section_en_rows %}{% endblock %}
+                    </section>
+                </li>
+                <li>
+                    <section class="section-es-rows">
+                        {%block section_es_rows %}{% endblock %}
+                    </section>
+                </li>
+            </ul>
+        </div>
+        <div class="footer">
+            {% block footer %}{% endblock %}
+        </div>
+    </div>
+</body>
+
+</html>
