@@ -99,7 +99,8 @@ chapter = {
     ],
     "LessonTitles": [                # list of lessons
         lesson                  # lesson dict
-    ]
+    ],
+    "lessonLinks": [str]
 }
 
 chapters = list[chapter]
