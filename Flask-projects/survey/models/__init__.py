@@ -4,7 +4,9 @@ from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
 
-# SQLITE Engine
+# SQLITE Enginec
+
+engine = create_engine("sqlite:///../data/intance/app.sqlite3", echo=True)
 
 # Probar conexión inmediatamente
 try:
