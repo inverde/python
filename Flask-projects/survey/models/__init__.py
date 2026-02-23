@@ -12,6 +12,7 @@ engine = create_engine("sqlite:///../data/intance/app.sqlite3", echo=True)
 try:
     with engine.connect() as connection:
         print("✅ Conexión establecida con la base de datos SQLite.")
+
 except Exception as e:
 
     print("❌ Error al conectar con la base de datos:", e)
