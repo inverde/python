@@ -1,4 +1,4 @@
-from models.__init__ import Base, engine, sessionLocal
+from models.__init__ import Base, engine
 
 # Import all models so they are registered with base
 from models.school import School
