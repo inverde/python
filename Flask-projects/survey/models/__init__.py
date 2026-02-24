@@ -6,6 +6,7 @@ Base = declarative_base()
 
 # SQLITE Engine
 
+
 engine = create_engine("sqlite:///../data/instance/app.sqlite3", echo=True)
 
 # Probar conexión inmediatamente
