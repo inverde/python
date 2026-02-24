@@ -9,7 +9,8 @@ def get_Base():
     global std_base
     if Base is None:
         std_base = declarative_base()
-    return std_base
+        return std_base
+    return Base
 
 Base = get_Base()
 
