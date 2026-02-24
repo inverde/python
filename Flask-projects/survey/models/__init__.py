@@ -7,7 +7,8 @@ std_base = None
 
 def get_Base():
     global std_base
-    if std_base is None:
+    global Base
+    if Base is None:
         std_base = declarative_base()
         return std_base
     return Base
