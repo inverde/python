@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 
 
 std_base = None
-
+Base = None
 def get_Base():
     global std_base
     global Base
