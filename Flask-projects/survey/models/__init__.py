@@ -5,8 +5,9 @@ from sqlalchemy.orm import sessionmaker
 std_base = None
 
 def get_Base():
+    global Base
     global std_base
-    if std_base is None:
+    if Base is None:
         std_base = declarative_base()
     return std_base
 
