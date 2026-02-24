@@ -7,7 +7,7 @@ Base = declarative_base()
 # SQLITE Engine
 
 
-engine = create_engine("sqlite:///../data/instance/app.sqlite3", echo=True)
+engine = create_engine("sqlite:////workspaces/python/Flask-projects/survey/data/instance/app.sqlite3", echo=True)
 
 # Probar conexión inmediatamente
 try:

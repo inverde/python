@@ -1,4 +1,7 @@
-from sqlalchemy import Column, Integer, Text, DateTime, ForeignKey
+from sqlalchemy import (
+    Column, String, Integer, Text, DateTime, Boolean,
+    ForeignKey, CheckConstraint, UniqueConstraint
+)
 from sqlalchemy.orm import relationship
 import datetime
 from . import Base
@@ -6,11 +9,12 @@ from . import Base
 class Answer(Base):
 
     __tablename__ = "Answers"
+
     AnswerID = Column(Integer, primary_key=True, autoincrement=True)
     RespondentID = Column(Integer, ForeignKey("Respondents.RespondentID"), nullable=False)
     QuestionID = Column(Integer, ForeignKey("Questions.QuestionID"), nullable=False)
-    AnswerValue = Column(Text, nullable=False)
-    AnswerTimestamp = Column(DateTime, default=datetime.datetime.utcnow)
+    AnswerValue = Column(Text, nullable=False)  # store numeric as text or JSON; convert as needed
+    AnswerTimestamp = Column(DateTime, default=datetime.datetime.utcnow, nullable=False)
 
     respondent = relationship("Respondent", back_populates="answers")
     question = relationship("Question", back_populates="answers")
