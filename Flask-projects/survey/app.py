@@ -20,7 +20,7 @@ tablenames = [
     'Answers'
 ]
 
-def drop_all_tables(tables):
+def drop_all_tables(tables=None):
     if not tables:
         print("⚠️ WARNING: This will delete ALL tables and data in the database!")
         confirm = input("Type 'Yes' to confirm: ")
