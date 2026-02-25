@@ -22,5 +22,5 @@ class Question(Base):
     answers = relationship("Answer", back_populates="question", cascade="all, delete-orphan")
 
     __table_args__ = (
-      CheckConstraint("QuestionType IN ('Closed', 'Multiple', 'Scale', Open')", name="check_question_type"),
-    )
+      CheckConstraint("QuestionType IN ('Closed', 'Multiple', 'Scale', 'Open')", name="check_question_type"),
+      )

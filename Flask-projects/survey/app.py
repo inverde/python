@@ -1,22 +1,8 @@
 from sqlalchemy import inspect
-from models.__init__ import Base, engine
+from models import Base, engine
 import logging
 import sys, os
 
-"""
-# Import all models so they are registered with base
-from models.region import Region
-from models.district import District
-from models.building import Building
-from models.school import School
-from models.respondent import Respondent
-from models.section import Section
-from models.question import Question
-from models.answer import Answer
-"""
-#original_stdout = sys.stdout
-#sys.stdout = open(os.devnull, 'w')  # Redirect stdout to null to suppress output
-#sys.stdout = sys.__stdout__
 
 logging.getLogger("sqlalchemy").setLevel(logging.WARNING)
 logging.getLogger("sqlalchemy.engine").setLevel(logging.WARNING)
@@ -54,13 +40,15 @@ def init_db():
         if engine.url.database:
             db_path = os.path.abspath(engine.url.database)
             print(f"Database file will be created at path: {db_path}")
-            print("Priting all tables imported into Base metadata:", Base.metadata.tables.keys())
-        #Base.metadata.create_all(engine)
-        #print("Base de datos creada exitosamente.")
+            print("Printing all tables imported into Base metadata:", Base.metadata.tables.keys())
+        Base.metadata.create_all(engine)
+        print("Base de datos creada exitosamente.")
         #print(missing)
     else:
         print("Some tables are missing:", missing)
-
+        tables_to_create = [Base.metadata.tables[name] for name in list(missing)]
+        #print(tables_to_create)
+        Base.metadata.create_all(engine, tables=tables_to_create)
 
 #sys.stdout = original_stdout
 #print("Base de datos creada exitosamente.")
