@@ -33,8 +33,8 @@ def drop_all_tables(tables=None):
     else:
         tables_to_handle = [Base.metadata.tables[name] for name in tables if name in Base.metatada.tables]
         if not tables_to_handle:
-            confirm = Input("Type 'Yes' to confirm dropping: ", tables_to_handle)
-            if confim == "Yes":
+            confirm = input("Type 'Yes' to confirm dropping: ", tables_to_handle)
+            if confirm == "Yes":
                 Base.metadata.drop_all(engine, tables_to_handle)
                 print("✅ The requested tables were successfully deleted.")
             else:
