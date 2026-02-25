@@ -20,15 +20,19 @@ tablenames = [
     'Answers'
 ]
 
-def drop_all_tables():
-    print("⚠️ WARNING: This will delete ALL tables and data in the database!")
-    confirm = input("Type 'Yes' to confirm: ")
+def drop_all_tables(tables):
+    if not tables:
+        print("⚠️ WARNING: This will delete ALL tables and data in the database!")
+        confirm = input("Type 'Yes' to confirm: ")
 
-    if confirm == "Yes":
-        Base.metadata.drop_all(engine)
-        print("✅ All tables dropped successfully.")
+        if confirm == "Yes":
+            Base.metadata.drop_all(engine)
+            print("✅ All tables dropped successfully.")
+        else:
+            print("❌ Operation cancelled. No tables were dropped.")
     else:
-        print("❌ Operation cancelled. No tables were dropped.")
+        tables_to_handle = [Base.metadata.tables[name] for name in tables if name in Base.metatada.tables]
+        if not 
 
 
 def init_db():
