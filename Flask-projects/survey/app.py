@@ -21,6 +21,7 @@ tablenames = [
 ]
 
 def drop_all_tables():
+    print("⚠️ WARNING: This will delete ALL tables and data in the database!")
     confirm = input("Type 'Yes' to confirm: ")
 
     if confirm == "Yes":
