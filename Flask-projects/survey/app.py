@@ -74,4 +74,5 @@ def init_db():
 #sys.stdout = original_stdout
 #print("Base de datos creada exitosamente.")
 if __name__ == "__main__":
+    drop_all_tables()
     init_db()
