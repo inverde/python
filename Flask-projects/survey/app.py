@@ -21,7 +21,14 @@ tablenames = [
 ]
 
 def drop_all_tables():
-    
+    confirm = input("Type 'Yes' to confirm: ")
+
+    if confirm == "Yes":
+        Base.metadata.drop_all(engine)
+        print("✅ All tables dropped successfully.")
+    else:
+        print("❌ Operation cancelled. No tables were dropped.")
+
 
 def init_db():
     """
