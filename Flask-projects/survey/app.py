@@ -20,6 +20,9 @@ tablenames = [
     'Answers'
 ]
 
+def drop_all_tables():
+    
+
 def init_db():
     """
     Initializes the database by creating all tables defined in the models.
