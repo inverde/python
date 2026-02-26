@@ -12,6 +12,8 @@ def drop_database_tables(db_path:str):
     Parameters:
         db_path(str): Path to the SQLite databse file, e.g. 'example.db'
     """
+    # Get tables from global
+    global tables
     # Create engine
     engine = create_engine(f"sqlite:///{db_paty}", echo=True)
 
