@@ -1,4 +1,4 @@
-from . import app
+import app
 
 tables=['Regions', 'Districts', 'Buildings', 'Schools', 'Respondents', 'Sections', 'Questions', 'Answers']
 
