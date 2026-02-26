@@ -1,3 +1,3 @@
 from sqlalchemy.orm import Session
-from . import Survey
+from repositories.survey_repo import Survey
 
