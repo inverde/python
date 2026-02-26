@@ -29,21 +29,3 @@ class Section(Base):
 
     def __repr__(self):
         return f"<Section(id={self.ID}, SectionCode='{self.SectionCode}', Section='{self.SectionName}')>"
-
-
-from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.orm import declarative_base
-
-Base = declarative_base()
-
-class Section(Base):
-    __tablename__ = "Sections"
-
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    name = Column(String, nullable=False)
-
-    # Assuming these exist in your schema
-    survey_id = Column(Integer, ForeignKey("Surveys.id"), nullable=False)
-    section_order = Column(Integer, nullable=False)
-
-
