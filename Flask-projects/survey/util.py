@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, Metadata
 # Get the path from a SQLite database file
 
 db_path='/worspaces/python/Flask-projects/survey/data/instance/app.sqlite3.db'
-tables= ['Regions', 'Districts', 'Buildings', 'Schools', 'Respondents', 'Sections', 'Questions', 'Answers']
+db_tables= ['Regions', 'Districts', 'Buildings', 'Schools', 'Respondents', 'Sections', 'Questions', 'Answers']
 
 def drop_all_tables(db_path:str, tables=None):
     """
@@ -11,9 +11,6 @@ def drop_all_tables(db_path:str, tables=None):
     Parameters:
         db_path(str): Path to the SQLite databse file, e.g. 'example.db'
     """
-    # Get tables from global
-
-    global tables
     try:
 
         # Create engine
