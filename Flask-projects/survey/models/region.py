@@ -10,7 +10,8 @@ class Region(Base):
 
     districts = relationship("District", back_populates="region", cascade="all, delete-orphan")
 
-    def __init__(self, RegionName):
+    def __init__(self, ID, RegionName):
+        self.ID = ID
         self.RegionName = RegionName
 
     def __repr__(self):
