@@ -1,3 +1,3 @@
 from sqlalchemy.orm import Session
-from .models import Survey
+from survey.models import Survey
 
