@@ -21,11 +21,13 @@ def drop_all_tables(db_path:str, tables=None):
         # Reflect existing database schema
         metadata = Metadata()
         metadata.reflect(bind=engine)
+
         # Drop all existing defined tables
         metadata.drop_all(bind=engine)
         print(f"All tables dropped from {db_path}]")
     except Exception as e:
-        # 
+        # Catch-all exception handler
+        print(f"An error occurred while droppinng tables: {e}")
 
 
 if __name__ == "__main__":
