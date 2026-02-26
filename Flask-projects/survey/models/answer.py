@@ -20,7 +20,7 @@ class Answer(Base):
     question = relationship("Question", back_populates="answers")
 
     def __init__(self, RespondentID, QuestionID, AnswerValue, AnswerTimestamp=None):
-        self.D = RespondentID
+        self.RespondentID = RespondentID
         self.QuestionID = QuestionID
         self.AnswerValue = AnswerValue
         self.AnswerTimestamp = AnswerTimestamp or datetime.datetime.utcnow()
