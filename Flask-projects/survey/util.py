@@ -13,15 +13,19 @@ def drop_all_tables(db_path:str, tables=None):
     """
     # Get tables from global
     global tables
-    # Create engine
-    engine = create_engine(f"sqlite:///{db_path}", echo=True)
+    try:
 
-    # Reflect existing database schema
-    metadata = Metadata()
-    metadata.reflect(bind=engine)
-    # Drop all existing defined tables
-    metadata.drop_all(bind=engine)
-    print(f"All tables dropped from {db_path}]")
+        # Create engine
+        engine = create_engine(f"sqlite:///{db_path}", echo=True)
+
+        # Reflect existing database schema
+        metadata = Metadata()
+        metadata.reflect(bind=engine)
+        # Drop all existing defined tables
+        metadata.drop_all(bind=engine)
+        print(f"All tables dropped from {db_path}]")
+    except Exception as e:
+        # 
 
 
 if __name__ == "__main__":
