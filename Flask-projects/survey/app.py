@@ -10,6 +10,7 @@ logging.getLogger("sqlalchemy.dialects").setLevel(logging.WARNING)
 
 
 tablenames = [
+    'Surveys',
     'Regions',
     'Districts',
     'Buildings',
