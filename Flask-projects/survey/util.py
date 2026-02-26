@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine, MetaData
 # Get the path from a SQLite database file
 
-db_path='/worspaces/python/Flask-projects/survey/data/instance/app.sqlite3.db'
+db_path='/workspaces/python/Flask-projects/survey/data/instance/app.sqlite3.db'
 db_tables= ['Regions', 'Districts', 'Buildings', 'Schools', 'Respondents', 'Sections', 'Questions', 'Answers']
 
 def drop_all_tables(db_path:str, tables=None):
