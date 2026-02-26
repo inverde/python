@@ -20,7 +20,7 @@ def drop_database_tables(db_path:str):
     # Reflect existing database schema
     metadata = Metadata()
     metadata.reflect(bind=engine)
-    drop_all_tables()
+    drop_all_tables(tables)
 
 
 if __name__ == "__main__":
