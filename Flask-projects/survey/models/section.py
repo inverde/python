@@ -10,7 +10,7 @@ class Section(Base):
     __tablename__ = "Sections"
 
     ID = Column(Integer, primary_key=True, autoincrement=True)
-    SurveyID = Column(Integer, ForeignKey("Surveys.ID"), nullable=False)
+    SurveyID = Column(Integer, ForeignKey("Surveys.ID", ondelete="CASCADE"),nullable=False)
     SectionName = Column(String, nullable=False)
     SectionDescription = Column(Text, nullable=True)
     SectionOrder = Column(Integer, nullable=True)
