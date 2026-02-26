@@ -4,7 +4,7 @@ from sqlalchemy import create_engine, Metadata
 db_path='/worspaces/python/Flask-projects/survey/data/instance/app.sqlite3.db'
 tables=['Regions', 'Districts', 'Buildings', 'Schools', 'Respondents', 'Sections', 'Questions', 'Answers']
 
-def drop_database_tables(db_path:str):
+def drop_all_tables(db_path:str, tables=None):
     """
     Drops all tables from a SQLite database file.
 
@@ -19,7 +19,9 @@ def drop_database_tables(db_path:str):
     # Reflect existing database schema
     metadata = Metadata()
     metadata.reflect(bind=engine)
-    drop_all_tables(tables)
+    # Drop all existing defined tables
+    metadata.drop_all(bind=engine)
+    print(f"All tables dropped from {db_path}]")
 
 
 if __name__ == "__main__":
