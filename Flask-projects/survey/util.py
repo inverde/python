@@ -1,4 +1,7 @@
 import app
+from sqlalchemy import create_engine, Metadata
+
+# Create engine
 
 tables=['Regions', 'Districts', 'Buildings', 'Schools', 'Respondents', 'Sections', 'Questions', 'Answers']
 
