@@ -14,7 +14,7 @@ def drop_all_tables(db_path:str, tables=None):
     # Get tables from global
     global tables
     # Create engine
-    engine = create_engine(f"sqlite:///{db_paty}", echo=True)
+    engine = create_engine(f"sqlite:///{db_path}", echo=True)
 
     # Reflect existing database schema
     metadata = Metadata()
@@ -25,4 +25,4 @@ def drop_all_tables(db_path:str, tables=None):
 
 
 if __name__ == "__main__":
-    app.drop_all_tables(tables)
+    app.drop_all_tables(db_path)
