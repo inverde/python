@@ -1,4 +1,5 @@
 {
+    "python.analysis.extraPaths": [ "./" ],
     "git.decorations.enabled": true,
     "gitdoc.enabled": true
 }
