@@ -9,7 +9,8 @@ from . import Base
 class Section(Base):
     __tablename__ = "Sections"
 
-    SectionID = Column(Integer, primary_key=True, autoincrement=True)
+    ID = Column(Integer, primary_key=True, autoincrement=True)
+    SurveyID = Column(Integer, ForeignKey("Surveys.ID"), nullable=False)
     SectionName = Column(String, nullable=False)
     SectionDescription = Column(Text, nullable=True)
     SectionOrder = Column(Integer, nullable=True)
@@ -17,14 +18,14 @@ class Section(Base):
     questions = relationship("Question", back_populates="section", cascade="all, delete-orphan")
 
     # New field: section_code
-    section_code = Column(String(11), unique=True, nullable=False)
+    SectionCode = Column(String(11), unique=True, nullable=False)
 
     def __init__(self, name, survey_id, section_order):
-        self.name = name
-        self.survey_id = survey_id
-        self.section_order = section_order
+        self.SectionName = name
+        self.SurveyID = survey_id
+        self.SectionOrder = section_order
         # Generate the code automatically
-        self.section_code = f"S_{survey_id:05d}_{section_order:03d}"
+        self.SectionCode = f"S_{survey_id:05d}_{section_order:03d}"
 
     def __repr__(self):
         return f"<Section(id={self.id}, section_code='{self.section_code}', name='{self.name}')>"
