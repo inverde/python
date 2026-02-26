@@ -10,9 +10,9 @@ class Answer(Base):
 
     __tablename__ = "Answers"
 
-    AnswerID = Column(Integer, primary_key=True, autoincrement=True)
+    ID = Column(Integer, primary_key=True, autoincrement=True)
     RespondentID = Column(Integer, ForeignKey("Respondents.RespondentID"), nullable=False)
-    QuestionID = Column(Integer, ForeignKey("Questions.QuestionID"), nullable=False)
+    QuestionID = Column(Integer, ForeignKey("Questions.ID"), nullable=False)
     AnswerValue = Column(Text, nullable=False)  # store numeric as text or JSON; convert as needed
     AnswerTimestamp = Column(DateTime, default=datetime.datetime.utcnow, nullable=False)
 

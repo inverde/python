@@ -9,7 +9,7 @@ from . import Base
 class Respondent(Base):
     __tablename__ = "Respondents"
 
-    RespondentID = Column(Integer, primary_key=True, autoincrement=True)
+    ID = Column(Integer, primary_key=True, autoincrement=True)
     SchoolID = Column(Integer, ForeignKey("Schools.SchoolID"), nullable=False)
     Age = Column(Integer, nullable=True)
     Grade = Column(String, nullable=True)
