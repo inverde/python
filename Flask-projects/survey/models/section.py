@@ -28,7 +28,7 @@ class Section(Base):
         self.SectionCode = f"S_{survey_id:05d}_{section_order:03d}"
 
     def __repr__(self):
-        return f"<Section(id={self.id}, section_code='{self.section_code}', name='{self.name}')>"
+        return f"<Section(id={self.ID}, SectionCode='{self.SectionCode}', Section='{self.SectionName}')>"
 
 
 from sqlalchemy import Column, Integer, String, ForeignKey
