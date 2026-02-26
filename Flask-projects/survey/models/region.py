@@ -9,3 +9,9 @@ class Region(Base):
     RegionName = Column(String, nullable=False, unique=True)
 
     districts = relationship("District", back_populates="region", cascade="all, delete-orphan")
+
+    def __init__(self, RegionName):
+        self.RegionName = RegionName
+
+    def __repr__(self):
+        return f"<Region(ID={self.ID}, RegionName='{self.RegionName}')>"

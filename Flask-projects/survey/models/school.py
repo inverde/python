@@ -40,3 +40,28 @@ class School(Base):
         ),
     )
 
+    def __init__(self, SchoolCode, SchoolName, SchoolDistrictID, SchoolType, SchoolLevel,
+                 StudentCount, GeospatialCoordinates, Municipality, Province, SchoolYear,
+                 FullAddress=None, PostalCode=None):
+        self.SchoolCode = SchoolCode
+        self.SchoolName = SchoolName
+        self.SchoolDistrictID = SchoolDistrictID
+        self.SchoolType = SchoolType
+        self.SchoolLevel = SchoolLevel
+        self.StudentCount = StudentCount
+        self.GeospatialCoordinates = GeospatialCoordinates
+        self.Municipality = Municipality
+        self.Province = Province
+        self.SchoolYear = SchoolYear
+        self.FullAddress = FullAddress
+        self.PostalCode = PostalCode
+
+    def __repr__(self):
+        return (
+            f"<School(SchoolID={self.SchoolID}, SchoolCode='{self.SchoolCode}', "
+            f"SchoolName='{self.SchoolName}', SchoolDistrictID={self.SchoolDistrictID}, "
+            f"SchoolType='{self.SchoolType}', SchoolLevel='{self.SchoolLevel}', "
+            f"StudentCount={self.StudentCount}, Municipality='{self.Municipality}', "
+            f"Province='{self.Province}', SchoolYear='{self.SchoolYear}')>"
+        )
+

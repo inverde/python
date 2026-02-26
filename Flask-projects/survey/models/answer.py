@@ -18,3 +18,16 @@ class Answer(Base):
 
     respondent = relationship("Respondent", back_populates="answers")
     question = relationship("Question", back_populates="answers")
+
+    def __init__(self, RespondentID, QuestionID, AnswerValue, AnswerTimestamp=None):
+        self.RespondentID = RespondentID
+        self.QuestionID = QuestionID
+        self.AnswerValue = AnswerValue
+        self.AnswerTimestamp = AnswerTimestamp or datetime.datetime.utcnow()
+
+    def __repr__(self):
+        return (
+            f"<Answer(ID={self.ID}, RespondentID={self.RespondentID}, "
+            f"QuestionID={self.QuestionID}, AnswerValue='{self.AnswerValue}', "
+            f"AnswerTimestamp={self.AnswerTimestamp})>"
+        )

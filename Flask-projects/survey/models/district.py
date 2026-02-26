@@ -20,3 +20,11 @@ class District(Base):
     __table_args__ = (
         UniqueConstraint("DistrictName", "RegionID", name="uq_district_region"),
     )
+
+    def __init__(self, ID, DistrictName, RegionID):
+        self.ID = ID
+        self.DistrictName = DistrictName
+        self.RegionID = RegionID
+
+    def __repr__(self):
+        return f"<District(ID={self.ID}, DistrictName='{self.DistrictName}', RegionID={self.RegionID})>"
