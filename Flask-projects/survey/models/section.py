@@ -16,6 +16,8 @@ class Section(Base):
     SectionOrder = Column(Integer, nullable=True)
 
     questions = relationship("Question", back_populates="section", cascade="all, delete-orphan")
+    # Relationship to Survey
+    survey = relationship("Survey", back_populates="sections")
 
     # New field: section_code
     SectionCode = Column(String(11), unique=True, nullable=False)
