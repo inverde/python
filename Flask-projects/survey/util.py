@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, Metadata
+from sqlalchemy import create_engine, MetaData
 # Get the path from a SQLite database file
 
 db_path='/worspaces/python/Flask-projects/survey/data/instance/app.sqlite3.db'
@@ -17,7 +17,7 @@ def drop_all_tables(db_path:str, tables=None):
         engine = create_engine(f"sqlite:///{db_path}", echo=True)
 
         # Reflect existing database schema
-        metadata = Metadata()
+        metadata = MetaData()
         metadata.reflect(bind=engine)
 
         # Drop all existing defined tables
