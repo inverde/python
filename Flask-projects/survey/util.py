@@ -1,4 +1,3 @@
-from app import drop_all_tables
 from sqlalchemy import create_engine, Metadata
 # Get the path from a SQLite database file
 
