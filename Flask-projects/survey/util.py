@@ -29,4 +29,4 @@ def drop_all_tables(db_path:str, tables=None):
 
 
 if __name__ == "__main__":
-    drop_all_tables(db_path)
+    drop_all_tables(db_path, db_tables)
