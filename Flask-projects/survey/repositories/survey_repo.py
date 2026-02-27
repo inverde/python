@@ -30,4 +30,10 @@ def get_all_surveys(session: Session) -> list:
 
 # Update Survey
 def updtate_survey(session: Session, survey_id: int, **kwargs) -> Survey:
-    survey 
+    survey = session.query(Survey).filter(Survey.ID == survey_id).first()
+    if survey:
+        for key, value in kwargs.items():
+            if hasattr(survey, key):
+                setattr(survey, key, value)
+        session.commit()
+    return survey
