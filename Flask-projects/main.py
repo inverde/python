@@ -1,3 +1,3 @@
 def main():
-    import survery
+    import s
 if __name__== "__main__":
