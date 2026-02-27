@@ -22,5 +22,7 @@ def create_survey(session:Session,
 
 # Read Survey
 def get_survey(session: Session, survey_id: int) -> Survey:
-    pass
+    return session.query(Survey).Filter(Survey.ID == survey_id)
+
+def get_all_surveys(session: Session)
 
