@@ -4,6 +4,7 @@ def main():
     survey.repositories.region_repo
     survey.repositories.district_repo
     survey.repositories.school_repo
+    survey.repositories.building_repo
 
 
 if __name__== "__main__":
