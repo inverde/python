@@ -7,7 +7,7 @@ def create_question(session: Session,
                     QuestionOrder: int,
                     QuestionText: str,
                     QuestionType: str,
-                    AnswerOptions: str = None):
+                    AnswerOptions: dict = None):
     # Validation: ensure SectionID exists
     section = session.query(Section).filter(Section.id == SectionID).first()
     if not section:
