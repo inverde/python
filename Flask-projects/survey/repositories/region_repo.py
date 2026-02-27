@@ -13,4 +13,11 @@ def create_region(session: Session, ID: int, RegionName: str) -> Region:
     return new_region
 
 # Read (single + all)
-def get_region(session: Session, )
+def get_region(session: Session, region_id: int) -> Region:
+    return session.query(Region).filter(Region.ID == region_id).first()
+
+def get_all_region(session: Session) -> list:
+    return session.query(Region).all()
+
+
+#Upda
