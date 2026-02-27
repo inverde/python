@@ -20,6 +20,23 @@ def get_all_region(session: Session) -> list:
     return session.query(Region).all()
 
 
-#U Update Region
+# Update Region
 def update_region(session: Session, region_id: int, **kwargs) -> Region:
-    pass
+    region = session.query(Region).filter(Region.ID == region_id).first()
+    if not region:
+        return None
+    for key, value in kwargs.items():
+        if hasattr(region, key):
+            setattr(region, key, value)
+    session.commit()
+    session.refresh()
+    return region
+
+# Delete Region
+def delete_region(session: Session, region_id: int) -> bool:
+    region = session.query(Region).filter(Region.ID == region_id).first()
+    if not region:
+        return False
+    session.delete(region)
+    session.commit()
+    return True

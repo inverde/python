@@ -18,6 +18,7 @@ def create_survey(session:Session,
     )
     session.add(new_survey)
     session.commit()
+    session.refresh(new_survey)
     return new_survey
 
 # Read Survey
