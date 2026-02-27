@@ -15,8 +15,8 @@ from building import Building
 from school import School
 from respondent import Respondent
 from section import Section
-from models.question import Question
-from models.answer import Answer
+from question import Question
+from answer import Answer
 
 
 # SQLITE Engine
