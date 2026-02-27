@@ -1,5 +1,5 @@
 # repositories/__init__.py
 # Makes 'repositories' a package
-from repositories import (
+from survey.repositories import (
     survey_repo
 )
