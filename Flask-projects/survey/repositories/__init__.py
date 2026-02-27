@@ -8,5 +8,6 @@ from survey.repositories import (
     building_repo,
     respondent_repo,
     section_repo,
-    question_repo
+    question_repo,
+    answer_repo
 )
