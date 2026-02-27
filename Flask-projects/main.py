@@ -1,4 +1,4 @@
-from . import __init__
+import __init__
 
 def main():
     survey.repositories.survey_repo
