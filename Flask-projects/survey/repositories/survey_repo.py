@@ -39,4 +39,4 @@ def updtate_survey(session: Session, survey_id: int, **kwargs) -> Survey:
     return survey
 # Delete Survey
 def delete_survey(session: Session, survey_id: int) -> bool:
-    pass
+    survey = session.query(Survey).filter(Survey.ID == survey_id).first()
