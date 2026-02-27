@@ -24,5 +24,10 @@ def create_survey(session:Session,
 def get_survey(session: Session, survey_id: int) -> Survey:
     return session.query(Survey).Filter(Survey.ID == survey_id)
 
-def get_all_surveys(session: Session) -> 
+def get_all_surveys(session: Session) -> list:
+    return session.query(Survey).all()
 
+
+# Update Survey
+def updtate_survey(session: Session, survey_id: int, **kwargs) -> Survey:
+    survey 
