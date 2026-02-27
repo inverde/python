@@ -37,6 +37,13 @@ def updtate_survey(session: Session, survey_id: int, **kwargs) -> Survey:
                 setattr(survey, key, value)
         session.commit()
     return survey
+
 # Delete Survey
 def delete_survey(session: Session, survey_id: int) -> bool:
     survey = session.query(Survey).filter(Survey.ID == survey_id).first()
+    if survey:
+        session.delete(survey)
+        session.commit()
+        return True
+    return False
+
