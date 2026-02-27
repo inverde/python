@@ -1,8 +1,13 @@
 from sqlalchemy.orm import Session
-from survey.models import Building
+from survey.models import Building, School
 
 # CREATE
 def create_building(session: Session, ID: int, BuildingCode: str, BuildingName: str, SchoolID: int):
+    # Validation: ensure SchoolID exists in School table
+    school = session.query(School).filter(School.SchoolCode == SchoolID).first()
+    if not school:
+        raise ValueError(f"SchoolID {SchoolID} does not exist in School table.")
+
     new_building = Building(
         ID=ID,
         BuildingCode=BuildingCode,
