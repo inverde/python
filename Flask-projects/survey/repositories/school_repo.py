@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from survey.models.models import School
+from survey.models import School
 
 # CREATE
 def create_school(session: Session,

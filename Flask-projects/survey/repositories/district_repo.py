@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from survey.models.models import District
+from survey.models import District
 
 # CREATE
 def create_district(session: Session, ID: int, DistrictName: str, RegionID: int):
