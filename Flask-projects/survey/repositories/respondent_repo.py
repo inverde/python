@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from survey.models import Respondent
+from survey.models import Respondent, School
 
 # CREATE
 def create_respondent(session: Session,
@@ -11,6 +11,11 @@ def create_respondent(session: Session,
                       DeviceInfo: str = None,
                       IPAddress: str = None,
                       TokenExpiry: str = None):
+    # Validation: ensure SchoolID exists
+    school = session.query(School).filter(School.SchoolCode == SchoolID).first()
+    if not school:
+        raise ValueError(f"SchoolID {SchoolID} does not exist in School table.")
+
     new_respondent = Respondent(
         SchoolID=SchoolID,
         Age=Age,
@@ -23,10 +28,10 @@ def create_respondent(session: Session,
     )
     session.add(new_respondent)
     session.commit()
-    session.refresh(new_respondent)  # ensures persisted state is returned
+    session.refresh(new_respondent)
     return new_respondent
 
-# READ (single + all)
+# READ
 def get_respondent(session: Session, respondent_id: int):
     return session.query(Respondent).filter(Respondent.id == respondent_id).first()
 
