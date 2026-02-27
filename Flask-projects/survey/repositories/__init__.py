@@ -6,5 +6,6 @@ from survey.repositories import (
     district_repo,
     school_repo,
     building_repo,
-    respondent_repo
+    respondent_repo,
+    section_repo
 )
