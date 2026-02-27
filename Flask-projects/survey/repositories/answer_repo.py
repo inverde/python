@@ -1,6 +1,6 @@
 import datetime
 from sqlalchemy.orm import Session
-from survey.models import Answer, Question
+from survey.models import Answer, Question, Respondent
 
 # CREATE
 def create_answer(session: Session,
@@ -12,6 +12,11 @@ def create_answer(session: Session,
     question = session.query(Question).filter(Question.id == QuestionID).first()
     if not question:
         raise ValueError(f"QuestionID {QuestionID} does not exist in Question table.")
+
+    # Validation: ensure RespondentID exists
+    respondent = session.query(Respondent).filter(Respondent.id == RespondentID).first()
+    if not respondent:
+        raise ValueError(f"RespondentID {RespondentID} does not exist in Respondent table.")
 
     new_answer = Answer(
         RespondentID=RespondentID,
