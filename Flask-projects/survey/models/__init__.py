@@ -8,15 +8,15 @@ Base = declarative_base()
 
 engine = create_engine("sqlite:////workspaces/python/Flask-projects/survey/data/instance/app.sqlite3.db", echo=True)
 
-from models.survey import Survey
-from models.region import Region
-from models.district import District
-from models.building import Building
-from models.school import School
-from models.respondent import Respondent
-from models.section import Section
-from models.question import Question
-from models.answer import Answer
+from survey.models.survey import Survey
+from survey.models.region import Region
+from survey.models.district import District
+from survey.models.building import Building
+from survey.models.school import School
+from survey.models.respondent import Respondent
+from survey.models.section import Section
+from survey.models.question import Question
+from survey.models.answer import Answer
 
 
 # SQLITE Engine
