@@ -46,4 +46,3 @@ def delete_survey(session: Session, survey_id: int) -> bool:
         session.commit()
         return True
     return False
-
