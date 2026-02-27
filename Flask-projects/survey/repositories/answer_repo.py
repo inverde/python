@@ -8,6 +8,7 @@ def create_answer(session: Session,
                   QuestionID: int,
                   AnswerValue: str,
                   AnswerTimestamp: datetime.datetime = None):
+
     # Validation: ensure QuestionID exists
     question = session.query(Question).filter(Question.id == QuestionID).first()
     if not question:
