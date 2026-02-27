@@ -1,13 +1,14 @@
 from sqlalchemy.orm import Session
 from survey.models.survey import Survey
 
-# CRUD functions for survey insert
+# CRUD functions
+# Insert Survey
 def create_survey(session:Session,
                   SurveyTitle,
                   SurveyPurpose=None,
                   Year=None,
                   Release=None,
-                  SponsorInstitution=None):
+                  SponsorInstitution=None) -> Survey:
     new_survey = Survey(
         SurveyTitle=SurveyTitle,
         SurveyPurpose=SurveyPurpose,
@@ -18,3 +19,8 @@ def create_survey(session:Session,
     session.add(new_survey)
     session.commit()
     return new_survey
+
+# Read Survey
+def get_survey(session: Session, survey_id: int) -> Survey:
+    pass
+
