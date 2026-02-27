@@ -2,6 +2,8 @@ import survey.__init__
 def main():
     survey.repositories.survey_repo
     survey.repositories.region_repo
+    survey.repositories.district_repo
+    survey.repositories.school_repo
 
 
 if __name__== "__main__":
