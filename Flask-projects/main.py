@@ -1,8 +1,7 @@
+import survey.__init__
 def main():
-    import survey.__init__
     survey.repositories.survey_repo
 
 
 if __name__== "__main__":
     main()
-

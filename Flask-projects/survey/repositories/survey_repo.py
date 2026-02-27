@@ -13,5 +13,8 @@ def create_survey(session:Session,
         SurveyPurpose=SurveyPurpose,
         Year=Year,
         Release=Release,
-        SponsorInstitu
+        SponsorInstitution=SponsorInstitution
     )
+    session.add(new_survey)
+    session.commit()
+    return new_survey
