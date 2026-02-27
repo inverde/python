@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from models.survey import Survey
+from survey.models.survey import Survey
 
 # CRUD functions for survey insert
 def create_survey(session:Session,
