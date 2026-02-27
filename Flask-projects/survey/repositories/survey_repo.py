@@ -10,5 +10,8 @@ def create_survey(session:Session,
                   SponsorInstitution=None):
     new_survey = Survey(
         SurveyTitle=SurveyTitle,
-        SurveyPurpose=SurveyPurpose
+        SurveyPurpose=SurveyPurpose,
+        Year=Year,
+        Release=Release,
+        SponsorInstitu
     )
