@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from survey.models import School
+from survey.models import School, District
 
 # CREATE
 def create_school(session: Session,
@@ -9,12 +9,17 @@ def create_school(session: Session,
                   SchoolType: str,
                   SchoolLevel: str,
                   StudentCount: int,
-                  GeospatialCoordinates: dict,
+                  GeospatialCoordinates: str,
                   Municipality: str,
                   Province: str,
                   SchoolYear: int,
                   FullAddress: str = None,
                   PostalCode: str = None):
+    # Validation: ensure SchoolDistrictID exists
+    district = session.query(District).filter(District.ID == SchoolDistrictID).first()
+    if not district:
+        raise ValueError(f"SchoolDistrictID {SchoolDistrictID} does not exist in District table.")
+
     new_school = School(
         SchoolCode=SchoolCode,
         SchoolName=SchoolName,
@@ -31,10 +36,10 @@ def create_school(session: Session,
     )
     session.add(new_school)
     session.commit()
-    session.refresh(new_school)  # ensures persisted state is returned
+    session.refresh(new_school)
     return new_school
 
-# READ (single + all)
+# READ
 def get_school(session: Session, school_code: str):
     return session.query(School).filter(School.SchoolCode == school_code).first()
 
